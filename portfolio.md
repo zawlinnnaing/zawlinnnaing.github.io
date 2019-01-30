@@ -1,7 +1,7 @@
 #### Zaw Linn Naing  (22 Y.O)
 
 I am a **Computer Engineering and Information Technology** student currently studying in Mandalay Technological University.
-I am also a Laravel php developer and a minimalist .
+I am also a **Laravel php developer**, a minimalist and **Data Science learner** . 
 
 ## Contact information:
 
