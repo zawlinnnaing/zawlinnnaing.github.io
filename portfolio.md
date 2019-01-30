@@ -3,7 +3,7 @@
 I am a **Computer Engineering and Information Technology** student currently studying in Mandalay Technological University.
 I am also a **Laravel php developer**, a minimalist and **Data Science learner** . 
 
-## Contact information:
+#### Contact information:
 
 Email: zawlinnnaing0018@gmail.com  
 LinkedIn: [LinkedIn profile](https://www.linkedin.com/in/zaw-linn-naing-184931159/)
