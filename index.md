@@ -1,5 +1,9 @@
 #### Zaw Linn Naing
-![profile-image](/images/profile.png)  
+![profile-image](/images/profile.png)
+
+<div class="contact-info">
+  <small> Email: zawlinnnaing0018@gmail.com </small>
+</div>
 
 I am a **Computer Engineering and Information Technology** student currently studying in Mandalay Technological University.
 I am also a Laravel php developer. 
@@ -16,13 +20,13 @@ I am also a Laravel php developer.
 
 ## Projects I have worked on:
 
-### Travelio (Java SE) 
-    A desktop application for recommending famous areas in Myanmar and calculating travelling expense (for local use only).
+#### Travelio (Java SE) 
+   A desktop application for recommending famous areas in Myanmar and calculating travelling expense (for local use only).
    
-### Library Website for MTU (html, css, javascript, PHP, laravel, Mysql)
-    A website for managing library.
+#### Library Website for MTU (html, css, javascript, PHP, laravel, Mysql)
+   A website for managing library.
    
-### Mandalay Technological University Website 
+#### Mandalay Technological University Website 
   Official Website for MTU. 
 
 ## Actives: 
@@ -32,4 +36,8 @@ I am also a Laravel php developer.
 + Attended Global Blockchain Conference (2018)
 
 
-
+<style type="text/css">
+.contact-info{
+   background-color: #E0E0E0;
+ }
+</style>
