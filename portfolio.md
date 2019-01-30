@@ -1,14 +1,12 @@
 #### Zaw Linn Naing  (22 Y.O)
 
-![profile-image](/images/profile.png)  
-
-<div class="contact-info">
-  <small> Email: zawlinnnaing0018@gmail.com </small>
-</div>
-
 I am a **Computer Engineering and Information Technology** student currently studying in Mandalay Technological University.
 I am also a Laravel php developer and a minimalist .
 
+## Contact information:
+
+Email: zawlinnnaing0018@gmail.com
+LinkedIn: [LinkedIn profile](https://www.linkedin.com/in/zaw-linn-naing-184931159/)
 
 ## Technical Skill: 
 
