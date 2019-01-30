@@ -20,34 +20,34 @@ I am also a Laravel php developer and a minimalist .
   
 ## Working Experience:
 
--   Intern at ![nexlabs.co](https://nexlabs.co/) (1/11/2018 - 31/1/2019)
+-   Intern at [nexlabs.co](https://nexlabs.co/) (1/11/2018 - 31/1/2019)
 
 ## Projects I have worked on:
 
 ### Mingalar Cinema (Website)
-    Position: Code review
-   Website for Mingalar Cinema .
-   
+    Position: Code review  
+    
+   Website for Mingalar Cinema .   
    + Frontend (Html/Css/Javascript/Jquery/Vue)
    + Backend (Laravel 5.4/PHP/MySQL/Redis)
 
 #### Travelio (Desktop Application) 
-    Position:  Developer
+    Position:  Developer  
+        
    A desktop application for recommending famous areas in Myanmar and calculating travelling expense (for local use only).
-   
    + Java SE
    
 #### Library Website for MTU (Website)
-    Position:  Developer
-   A website for managing library.
-   
+    Position:  Developer  
+    
+   A website for managing library.   
    + Frontend (Html/Css/Javascript/Jquery)
    + Backend (Laravel 5.5/PHP/MySQL)
    
 #### Mandalay Technological University Website
-    Position:  Developer 
+    Position:  Developer  
+    
    Official Website for MTU. 
-   
    + Frontend (Html/Css/Javascript/Jquery)
    + Backend (Laravel 5.5/PHP/MySQL)
 
@@ -56,7 +56,7 @@ I am also a Laravel php developer and a minimalist .
 ## Interests:
 
 -   Hoping to learn more about **Data Science** and looking forward to work in related industry.
--   Web development
+-   **Web development**
  
 ## Activities: 
 
