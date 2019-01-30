@@ -32,12 +32,13 @@ I am also a Laravel php developer.
 ## Actives: 
 
 +	Attended 22nd IEEE Symposium on Computers and Communication (2017)
-+	Attended 18th International Conference on Computer Applications (2018)
-+ Attended Global Blockchain Conference (2018)
++   Attended 18th International Conference on Computer Applications (2018)
++   Attended Global Blockchain Conference (2018)
 
 
 <style type="text/css">
 .contact-info{
    background-color: #E0E0E0;
+   padding: 2rem;
  }
 </style>
