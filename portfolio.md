@@ -1,4 +1,4 @@
-#### Zaw Linn Naing  
+#### Zaw Linn Naing  (22 Y.O)
 
 ![profile-image](/images/profile.png)  
 
@@ -67,6 +67,6 @@ I am also a Laravel php developer and a minimalist .
 <style type="text/css">
 .contact-info{
    background-color: #E0E0E0;
-   padding: 2rem;
+   padding: 1rem 0.5rem;
  }
 </style>
