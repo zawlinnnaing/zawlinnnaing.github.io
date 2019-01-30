@@ -62,9 +62,4 @@ LinkedIn: [LinkedIn profile](https://www.linkedin.com/in/zaw-linn-naing-18493115
 +   Attended 18th International Conference on Computer Applications (2018)
 +   Attended Global Blockchain Conference (2018)
 
-<style type="text/css">
-.contact-info{
-   background-color: #E0E0E0;
-   padding: 1rem 0.5rem;
- }
-</style>
+
