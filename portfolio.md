@@ -5,7 +5,7 @@ I am also a Laravel php developer and a minimalist .
 
 ## Contact information:
 
-Email: zawlinnnaing0018@gmail.com
+Email: zawlinnnaing0018@gmail.com  
 LinkedIn: [LinkedIn profile](https://www.linkedin.com/in/zaw-linn-naing-184931159/)
 
 ## Technical Skill: 
