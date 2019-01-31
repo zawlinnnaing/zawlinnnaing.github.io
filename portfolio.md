@@ -18,7 +18,7 @@ LinkedIn: [LinkedIn profile](https://www.linkedin.com/in/zaw-linn-naing-18493115
   
 ## Working Experience:
 
--   Intern at [nexlabs.co](https://nexlabs.co/) (1/11/2018 - 31/1/2019)
+-   Intern at [nexlabs.co](https://nexlabs.co/) (1/Nov/2018 - 31/Jan/2019)
 
 ## Projects I have worked on:
 
@@ -58,7 +58,7 @@ LinkedIn: [LinkedIn profile](https://www.linkedin.com/in/zaw-linn-naing-18493115
  
 ## Activities: 
 
-+	Attended 22nd IEEE Symposium on Computers and Communication (2017)
++	  Attended 22nd IEEE Symposium on Computers and Communication (2017)
 +   Attended 18th International Conference on Computer Applications (2018)
 +   Attended Global Blockchain Conference (2018)
 
