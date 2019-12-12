@@ -13,7 +13,8 @@ LinkedIn: [LinkedIn profile](https://www.linkedin.com/in/zaw-linn-naing-18493115
 *	Basic Understanding of Machine Learning especially, Neural Networks
 *	Web development using Laravel framework
 *	Python 
-  
+* Vue/Nuxt js 
+ 
 ## Working Experience:
 
 -   Intern at [nexlabs.co](https://nexlabs.co/) (1/Nov/2018 - 31/Jan/2019)
