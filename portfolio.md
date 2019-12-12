@@ -44,8 +44,8 @@ LinkedIn: [LinkedIn profile](https://www.linkedin.com/in/zaw-linn-naing-18493115
 
 ### Creating new “art” works by integrating Creative Adversarial Network (CAN) and Neural Style Transfer Learning (final year thesis for bachelor degree)
 
-ppt: [here](https://www.slideshare.net/secret/4ct2tSKtK2iauQ)
-paper: [here](https://drive.google.com/open?id=1DEDw3HYKRsSvyvg1_VltDeMhYbLRWLLa)
+    Powerpoint can be found [here](https://www.slideshare.net/secret/4ct2tSKtK2iauQ). Paper can be found 
+[here](https://drive.google.com/open?id=1DEDw3HYKRsSvyvg1_VltDeMhYbLRWLLa)
 
 ## Interests:
 
