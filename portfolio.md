@@ -43,11 +43,10 @@ LinkedIn: [LinkedIn profile](https://www.linkedin.com/in/zaw-linn-naing-18493115
 ## Deep Learning Projects
 
 ### Creating new “art” works by integrating Creative Adversarial Network (CAN) and Neural Style Transfer Learning (final year thesis for bachelor degree)
-    
 
-    ppt: [here](https://www.slideshare.net/secret/4ct2tSKtK2iauQ)
-    paper: [here](https://drive.google.com/open?id=1DEDw3HYKRsSvyvg1_VltDeMhYbLRWLLa)
-    
+ppt: [here](https://www.slideshare.net/secret/4ct2tSKtK2iauQ)
+paper: [here](https://drive.google.com/open?id=1DEDw3HYKRsSvyvg1_VltDeMhYbLRWLLa)
+
 ## Interests:
 
 -   Hoping to learn more about **Deep learning** and looking forward to work in related industry.
