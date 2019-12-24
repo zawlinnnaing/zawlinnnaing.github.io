@@ -28,6 +28,9 @@ LinkedIn: [LinkedIn profile](https://www.linkedin.com/in/zaw-linn-naing-18493115
 
 Website for Mingalar Cinema .
 
+
+What I have learnt: Repository pattern used in MVC software architecture. Good programming practices from senior developers.
+
 #### Travelio (Desktop Application) (University Project)
 
     Position:  Developer
@@ -41,15 +44,34 @@ A desktop application for recommending famous areas in Myanmar and calculating t
 
     Position:  Developer
 
-A website for managing library.
+A web application for managing library.
 
 - Frontend (Html/Css/Javascript/Jquery)
 - Backend (Laravel 5.5/PHP/MySQL)
+
+
+#### Electrical ERP management system
+     
+     Position: Backend Developer
+    
+     A web application for managing human resources and materials for making electrical circuits. 
+
+Challenge: Maintaining complex relationships among different types of entities in database and supporting data integrity in transactions of items. 
+
+#### Package Delivery System
+
+     Position: Developer
+     
+     Real-time package tracking delivery system.
+     
+Challenge: Integrating google map service and firebase relatime database to web server. Ensuring real-time location updating for delivery men and allowing associated users to track that location and  
+
 
 ## Deep Learning Projects
 
 ### Creating new “art” works by integrating Creative Adversarial Network (CAN) and Neural Style Transfer Learning (final year thesis for bachelor degree)
 
+    
     Powerpoint can be found [here](https://www.slideshare.net/secret/4ct2tSKtK2iauQ). Paper can be found
 
 [here](https://drive.google.com/open?id=1DEDw3HYKRsSvyvg1_VltDeMhYbLRWLLa).
