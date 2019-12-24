@@ -1,7 +1,7 @@
 #### Zaw Linn Naing (22 Y.O)
 
 I am a **Computer Engineering and Information Technology** student currently studying in Mandalay Technological University.
-I am also a **Laravel php developer**, a minimalist and a **Deep learning noob** .
+I am also a **Laravel php developer**, a minimalist and a **Deep learning newbie** .
 
 #### Contact information:
 
@@ -54,7 +54,7 @@ A web application for managing library.
      
      Position: Backend Developer
     
-     A web application for managing human resources and materials for making electrical circuits. 
+A web application for managing human resources and materials for making electrical circuits. 
 
 Challenge: Maintaining complex relationships among different types of entities in database and supporting data integrity in transactions of items. 
 
@@ -62,9 +62,10 @@ Challenge: Maintaining complex relationships among different types of entities i
 
      Position: Developer
      
-     Real-time package tracking delivery system.
      
-Challenge: Integrating google map service and firebase relatime database to web server. Ensuring real-time location updating for delivery men and allowing associated users to track that location and  
+Real-time package tracking delivery system.
+     
+Challenge: Integrating google map service and firebase relatime database to web server. Ensuring real-time location updating for delivery men, allowing associated users to track that location and allowing regional admins to track delivery men locations in specified regions in real-time. 
 
 
 ## Deep Learning Projects
@@ -72,11 +73,11 @@ Challenge: Integrating google map service and firebase relatime database to web 
 ### Creating new “art” works by integrating Creative Adversarial Network (CAN) and Neural Style Transfer Learning (final year thesis for bachelor degree)
 
     
-    Powerpoint can be found [here](https://www.slideshare.net/secret/4ct2tSKtK2iauQ). Paper can be found
-
+Powerpoint can be found [here](https://www.slideshare.net/secret/4ct2tSKtK2iauQ). Paper can be found
 [here](https://drive.google.com/open?id=1DEDw3HYKRsSvyvg1_VltDeMhYbLRWLLa).
 
 ## Interests:
 
 - Hoping to learn more about **Deep learning** and looking forward to work in related industry.
+- Passionate to know about how enterprise applications are designed, implemented and maintained (espically monolitic             architecture. 
 - **Web development** and willing to learn more about developing and maintaining enterprise web applications.
