@@ -79,5 +79,5 @@ Powerpoint can be found [here](https://www.slideshare.net/secret/4ct2tSKtK2iauQ)
 ## Interests:
 
 - Hoping to learn more about **Deep learning** and looking forward to work in related industry.
-- Passionate to know about how enterprise applications are designed, implemented and maintained (espically monolitic             architecture. 
+- Passionate to know about how enterprise applications are designed, implemented and maintained (espically micro-service             architecture. 
 - **Web development** and willing to learn more about developing and maintaining enterprise web applications.
