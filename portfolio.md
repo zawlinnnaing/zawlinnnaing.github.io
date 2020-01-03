@@ -88,11 +88,9 @@ Managing thesis papers for university, allowing students to upload their own pap
 
 ### Creating new “art” works by integrating Creative Adversarial Network (CAN) and Neural Style Transfer Learning (final year thesis for bachelor degree)
 
-Creat new "art" works from creative art styles from AI which has never created in history but learnt from history for art styles and take images taken by humans to combine these two images to create new aesthetic "art" works that are also creative and artistic from human perspective.
-
+Create new “art” works from creative art styles from AI which has never been created in history but learnt from history for art styles and take photograph provided by humans to combine these two images to create new aesthetic “art” works that are also creative and artistic from human perspective.
     
-Powerpoint can be found [here](https://www.slideshare.net/secret/4ct2tSKtK2iauQ). Paper can be found
-[here](https://drive.google.com/open?id=1DEDw3HYKRsSvyvg1_VltDeMhYbLRWLLa).
+Powerpoint can be found [here](https://www.slideshare.net/secret/4ct2tSKtK2iauQ). Yon can also contact me for full paper. Artical can be read [here](https://medium.com/@zawlinnnaing0018/creating-new-art-works-by-integrating-creative-adversarial-network-can-and-neural-style-bed8aa51fb3a)
 
 **Challenges faced**:
 
