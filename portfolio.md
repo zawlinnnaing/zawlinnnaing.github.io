@@ -22,11 +22,11 @@ LinkedIn: [LinkedIn profile](https://www.linkedin.com/in/zaw-linn-naing-18493115
 
 ## Projects I have worked on:
 
-### Mingalar Cinema (Website)
+### Mingalar Cinema (Web app)
 
     Position: Intern
 
-Website for Mingalar Cinema .
+Website for Mingalar Cinema.
 
 
 **What I have learnt**: Repository pattern used in MVC software architecture. Good programming practices from senior developers.
@@ -50,24 +50,24 @@ A web application for managing library.
 - Backend (Laravel 5.5/PHP/MySQL)
 
 
-#### Electrical ERP management system
+#### Electronic devices ERP management system (Web app)
      
      Position: Backend Developer
     
-A web application for managing human resources and materials for making electrical circuits. 
+A web application for managing human resources and materials for making electronic devices. 
 
-**Challenges faced**: Maintaining complex relationships among different types of entities in database and supporting data integrity in transactions of items. 
+**Challenges faced**: Maintaining complex relationships among different types of entities in database and supporting data integrity in transactions of items.
 
-#### Package Delivery System
+#### Package Delivery System (Web app)
 
      Position: Developer
      
      
 Real-time package tracking delivery system.
      
-**Challenges faced**: Integrating google map service and firebase relatime database to web server. Ensuring real-time location updating for delivery men, allowing associated users to track that location and allowing regional admins to track delivery men locations in specified regions in real-time. 
+**Challenges faced**: Integrating google map services and firebase relatime database to web server. Ensuring real-time location updating for delivery men, allowing associated users to track that location and also allowing regional admins to track delivery men locations in specified regions in real-time. 
 
-#### Document Management System
+#### Document Management System (Web app)
 
     Position: Developer, System admin
     
@@ -75,11 +75,11 @@ Managing thesis papers for university, allowing students to upload their own pap
 
 **Technologies used**:
 
-- PHP(Laravel)(for database related purpose and serving websites) ,HTML,CSS,JQuery,Javascript,Python (recommendation based on paper, terms extraction from abstract, watermarking in papers)
+- PHP (Laravel) (for database related purpose and serving websites), HTML, CSS, JQuery, Javascript, Python (recommendation based on paper, terms extraction from abstract, watermarking in papers).
 
 **System requirements**:
 
-- Docker,Nginx,MySQL,PHP,Python,Flask
+- Docker, Nginx, MySQL, PHP, Python, Flask
 
 **Challenges faced**: Since this project is my first experience with Docker, thus I need to learn to maintain containers, build and deploy them. Integrating two web servers (PHP server and Python server) to work as the same server from user perspective.
 
@@ -103,4 +103,4 @@ Powerpoint can be found [here](https://www.slideshare.net/secret/4ct2tSKtK2iauQ)
 ## Interests:
 
 - Hoping to learn more about **Deep learning** and looking forward to work in related industry.
-- Passionate to know about how enterprise applications are designed, implemented and maintained (espically micro-service             architecture. 
+- Passionate to know about how enterprise applications are designed, implemented and maintained (espically in micro-service architecture. 
