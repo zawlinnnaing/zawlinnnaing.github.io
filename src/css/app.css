@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-white dark:bg-gray-900;
+  @apply min-h-screen;
+  @apply w-screen overflow-hidden;
+  @apply text-black dark:text-white;
+}
+
+.theme-icon {
+  @apply w-5 h-5 inline-block text-white my-2;
+}
