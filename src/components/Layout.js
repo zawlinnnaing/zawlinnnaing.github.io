@@ -22,7 +22,7 @@ export default function Layout({ children }) {
         />
       </Helmet>
       <Navbar />
-      <main>{children}</main>
+      <main className="h-full w-full">{children}</main>
     </div>
   );
 }
