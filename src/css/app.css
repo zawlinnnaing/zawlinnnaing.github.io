@@ -5,10 +5,19 @@
 body {
   @apply bg-white dark:bg-gray-900;
   @apply min-h-screen;
+  overflow: scroll;
   @apply w-screen overflow-hidden;
   @apply text-black dark:text-white;
 }
 
 .theme-icon {
   @apply w-5 h-5 inline-block text-white my-2;
+}
+
+.left-34 {
+  left: 8.5rem;
+}
+
+.max-h-250px {
+  max-height: 250px;
 }
