@@ -1,6 +1,6 @@
 import { Transition } from "@headlessui/react";
 import React, { Fragment, useEffect, useState } from "react";
-import UnderConstruction from "../../assets/under-construction.svg";
+import UnderConstruction from "../../images/under-construction.svg";
 
 export default function HomeContainer() {
   const [isShowing, setIsShowing] = useState(false);
