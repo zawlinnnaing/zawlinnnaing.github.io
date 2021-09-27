@@ -1,19 +1,23 @@
 /* This example requires Tailwind CSS v2.0+ */
-import React, { useEffect } from "react";
+import React, { createRef, useEffect } from "react";
 import { Helmet } from "react-helmet";
-import Debug from "../utils/logging";
+import "../css/app.css";
 import { changeTheme, getInitTheme } from "../utils/theme";
 import Navbar from "./Navbar";
-import "../css/app.css";
 
 export default function Layout({ children }) {
+  const ref = createRef();
+
   useEffect(() => {
-    Debug.log("current theme", getInitTheme());
     changeTheme(getInitTheme());
   }, []);
 
+  // useEffect(() => {
+  //   window.addEventListener("wheel", throttledHandler, { capture: true });
+  // }, []);
+
   return (
-    <div>
+    <>
       <Helmet>
         <title>Zaw Linn Naing</title>
         <meta
@@ -22,7 +26,9 @@ export default function Layout({ children }) {
         />
       </Helmet>
       <Navbar />
-      <main className="h-full w-full">{children}</main>
-    </div>
+      <main className="h-full w-full" ref={ref}>
+        {children}
+      </main>
+    </>
   );
 }

@@ -1,16 +1,13 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { Disclosure, Menu } from "@headlessui/react";
-import { ChevronDownIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
+import { Disclosure } from "@headlessui/react";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import { Link } from "gatsby";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 import React from "react";
+import { ROUTES } from "../utils/constants";
+import { getInitTheme, THEME_MODES } from "../utils/theme";
 import LocalizationMenu from "./LocalizationMenu";
 import ThemeToggle from "./ThemeToggle";
-
-const navigation = [
-  { name: "Home", href: "#", current: true },
-  { name: "About me", href: "#", current: false },
-  { name: "Projects", href: "#", current: false },
-  { name: "My Experience", href: "#", current: false },
-];
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -39,20 +36,29 @@ export default function Navbar() {
               <div className="flex items-center justify-center sm:items-stretch sm:justify-center w-full">
                 <div className="hidden sm:flex sm:mx-6 w-full">
                   <div className="flex flex-auto space-x-4 items-center">
-                    {navigation.map((item) => (
-                      <a
+                    {ROUTES.map((item) => (
+                      <AniLink
+                        cover
+                        bg={
+                          getInitTheme() === THEME_MODES.dark
+                            ? "#111827"
+                            : "#F9FAFB"
+                        }
+                        duration={1}
                         key={item.name}
-                        href={item.href}
-                        className={classNames(
-                          item.current
-                            ? "bg-gray-900 text-white dark:bg-white dark:text-gray-900"
-                            : "text-gray-500 dark:hover:text-white hover:text-black",
-                          "px-3 py-2 rounded-md text-sm font-medium"
-                        )}
+                        to={item.href}
+                        getProps={({ isCurrent }) => ({
+                          className: classNames(
+                            isCurrent
+                              ? "bg-gray-900 text-white dark:bg-white dark:text-gray-900"
+                              : "text-gray-500 dark:hover:text-white hover:text-black",
+                            "px-3 py-2 rounded-md text-sm font-medium"
+                          ),
+                        })}
                         aria-current={item.current ? "page" : undefined}
                       >
                         {item.name}
-                      </a>
+                      </AniLink>
                     ))}
                   </div>
                   <div className="flex flex-none">
@@ -70,20 +76,27 @@ export default function Navbar() {
 
           <Disclosure.Panel className="sm:hidden transition-all px-4 divide-y divide-black dark:divide-white bg-gray-100 dark:bg-gray-800">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              {navigation.map((item) => (
-                <a
+              {ROUTES.map((item) => (
+                <AniLink
+                  cover
+                  bg={
+                    getInitTheme() === THEME_MODES.dark ? "#111827" : "#F9FAFB"
+                  }
+                  duration={1}
                   key={item.name}
-                  href={item.href}
-                  className={classNames(
-                    item.current
-                      ? "bg-gray-900 text-white dark:bg-gray-100 dark:text-black"
-                      : "text-gray-500  hover:text-gray-800 dark:hover:text-white",
-                    "block px-3 py-2 rounded-md text-base font-medium text-white"
-                  )}
+                  to={item.href}
+                  getProps={({ isCurrent }) => ({
+                    className: classNames(
+                      isCurrent
+                        ? "bg-gray-900 text-white dark:bg-gray-100 dark:text-black"
+                        : "text-gray-500  hover:text-gray-800 dark:hover:text-white",
+                      "block px-3 py-2 rounded-md text-base font-medium text-white"
+                    ),
+                  })}
                   aria-current={item.current ? "page" : undefined}
                 >
                   {item.name}
-                </a>
+                </AniLink>
               ))}
             </div>
             <div className="flex">

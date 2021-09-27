@@ -5,8 +5,8 @@
 body {
   @apply bg-white dark:bg-gray-900;
   @apply min-h-screen;
-  overflow: scroll;
-  @apply w-screen overflow-hidden;
+  /* overflow-y: scroll; */
+  @apply w-screen overflow-x-hidden;
   @apply text-black dark:text-white;
 }
 
@@ -20,4 +20,8 @@ body {
 
 .max-h-250px {
   max-height: 250px;
+}
+
+.h-screen-4by6 {
+  height: 83.33vh;
 }

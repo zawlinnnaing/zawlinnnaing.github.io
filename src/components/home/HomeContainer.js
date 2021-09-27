@@ -1,5 +1,6 @@
 import { Transition } from "@headlessui/react";
-import React, { Fragment, useEffect, useState } from "react";
+import React, { createRef, Fragment, useEffect, useState } from "react";
+import Debug from "../../utils/logging";
 import UnderConstructionCard from "../common/UnderConstructionCard";
 
 export default function HomeContainer() {
@@ -11,7 +12,7 @@ export default function HomeContainer() {
 
   return (
     <>
-      <div className="h-screen text-center">
+      <div className="h-screen-4by6 text-center">
         <Transition
           as={Fragment}
           show={isShowing}
