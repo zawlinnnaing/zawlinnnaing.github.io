@@ -49,10 +49,8 @@ export default function Navbar() {
                         to={item.href}
                         getProps={({ isCurrent }) => ({
                           className: classNames(
-                            isCurrent
-                              ? "bg-gray-900 text-white dark:bg-white dark:text-gray-900"
-                              : "text-gray-500 dark:hover:text-white hover:text-black",
-                            "px-3 py-2 rounded-md text-sm font-medium"
+                            "navbar-item",
+                            isCurrent && "active-navbar-item"
                           ),
                         })}
                         aria-current={item.current ? "page" : undefined}
@@ -87,10 +85,9 @@ export default function Navbar() {
                   to={item.href}
                   getProps={({ isCurrent }) => ({
                     className: classNames(
-                      isCurrent
-                        ? "bg-gray-900 text-white dark:bg-gray-100 dark:text-black"
-                        : "text-gray-500  hover:text-gray-800 dark:hover:text-white",
-                      "block px-3 py-2 rounded-md text-base font-medium text-white"
+                      "navbar-item",
+                      "block",
+                      isCurrent && "active-navbar-item"
                     ),
                   })}
                   aria-current={item.current ? "page" : undefined}
