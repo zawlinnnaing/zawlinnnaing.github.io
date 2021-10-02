@@ -1,14 +1,15 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import styled from "styled-components";
 import Layout from "../components/Layout";
 import * as styles from "../css/about.module.css";
 
-const PaddingLi = styled.li`
-  padding-left: 1rem;
-`;
-
 const PrimarySpan = styled.span`
   color: var(--accent-color);
+`;
+
+const SectioNHr = styled.hr`
+  margin: 0 1rem;
 `;
 
 const SECTIONS = [
@@ -22,12 +23,15 @@ const SECTIONS = [
 export default function AboutPage() {
   return (
     <Layout>
-      <section className="lg:flex block lg:gap-4">
-        <div className="lg:border-r-4 sm:border-b-4 border-gray-900 dark:border-white px-4">
+      <Helmet>
+        <title>About me, Zaw Lin Naing</title>
+      </Helmet>
+      <section className="lg:flex block lg:gap-4 break-all">
+        <div className="lg:border-r-2 lg:border-b-0 border-b-2 border-gray-900 dark:border-white p-4 min-w-200">
           <p>Table of content</p>
           <ul className="my-8">
             {SECTIONS.map((appSection) => (
-              <li className="p-4 sm:p-2">
+              <li className="p-4 sm:p-2" key={appSection.id}>
                 <a
                   href={`#${appSection.id}`}
                   key={appSection.id}
@@ -39,7 +43,7 @@ export default function AboutPage() {
             ))}
           </ul>
         </div>
-        <div className="flex-grow">
+        <div className="flex-grow max-w-screen">
           <section id="tldr" className={styles.aboutSection}>
             <h1 className={styles.aboutSectionTitle}>TLDR</h1>
             <p className="my-4">
@@ -58,23 +62,22 @@ export default function AboutPage() {
               am always eager to learn new technologies and concepts depending
               on requirements.
             </p>
-            <ol className="list-disc list-inside">
-              <p className="italic">What I can offer:</p>
-              <PaddingLi>
+            <p className="italic">What I can offer:</p>
+
+            <ol className="list-disc list-inside ml-4">
+              <li>
                 Developed and maintained web apps both backend and frontend.
-              </PaddingLi>
-              <PaddingLi>
+              </li>
+              <li>
                 Can also work on Deep learning/Machine learning if needed.
-              </PaddingLi>
-              <PaddingLi>
-                Setup and Deploy web apps on Docker and Kubernetes.
-              </PaddingLi>
-              <PaddingLi>
+              </li>
+              <li>Setup and Deploy web apps on Docker and Kubernetes.</li>
+              <li>
                 Research about new technologies to solve particular problems.
-              </PaddingLi>
+              </li>
             </ol>
           </section>
-          <hr className="mx-4" />
+          <SectioNHr />
           <section id="backend" className={styles.aboutSection}>
             <h1 className={styles.aboutSectionTitle}>Backend Engineering</h1>
             <p className="my-4">
@@ -84,7 +87,7 @@ export default function AboutPage() {
               can also design and solve business problems with following data
               storage technologies.
             </p>
-            <ul className="list-disc list-inside">
+            <ul className="list-disc list-inside ml-4">
               <li>
                 NoSQL database: <span className="font-bold">MongoDB</span>.
               </li>
@@ -92,7 +95,9 @@ export default function AboutPage() {
                 SQL databases:{" "}
                 <span className="font-bold">MySQL, PostgreSQL</span>.
               </li>
-              <li>In-memory storage: Redis</li>
+              <li>
+                In-memory storage: <span className="font-bold">Redis</span>.
+              </li>
               <li>
                 Cloud Storage:{" "}
                 <span className="font-bold">
@@ -101,9 +106,11 @@ export default function AboutPage() {
                 .
               </li>
             </ul>
-            <ul className="list-disc list-item">
+            <p>
               My current skill sets and experience for backend Engineering
               include:
+            </p>
+            <ul className="list-disc list-inside ml-4">
               <li></li>
             </ul>
           </section>

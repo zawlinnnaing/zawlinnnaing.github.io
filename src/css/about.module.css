@@ -1,5 +1,5 @@
 .aboutSection {
-  @apply px-4 lg:px-0 my-4;
+  @apply p-4;
 }
 
 .aboutSectionTitle {

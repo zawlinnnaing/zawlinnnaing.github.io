@@ -14,15 +14,13 @@ function classNames(...classes) {
 export default function Navbar() {
   const navRef = createRef();
 
-  useEffect(() => {
-
-  }, []);
+  useEffect(() => {}, []);
 
   return (
     <Disclosure as="nav" className="bg-transparent" ref={navRef}>
       {({ open }) => (
         <>
-          <div className="max-w-screen mx-auto container">
+          <div className="max-w-screen mx-auto px-4 sm:px-0 md:px-2">
             <div className="relative flex items-center justify-between h-16">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
@@ -88,7 +86,7 @@ export default function Navbar() {
                     className: classNames(
                       "navbar-item",
                       "block",
-                      isCurrent && "active-navbar-item"
+                      isCurrent && "active-navbar-item-mobile"
                     ),
                   })}
                   aria-current={item.current ? "page" : undefined}
