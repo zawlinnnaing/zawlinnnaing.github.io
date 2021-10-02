@@ -1,27 +1,28 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Disclosure } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
-import { Link } from "gatsby";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
-import React from "react";
+import React, { createRef, useEffect } from "react";
 import { ROUTES } from "../utils/constants";
 import { getInitTheme, THEME_MODES } from "../utils/theme";
-import LocalizationMenu from "./LocalizationMenu";
 import ThemeToggle from "./ThemeToggle";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-/**
- * @returns
- */
 export default function Navbar() {
+  const navRef = createRef();
+
+  useEffect(() => {
+
+  }, []);
+
   return (
-    <Disclosure as="nav" className="bg-transparent">
+    <Disclosure as="nav" className="bg-transparent" ref={navRef}>
       {({ open }) => (
         <>
-          <div className="max-w-screen mx-auto px-2 sm:px-6 lg:px-8">
+          <div className="max-w-screen mx-auto container">
             <div className="relative flex items-center justify-between h-16">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
@@ -63,9 +64,9 @@ export default function Navbar() {
                     <div className="py-2 pt-4 flex">
                       <ThemeToggle />
                     </div>
-                    <div className="mt-2">
+                    {/* <div className="mt-2">
                       <LocalizationMenu />
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
@@ -100,9 +101,9 @@ export default function Navbar() {
               <div className="flex-auto p-2 pt-4">
                 <ThemeToggle />
               </div>
-              <div className="p-2">
+              {/* <div className="p-2">
                 <LocalizationMenu />
-              </div>
+              </div> */}
             </div>
           </Disclosure.Panel>
         </>

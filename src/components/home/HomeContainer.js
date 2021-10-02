@@ -1,7 +1,7 @@
-import { Transition } from "@headlessui/react";
-import React, { createRef, Fragment, useEffect, useState } from "react";
-import Debug from "../../utils/logging";
-import UnderConstructionCard from "../common/UnderConstructionCard";
+import { ArrowDownIcon } from "@heroicons/react/outline";
+import React, { useEffect, useState } from "react";
+import TransitionContainer from "../common/TransitionContainer";
+import MeCard from "./MeCard";
 
 export default function HomeContainer() {
   const [isShowing, setIsShowing] = useState(false);
@@ -12,8 +12,8 @@ export default function HomeContainer() {
 
   return (
     <>
-      <div className="h-screen-4by6 text-center">
-        <Transition
+      <div className="h-screen-90 text-center">
+        {/* <Transition
           as={Fragment}
           show={isShowing}
           enter="transform transition-al duration-1000"
@@ -24,10 +24,17 @@ export default function HomeContainer() {
           leaveFrom="opacity-100 top-1/4 "
           leaveTo="opacity-0 -top-1/4"
         >
-          <div className="relative inline-block top-1/4">
-            <UnderConstructionCard bodyText="This site is under construction please check back soon later. 😉" />
-          </div>
-        </Transition>
+          <div className="relative inline-block top-1/4"> */}
+        <TransitionContainer>
+          <MeCard />
+        </TransitionContainer>
+        {/* </div>
+        </Transition> */}
+        <div className="absolute bottom-0 left-0 ml-4">
+          <p className="inline-block w-screen text-center subtitle">
+            Scroll for more <ArrowDownIcon className="h-5 w-5 inline-block" />
+          </p>
+        </div>
       </div>
     </>
   );

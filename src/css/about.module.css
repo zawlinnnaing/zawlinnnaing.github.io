@@ -1,0 +1,7 @@
+.aboutSection {
+  @apply px-4 lg:px-0 my-4;
+}
+
+.aboutSectionTitle {
+  @apply text-lg font-bold;
+}

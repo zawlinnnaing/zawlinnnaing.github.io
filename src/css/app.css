@@ -2,12 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --accent-color: #10b981;
+}
+
+::selection {
+  background: var(--accent-color);
+  @apply text-white;
+}
+
+::-moz-selection {
+  background: var(--accent-color);
+  @apply text-white;
+}
+
 body {
   @apply bg-white dark:bg-gray-900;
   @apply min-h-screen;
   /* overflow-y: scroll; */
   @apply w-screen overflow-x-hidden;
   @apply text-black dark:text-white;
+  @apply transition-colors duration-700;
 }
 
 .theme-icon {
@@ -26,12 +41,26 @@ body {
   height: 83.33vh;
 }
 
+.h-screen-90 {
+  height: 90vh;
+}
+
 .navbar-item {
-  @apply px-3 py-2 rounded-md text-base font-medium;
-  @apply text-gray-500  hover:text-gray-800 dark:hover:text-white;
+  @apply px-3 py-2 text-base font-medium;
+  @apply text-gray-500 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white;
+  @apply hover:border-black border-b-4 border-transparent dark:hover:border-white;
+  @apply transition-all duration-700;
 }
 
 .active-navbar-item {
-  @apply bg-gray-900 text-white dark:bg-gray-100 dark:text-black;
-  @apply hover:text-white dark:hover:text-white;
+  @apply border-black dark:border-gray-100 font-bold;
+  /* @apply hover:text-white dark:hover:text-white; */
+}
+
+.writing-mode-vertical {
+  writing-mode: vertical-lr;
+}
+
+.subtitle {
+  @apply text-gray-500 dark:text-gray-400;
 }

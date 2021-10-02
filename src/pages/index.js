@@ -1,3 +1,4 @@
+import { graphql } from "gatsby";
 import React from "react";
 import { Helmet } from "react-helmet";
 import HomeContainer from "../components/home/HomeContainer";
@@ -13,3 +14,5 @@ export default function IndexPage() {
     </Layout>
   );
 }
+
+

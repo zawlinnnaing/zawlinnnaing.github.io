@@ -1,13 +1,13 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { first } from "lodash";
-import React, { createRef, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import "../css/app.css";
+import "../utils/i18n";
 import {
   scrollWheelHandler,
   touchMoveHandler,
 } from "../utils/routeTransitionHandlers";
-import Debug from "../utils/logging";
 import { changeTheme, getInitTheme } from "../utils/theme";
 import Navbar from "./Navbar";
 
@@ -37,7 +37,7 @@ export default function Layout({ children }) {
         />
       </Helmet>
       <Navbar />
-      <main className="h-full w-full">{children}</main>
+      <main>{children}</main>
     </>
   );
 }
