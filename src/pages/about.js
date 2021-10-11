@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import styled from "styled-components";
+import AboutSidebar from "../components/about/AboutSidebar";
 import AppLink from "../components/common/AppLink";
 import Layout from "../components/Layout";
 import * as styles from "../css/about.module.css";
@@ -33,22 +34,7 @@ export default function AboutPage() {
         <title>About me, Zaw Lin Naing</title>
       </Helmet>
       <section className="lg:flex block lg:gap-4">
-        <div className="lg:border-r-2 lg:border-b-0 border-b-2 border-gray-900 dark:border-white p-4 min-w-200">
-          <p>Table of content</p>
-          <ul className="my-8">
-            {SECTIONS.map((appSection) => (
-              <li className="p-4 sm:p-2" key={appSection.id}>
-                <a
-                  href={`#${appSection.id}`}
-                  key={appSection.id}
-                  className="text-green-500"
-                >
-                  {appSection.text}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <AboutSidebar />
         <div className="flex-grow max-w-screen">
           <section id="tldr" className={styles.aboutSection}>
             <h1 className={styles.aboutSectionTitle}>TLDR</h1>

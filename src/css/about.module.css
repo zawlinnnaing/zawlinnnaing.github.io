@@ -6,3 +6,8 @@
 .aboutSectionTitle {
   @apply text-lg font-bold;
 }
+
+.aboutMobileSidebarPanel {
+  /* height: 300px; */
+  transition: height 0.5s;
+}
