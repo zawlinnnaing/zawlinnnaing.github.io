@@ -71,3 +71,7 @@ body {
 .min-w-200 {
   min-width: 200px;
 }
+
+.app-link {
+  @apply text-green-500 hover:underline;
+}

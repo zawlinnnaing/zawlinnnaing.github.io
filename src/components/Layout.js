@@ -16,16 +16,16 @@ export default function Layout({ children }) {
     changeTheme(getInitTheme());
   }, []);
 
-  useEffect(() => {
-    let yDown = null;
-    window.addEventListener("wheel", scrollWheelHandler, { capture: true });
-    window.addEventListener("touchstart", (event) => {
-      yDown = first(event.touches).clientY;
-    });
-    window.addEventListener("touchmove", (event) => {
-      touchMoveHandler(event, yDown);
-    });
-  }, []);
+  // useEffect(() => {
+  //   let yDown = null;
+  //   window.addEventListener("wheel", scrollWheelHandler, { capture: true });
+  //   window.addEventListener("touchstart", (event) => {
+  //     yDown = first(event.touches).clientY;
+  //   });
+  //   window.addEventListener("touchmove", (event) => {
+  //     touchMoveHandler(event, yDown);
+  //   });
+  // }, []);
 
   return (
     <>
