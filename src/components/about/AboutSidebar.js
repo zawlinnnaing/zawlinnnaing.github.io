@@ -1,26 +1,7 @@
-import { Disclosure, Transition } from "@headlessui/react";
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/outline";
-import React, { Fragment, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useScrollSections } from "react-scroll-section";
 import * as styles from "../../css/about.module.css";
-
-const SECTIONS = [
-  {
-    id: "tldr",
-    text: "TLDR",
-  },
-  { id: "backend", text: "Backend Engineering" },
-  {
-    id: "frontend",
-    text: "Frontend Engineering",
-  },
-];
-
-const SECTIONS_MAP = {
-  tldr: "TLDR",
-  backend: "Backend",
-  frontend: "Frontend",
-};
 
 export default function AboutSidebar({ activeId }) {
   const [isPanelOpen, setIsPanelOpen] = useState(false);
@@ -51,7 +32,10 @@ export default function AboutSidebar({ activeId }) {
                 href={`#${appSection.id}`}
                 key={appSection.id}
                 className="text-green-500"
-                onClick={appSection.onClick}
+                onClick={() => {
+                  // Cuz scroll section library does not work well when clicked link represents last section in UI, thus needed to put setTimeout here.
+                  setTimeout(appSection.onClick, 100);
+                }}
               >
                 {appSection.meta.text}
               </a>
