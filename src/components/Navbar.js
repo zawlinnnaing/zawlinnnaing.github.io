@@ -12,12 +12,10 @@ function classNames(...classes) {
 }
 
 export default function Navbar() {
-  const navRef = createRef();
-
   useEffect(() => {}, []);
 
   return (
-    <Disclosure as="nav" className="bg-transparent" ref={navRef}>
+    <Disclosure as="nav" className="bg-transparent">
       {({ open }) => (
         <>
           <div className="max-w-screen mx-auto px-4 sm:px-0 md:px-2">

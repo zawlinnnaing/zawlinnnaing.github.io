@@ -35,6 +35,13 @@ module.exports = {
       },
       __key: "pages",
     },
+    {
+      resolve: "gatsby-plugin-nprogress",
+      options: {
+        color: "#10b981",
+        showSpinner: false,
+      },
+    },
     // {
     //   resolve: `gatsby-source-filesystem`,
     //   options: {

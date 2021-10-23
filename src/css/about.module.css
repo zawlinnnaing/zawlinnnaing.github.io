@@ -11,3 +11,8 @@
   /* height: 300px; */
   transition: height 0.5s;
 }
+
+.contentHeight {
+  height: calc(100vh - 64px);
+
+}

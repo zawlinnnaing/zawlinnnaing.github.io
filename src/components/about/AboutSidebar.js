@@ -1,6 +1,7 @@
 import { Disclosure, Transition } from "@headlessui/react";
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/outline";
-import React, { Fragment, useRef, useState } from "react";
+import React, { Fragment, useEffect, useRef, useState } from "react";
+import { useScrollSections } from "react-scroll-section";
 import * as styles from "../../css/about.module.css";
 
 const SECTIONS = [
@@ -15,28 +16,44 @@ const SECTIONS = [
   },
 ];
 
+const SECTIONS_MAP = {
+  tldr: "TLDR",
+  backend: "Backend",
+  frontend: "Frontend",
+};
+
 export default function AboutSidebar({ activeId }) {
   const [isPanelOpen, setIsPanelOpen] = useState(false);
   const panelRef = useRef();
+  const sections = useScrollSections();
 
   function onPanelBtnClick() {
     setIsPanelOpen(!isPanelOpen);
-    panelRef.current.style.height = !isPanelOpen ? "170px" : "0px";
   }
+
+  useEffect(() => {
+    panelRef.current.style.height = !isPanelOpen ? "0px" : "170px";
+  }, [isPanelOpen]);
 
   return (
     <>
       <div className="lg:border-r-2 lg:border-b-0 border-b-2 border-gray-900 dark:border-white p-4 min-w-200 hidden lg:block">
         <p>Table of content</p>
         <ul className="my-8">
-          {SECTIONS.map((appSection) => (
-            <li className="p-4 sm:p-2" key={appSection.id}>
+          {sections.map((appSection) => (
+            <li
+              className={`p-4 sm:p-2 inline-block ${
+                appSection.selected ? "active-link" : ""
+              } `}
+              key={appSection.id}
+            >
               <a
                 href={`#${appSection.id}`}
                 key={appSection.id}
                 className="text-green-500"
+                onClick={appSection.onClick}
               >
-                {appSection.text}
+                {appSection.meta.text}
               </a>
             </li>
           ))}
@@ -60,10 +77,17 @@ export default function AboutSidebar({ activeId }) {
           ref={panelRef}
         >
           <ul>
-            {SECTIONS.map((appSection) => (
+            {sections.map((appSection) => (
               <li className="p-4 sm:p-2 text-green-500" key={appSection.id}>
-                <a href={`#${appSection.id}`} key={appSection.id}>
-                  {appSection.text}
+                <a
+                  href={`#${appSection.id}`}
+                  className={`${appSection.selected ? "active-link" : ""} py-2`}
+                  key={appSection.id}
+                  onClick={() => {
+                    setIsPanelOpen(false);
+                  }}
+                >
+                  {appSection.meta.text}
                 </a>
               </li>
             ))}
