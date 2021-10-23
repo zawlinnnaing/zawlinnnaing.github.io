@@ -16,11 +16,6 @@ export default function HomeContainer() {
         <TransitionContainer>
           <MeCard />
         </TransitionContainer>
-        {/* <div className="absolute bottom-0 left-0 ml-4">
-          <p className="inline-block w-screen text-center subtitle">
-            Scroll for more <ArrowDownIcon className="h-5 w-5 inline-block" />
-          </p>
-        </div> */}
       </div>
     </>
   );
