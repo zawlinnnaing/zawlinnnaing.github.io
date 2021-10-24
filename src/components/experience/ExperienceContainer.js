@@ -34,8 +34,9 @@ export default function ExperienceContainer({ children, location }) {
                     rel="noreferrer"
                   >
                     {experience.companyName}
-                  </a>
-                </p>
+                  </a>{" "}
+                </p>{" "}
+                - <i>{experience.role}</i>
                 {!isEmpty(experience.employmentPeriod) && (
                   <Subtitle>
                     {experience.employmentPeriod.start} -{" "}
