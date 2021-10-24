@@ -1,6 +1,5 @@
 .aboutSection {
   @apply p-4;
-  @apply my-4;
 }
 
 .aboutSectionTitle {
@@ -13,5 +12,5 @@
 }
 
 .contentHeight {
-  height: calc(100vh - 64px - 2rem);
+  height: calc(100vh - 64px - 3.1rem);
 }

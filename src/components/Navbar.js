@@ -11,11 +11,11 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Navbar() {
+export default function Navbar({ className }) {
   useEffect(() => {}, []);
 
   return (
-    <Disclosure as="nav" className="bg-transparent">
+    <Disclosure as="nav" className={`bg-transparent ${className}`}>
       {({ open }) => (
         <>
           <div className="max-w-screen mx-auto px-4 sm:px-0 md:px-2">

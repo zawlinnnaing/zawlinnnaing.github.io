@@ -19,10 +19,12 @@ function FooterIcon({ src, href }) {
   );
 }
 
-export default function Footer() {
+export default function Footer({ className }) {
   return (
     <>
-      <section className="text-center h-12 flex justify-center dark:bg-gray-700 bg-gray-200">
+      <section
+        className={`text-center h-12 justify-center flex dark:bg-gray-700 bg-gray-200 ${className}`}
+      >
         <div className="my-auto">
           Contact me: &nbsp;{" "}
           <FooterIcon

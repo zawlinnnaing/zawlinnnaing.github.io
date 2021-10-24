@@ -34,7 +34,7 @@ export default function Layout({ children, showFooter = true }) {
       </Helmet>
       <Navbar />
       <main className="flex-auto">{children}</main>
-      {showFooter && <Footer />}
+      {showFooter && <Footer className="flex-shrink-0" />}
     </section>
   );
 }
