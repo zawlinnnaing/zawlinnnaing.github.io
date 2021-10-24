@@ -17,7 +17,7 @@ export default function AboutSidebar({ activeId }) {
   }, [isPanelOpen]);
 
   return (
-    <>
+    <aside>
       <div className="lg:border-r-2 lg:border-b-0 border-b-2 border-gray-900 dark:border-white p-4 min-w-200 hidden lg:block">
         <p>Table of content</p>
         <ul className="my-8">
@@ -78,6 +78,6 @@ export default function AboutSidebar({ activeId }) {
           </ul>
         </div>
       </div>
-    </>
+    </aside>
   );
 }

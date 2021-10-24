@@ -4,6 +4,7 @@ import { ScrollingProvider, Section } from "react-scroll-section";
 import styled from "styled-components";
 import AboutSidebar from "../components/about/AboutSidebar";
 import AppLink from "../components/common/AppLink";
+import SEO from "../components/common/SEO";
 import Layout from "../components/Layout";
 import * as styles from "../css/about.module.css";
 
@@ -32,9 +33,7 @@ export default function AboutPage() {
   return (
     <Layout>
       <ScrollingProvider>
-        <Helmet>
-          <title>About me, Zaw Lin Naing</title>
-        </Helmet>
+        <SEO title="About me - Zaw Linn Naing" />
         <section className="lg:flex block lg:gap-4">
           <AboutSidebar />
           <div
