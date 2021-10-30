@@ -1,23 +1,6 @@
 import React from "react";
-import LinkedIn from "../assets/icons/linkedin.png";
-import Gmail from "../assets/icons/gmail.png";
-import GitHub from "../assets/icons/github.png";
-
-function FooterIcon({ src, href }) {
-  return (
-    <>
-      <a href={href} target="_blank" rel="noreferrer">
-        <img
-          className="inline-block"
-          src={src}
-          alt="footer icon"
-          height={16}
-          width={16}
-        />
-      </a>
-    </>
-  );
-}
+import { CONTACT_INFO } from "../utils/constants";
+import AppLinkIcon from "./common/AppLinkIcon";
 
 export default function Footer({ className }) {
   return (
@@ -27,14 +10,24 @@ export default function Footer({ className }) {
       >
         <div className="my-auto">
           Contact me: &nbsp;{" "}
-          <FooterIcon
+          {/* <FooterIcon
             src={LinkedIn}
             href="https://www.linkedin.com/in/zaw-linn-naing-184931159"
           />
           &nbsp;
           <FooterIcon src={Gmail} href="mailto://zawlinnnaing0018@gmail.com" />
           &nbsp;
-          <FooterIcon href="https://github.com/zawlinnnaing" src={GitHub} />
+          <FooterIcon href="https://github.com/zawlinnnaing" src={GitHub} /> */}
+          {CONTACT_INFO.map((contactInfo) => (
+            <span key={contactInfo.name}>
+              <AppLinkIcon
+                href={contactInfo.uri}
+                key={contactInfo.name}
+                src={contactInfo.icon}
+              />
+              &nbsp;
+            </span>
+          ))}
         </div>
       </section>
     </>
