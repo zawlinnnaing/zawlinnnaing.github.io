@@ -1,6 +1,7 @@
 import React from "react";
 import ExpaAI from "../assets/logos/expa-ai.png";
 import Mounts from "../assets/logos/mounts.jpg";
+import Nexlabs from "../assets/logos/nexlabs.jpg";
 import { TECHNOLOGIES } from "../utils/constants";
 
 export default [
@@ -39,6 +40,10 @@ export default [
               Revamped and extended a social commerce platform (using{" "}
               <i>Node.js</i> and <i>React.js</i>) which integrates with Facebook
               API and enables SME users to sell products via Facebook Messenger.
+            </li>
+            <li>
+              Developed live chat plugin (using React.js) that can be used on
+              websites even without React.js.
             </li>
             <li>
               Built <i>an analytics solution</i> for the social commerce
@@ -139,7 +144,48 @@ export default [
         </div>
       </>
     ),
-
     url: "/experience/mounts-digital",
+  },
+  {
+    id: "nexlabs",
+    companyName: "Nexlabs",
+    companyUrl: "https://www.nexlabs.co/",
+    role: "Intern",
+    employmentPeriod: {
+      start: "Dec 2018",
+      end: "Feb 2019",
+      duration: "3 mos",
+    },
+    logo: {
+      uri: Nexlabs,
+      isHorizontal: true,
+    },
+    technologies: [
+      TECHNOLOGIES.laravel,
+      TECHNOLOGIES.mysql,
+      TECHNOLOGIES.vue,
+      TECHNOLOGIES.nuxt,
+    ],
+    summary: (
+      <>
+        <div className="py-2">
+          <h4 className="text-xl pb-1 font-light">CONTRIBUTIONS</h4>
+          <ul className="app-list pl-6">
+            <li>
+              Reviewed code for a project to learn about code architecture,
+              coding styles from senior developers.
+            </li>
+            <li>
+              Collaborated with senior developers in debugging process and
+              removing dead code.
+            </li>
+            <li>
+              Developed a blog app <i>(with Nuxt.js and Laravel)</i> to put my
+              learned skills into use.
+            </li>
+          </ul>
+        </div>
+      </>
+    ),
   },
 ];

@@ -1,4 +1,7 @@
-// eslint-disable-next-line import/prefer-default-export
+import LinkedIn from "../assets/icons/linkedin.png";
+import Email from "../assets/icons/gmail.png";
+import GitHub from "../assets/icons/github.png";
+
 export const ROUTES = Object.freeze([
   { name: "Home", href: "/" },
   { name: "Experience", href: "/experience" },
@@ -67,4 +70,26 @@ export const TECHNOLOGIES = {
     text: "Google Map API",
     url: "https://developers.google.com/maps",
   },
+  nuxt: {
+    text: "Nuxt.js",
+    url: "https://nuxtjs.org/",
+  },
 };
+
+export const CONTACT_INFO = [
+  {
+    icon: LinkedIn,
+    name: "LinkedIn",
+    uri: "https://www.linkedin.com/in/zaw-linn-naing-184931159",
+  },
+  {
+    icon: GitHub,
+    name: "Github",
+    uri: "https://github.com/zawlinnnaing",
+  },
+  {
+    icon: Email,
+    name: "Gmail",
+    uri: "mailto://zawlinnnaing0018@gmail.com",
+  },
+];
