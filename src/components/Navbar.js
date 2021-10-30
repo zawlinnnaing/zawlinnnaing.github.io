@@ -5,6 +5,7 @@ import AniLink from "gatsby-plugin-transition-link/AniLink";
 import React, { createRef, useEffect } from "react";
 import { ROUTES } from "../utils/constants";
 import { getInitTheme, THEME_MODES } from "../utils/theme";
+import AppAniLink from "./common/AppAniLink";
 import ThemeToggle from "./ThemeToggle";
 
 function classNames(...classes) {
@@ -32,7 +33,16 @@ export default function Navbar({ className }) {
               </div>
               <div className="flex items-center justify-center sm:items-stretch sm:justify-center w-full">
                 <div className="hidden sm:flex sm:mx-6 w-full">
-                  <div className="flex flex-auto space-x-4 items-center" />
+                  <div className="flex flex-auto space-x-2 items-center">
+                    <div className="mt-2">
+                      <ThemeToggle />
+                    </div>
+                    <AppAniLink to="/">
+                      <h1 className="text-xl text-green-500 font-bold">
+                        Zaw Linn Naing
+                      </h1>
+                    </AppAniLink>
+                  </div>
                   <div className="flex flex-none items-center">
                     {ROUTES.map((item) => (
                       <AniLink
@@ -56,13 +66,6 @@ export default function Navbar({ className }) {
                         {item.name}
                       </AniLink>
                     ))}{" "}
-                    <ThemeToggle />
-                    {/* <div className="py-2 pt-4 flex"> */}
-                    {/* <ThemeToggle /> */}
-                    {/* </div> */}
-                    {/* <div className="mt-2">
-                      <LocalizationMenu />
-                    </div> */}
                   </div>
                 </div>
               </div>
@@ -70,13 +73,10 @@ export default function Navbar({ className }) {
           </div>
 
           <Disclosure.Panel className="sm:hidden transition-all px-4 divide-y divide-black dark:divide-white bg-gray-100 dark:bg-gray-800">
-            <div className="px-2 pt-2 pb-3 space-y-1">
+            <div className="p-2 space-y-1">
               {ROUTES.map((item) => (
-                <AniLink
+                <AppAniLink
                   cover
-                  bg={
-                    getInitTheme() === THEME_MODES.dark ? "#111827" : "#F9FAFB"
-                  }
                   duration={1}
                   key={item.name}
                   to={item.href}
@@ -87,10 +87,9 @@ export default function Navbar({ className }) {
                       isCurrent && "active-navbar-item-mobile"
                     ),
                   })}
-                  aria-current={item.current ? "page" : undefined}
                 >
                   {item.name}
-                </AniLink>
+                </AppAniLink>
               ))}
             </div>
             <div className="flex">
