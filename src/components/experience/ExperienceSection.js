@@ -5,6 +5,7 @@ import { isEmpty } from "lodash";
 import React, { useState } from "react";
 import Subtitle from "../common/Subtitle";
 import Tag from "../common/Tag";
+import * as styles from "../../css/experience.module.css";
 
 function Logo({ logo }) {
   return (
@@ -44,11 +45,13 @@ export default function ExperienceSection({ experience }) {
             {experience.employmentPeriod.duration})
           </Subtitle>
           <p
-            className="break-words list-disc"
-            dangerouslySetInnerHTML={{
-              __html: experience.summary,
-            }}
-          />
+            className={`break-words list-disc ${styles.summary}`}
+            // dangerouslySetInnerHTML={{
+            //   __html: experience.summary,
+            // }}
+          >
+            {experience.summary}
+          </p>
           <div
             className={`overflow-hidden my-2 ${isExpanded ? "h-auto" : "h-0"}`}
           >
@@ -65,18 +68,7 @@ export default function ExperienceSection({ experience }) {
             ))}
           </div>
 
-          <div>
-            {/* <Link
-              className="text-green-500 hover:underline"
-              href={experience.url}
-            >
-              {isExpanded ? "Less details" : "More details"} &nbsp;
-              {isExpanded ? (
-                <ChevronDoubleUpIcon className="w-3 h-3 inline-block" />
-              ) : (
-                <ChevronDoubleRightIcon className="w-3 h-3 inline-block" />
-              )}
-            </Link> */}
+          {/* <div>
             <Link
               className="text-green-500 hover:underline"
               to={`./${experience.id}`}
@@ -84,7 +76,7 @@ export default function ExperienceSection({ experience }) {
               More details &nbsp;{" "}
               <ChevronDoubleRightIcon className="w-3 h-3 inline-block" />
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

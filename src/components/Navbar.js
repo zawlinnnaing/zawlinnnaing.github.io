@@ -32,7 +32,8 @@ export default function Navbar({ className }) {
               </div>
               <div className="flex items-center justify-center sm:items-stretch sm:justify-center w-full">
                 <div className="hidden sm:flex sm:mx-6 w-full">
-                  <div className="flex flex-auto space-x-4 items-center">
+                  <div className="flex flex-auto space-x-4 items-center" />
+                  <div className="flex flex-none items-center">
                     {ROUTES.map((item) => (
                       <AniLink
                         cover
@@ -54,12 +55,11 @@ export default function Navbar({ className }) {
                       >
                         {item.name}
                       </AniLink>
-                    ))}
-                  </div>
-                  <div className="flex flex-none">
-                    <div className="py-2 pt-4 flex">
-                      <ThemeToggle />
-                    </div>
+                    ))}{" "}
+                    <ThemeToggle />
+                    {/* <div className="py-2 pt-4 flex"> */}
+                    {/* <ThemeToggle /> */}
+                    {/* </div> */}
                     {/* <div className="mt-2">
                       <LocalizationMenu />
                     </div> */}

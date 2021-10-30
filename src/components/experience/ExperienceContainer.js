@@ -19,7 +19,7 @@ export default function ExperienceContainer({ children, location }) {
       />
       <Layout>
         <>
-          <div className="flex border-b-2 shadow-sm sticky top-0 bg-white dark:bg-gray-900">
+          <div className="flex border-b-2 dark:border-gray-800 shadow-sm sticky top-0 bg-white dark:bg-gray-900">
             <div className="py-5 px-4 m-auto">
               <Link to="/experience" replace>
                 <ArrowLeftIcon className="w-4 h-4" />

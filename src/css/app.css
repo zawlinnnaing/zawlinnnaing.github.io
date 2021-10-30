@@ -44,7 +44,7 @@ body {
 }
 
 .navbar-item {
-  @apply px-3 py-2 text-base font-medium;
+  @apply px-3 py-2 text-base font-medium mx-2;
   @apply text-gray-500 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white;
   @apply md:hover:border-black border-b-4 border-transparent md:dark:hover:border-white;
 }
@@ -73,6 +73,14 @@ body {
 
 .app-link {
   @apply text-green-500 hover:underline;
+}
+
+.app-list {
+  @apply list-disc list-outside;
+}
+
+.app-span {
+  @apply text-green-500;
 }
 
 .active-link {

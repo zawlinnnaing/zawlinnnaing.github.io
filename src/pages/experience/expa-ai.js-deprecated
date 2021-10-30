@@ -1,0 +1,14 @@
+import React from "react";
+import ExperienceContainer from "../../components/experience/ExperienceContainer";
+import useGetExperience from "../../components/experience/useGetExperience";
+
+export default function ExpaAIPage({ location }) {
+  const experience = useGetExperience(location);
+  return (
+    <>
+      <ExperienceContainer location={location}>
+        At Expa.AI, I have worked as a <span className="app-span">Full-Stack Developer</span> on two platforms.
+      </ExperienceContainer>
+    </>
+  );
+}

@@ -1,6 +1,6 @@
+import React from "react";
 import ExpaAI from "../assets/logos/expa-ai.png";
 import Mounts from "../assets/logos/mounts.jpg";
-
 import { TECHNOLOGIES } from "../utils/constants";
 
 export default [
@@ -30,11 +30,51 @@ export default [
       TECHNOLOGIES.docker,
       TECHNOLOGIES.kubernetes,
     ],
-    summary:
-      "At Expa.AI, I worked as the core developer of <i>the social commerce platform</i>, which enables SME users to sell products via Facebook Messenger. I have also built <i>an analytics solution</i> for users to gain insight into how their storefronts are doing. " +
-      "I was also part of the team that builds <i>custom support and marketing solution</i>, and responsible for the <i>automatic deployment of AI models</i>.<br/>" +
-      "<i>Main challenges I overcame during my time in the company includes;</i>" +
-      '<ul class="list-disc list-inside"><li>Ensured product quality through rapid iterations of the development process</li><li>Implemented Event-Driven Architecture for storing user activity logs.</li><li>Solved N+1 problems and IAM on GraphQL server.</li></ul>',
+    summary: (
+      <>
+        <div className="py-2">
+          <h4 className="text-xl pb-1 font-light">ACHIEVEMENTS</h4>
+          <ul className="list-disc pl-6">
+            <li>
+              Revamped and extended a social commerce platform (using{" "}
+              <i>Node.js</i> and <i>React.js</i>) which integrates with Facebook
+              API and enables SME users to sell products via Facebook Messenger.
+            </li>
+            <li>
+              Built <i>an analytics solution</i> for the social commerce
+              platform (with <i>Node.js</i> and{" "}
+              <i>open-source data visualization library</i>) which enables users
+              to gain insight into their storefronts.
+            </li>
+            <li>
+              Coded <i>an AI-driven feature</i> that delivers automated
+              responses, on behalf of businesses, to customers’ queries, and
+              enables businesses to improve AI models iteratively using
+              real-world conversations over time.
+            </li>
+            <li>
+              Worked on the AI management server which allows businesses to
+              deploy their own models instantly on the dashboard, and
+              automatically scales those models depending on the usage.
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 className="text-xl pb-1 font-light">CHALLENGES</h4>
+          <ul className="list-disc pl-6">
+            <li>
+              Ensured product quality through rapid iterations of the
+              development process
+            </li>
+            <li>
+              Implemented Event-Driven Architecture for storing user activity
+              logs.
+            </li>
+            <li>Solved N+1 problems and implemented IAM on GraphQL server.</li>
+          </ul>
+        </div>
+      </>
+    ),
   },
   {
     id: "mounts-digital",
@@ -57,7 +97,49 @@ export default [
       TECHNOLOGIES.firebase,
       TECHNOLOGIES.googleMap,
     ],
-    summary: "",
+    summary: (
+      <>
+        <div className="py-2">
+          <h4 className="text-xl pb-1 font-light">ACHIEVEMENTS</h4>
+          <ul className="app-list pl-6">
+            <li>
+              Developed backend system for ERP solutions using{" "}
+              <i>Laravel and MySQL</i>.
+            </li>
+            <li>
+              Built a location tracking feature for the delivery management
+              platform by integrating with{" "}
+              <i>Firebase and Google Map&lsquo;s API</i>.
+            </li>
+            <li>
+              Developed video chatting feature by integrating with{" "}
+              <i>open-source library and using Javascript</i>.
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 className="text-xl pb-1 font-light">CHALLENGES</h4>
+          <ul className="app-list pl-6">
+            <li>
+              Designing DB schema for ERP systems that fit business needs.
+            </li>
+            <li>
+              Ensuring consistency and robustness for cascading writes across
+              multiple tables.
+            </li>
+            <li>
+              Writing and debugging complex and performant queries that span
+              across multiple tables.
+            </li>
+            <li>
+              Designing REST APIs for multiple platforms including web, android
+              and ios.
+            </li>
+          </ul>
+        </div>
+      </>
+    ),
+
     url: "/experience/mounts-digital",
   },
 ];
