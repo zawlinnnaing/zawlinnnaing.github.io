@@ -1,6 +1,7 @@
 import LinkedIn from "../assets/icons/linkedin.png";
 import Email from "../assets/icons/gmail.png";
-import GitHub from "../assets/icons/github.png";
+import GitHubDark from "../assets/icons/github-dark.png";
+import GitHubLight from "../assets/icons/github-light.png";
 
 export const ROUTES = Object.freeze([
   { name: "Home", href: "/" },
@@ -83,7 +84,8 @@ export const CONTACT_INFO = [
     uri: "https://www.linkedin.com/in/zaw-linn-naing-184931159",
   },
   {
-    icon: GitHub,
+    icon: GitHubDark,
+    iconLight: GitHubLight,
     name: "Github",
     uri: "https://github.com/zawlinnnaing",
   },

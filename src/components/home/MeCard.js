@@ -1,10 +1,12 @@
 import React from "react";
+import useAppContext from "../../hooks/useAppContext";
 import MyImage from "../../images/me.jpg";
 import { CONTACT_INFO } from "../../utils/constants";
 import AppCard from "../common/AppCard";
 import AppLinkIcon from "../common/AppLinkIcon";
 
 export default function MeCard() {
+  const { isDarkMode } = useAppContext();
   return (
     <>
       <AppCard>
@@ -24,7 +26,11 @@ export default function MeCard() {
               <span className="px-1">
                 <AppLinkIcon
                   href={contact.uri}
-                  src={contact.icon}
+                  src={
+                    isDarkMode
+                      ? contact.icon
+                      : contact.iconLight || contact.icon
+                  }
                   key={contact.name}
                   size={24}
                 />

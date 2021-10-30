@@ -1,8 +1,10 @@
 import React from "react";
+import useAppContext from "../hooks/useAppContext";
 import { CONTACT_INFO } from "../utils/constants";
 import AppLinkIcon from "./common/AppLinkIcon";
 
 export default function Footer({ className }) {
+  const { isDarkMode } = useAppContext();
   return (
     <>
       <section
@@ -10,20 +12,17 @@ export default function Footer({ className }) {
       >
         <div className="my-auto">
           Contact me: &nbsp;{" "}
-          {/* <FooterIcon
-            src={LinkedIn}
-            href="https://www.linkedin.com/in/zaw-linn-naing-184931159"
-          />
-          &nbsp;
-          <FooterIcon src={Gmail} href="mailto://zawlinnnaing0018@gmail.com" />
-          &nbsp;
-          <FooterIcon href="https://github.com/zawlinnnaing" src={GitHub} /> */}
           {CONTACT_INFO.map((contactInfo) => (
             <span key={contactInfo.name}>
               <AppLinkIcon
+                size={20}
                 href={contactInfo.uri}
                 key={contactInfo.name}
-                src={contactInfo.icon}
+                src={
+                  isDarkMode
+                    ? contactInfo.icon || contactInfo.iconLight
+                    : contactInfo.icon
+                }
               />
               &nbsp;
             </span>
