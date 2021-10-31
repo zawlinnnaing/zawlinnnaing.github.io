@@ -32,13 +32,13 @@ const SECTIONS = [
 export default function AboutPage() {
   return (
     <>
-      <SEO title="About me - Zaw Lin Naing" />
       <Layout>
+        <SEO title="About me - Zaw Lin Naing" />
         <ScrollingProvider>
           <section className="lg:flex block lg:gap-4">
             <AboutSidebar />
             <div
-              className={`flex-grow max-w-screen ${styles.contentHeight} overflow-y-scroll`}
+              className={`flex-grow max-w-screen ${styles.contentHeight} overflow-y-scroll ${styles.aboutContainer}`}
             >
               <Section
                 id="tldr"

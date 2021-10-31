@@ -23,7 +23,7 @@ export default function MeCard() {
           </p>
           <p className="py-2">
             {CONTACT_INFO.map((contact) => (
-              <span className="px-1">
+              <span className="px-1" key={contact.name}>
                 <AppLinkIcon
                   href={contact.uri}
                   src={

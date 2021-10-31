@@ -18,7 +18,6 @@ const DEFAULT_DESCRIPTION =
 export default function SEO({
   title = "Hi, I am Zaw Linn Naing",
   description = DEFAULT_DESCRIPTION,
-  //   keywords = [],
 }) {
   return (
     <>

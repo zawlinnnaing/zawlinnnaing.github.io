@@ -1,4 +1,3 @@
-import { ArrowDownIcon } from "@heroicons/react/outline";
 import React, { useEffect, useState } from "react";
 import TransitionContainer from "../common/TransitionContainer";
 import MeCard from "./MeCard";

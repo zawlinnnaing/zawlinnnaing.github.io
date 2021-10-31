@@ -34,7 +34,7 @@ export default [
     summary: (
       <>
         <div className="py-2">
-          <h4 className="text-xl pb-1 font-light">ACHIEVEMENTS</h4>
+          <h4 className="text-xl pb-1 font-light">CONTRIBUTIONS</h4>
           <ul className="list-disc pl-6">
             <li>
               Revamped and extended a social commerce platform (using{" "}
@@ -105,7 +105,7 @@ export default [
     summary: (
       <>
         <div className="py-2">
-          <h4 className="text-xl pb-1 font-light">ACHIEVEMENTS</h4>
+          <h4 className="text-xl pb-1 font-light">CONTRIBUTIONS</h4>
           <ul className="app-list pl-6">
             <li>
               Developed backend system for ERP solutions using{" "}

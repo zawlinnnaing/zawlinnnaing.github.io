@@ -16,7 +16,10 @@ export default function Navbar({ className }) {
   useEffect(() => {}, []);
 
   return (
-    <Disclosure as="nav" className={`bg-transparent ${className}`}>
+    <Disclosure
+      as="nav"
+      className={`dark:bg-gray-900 bg-white ${className} border-b-2 z-50 shadow-sm sticky top-0`}
+    >
       {({ open }) => (
         <>
           <div className="max-w-screen mx-auto px-4 sm:px-0 md:px-2">
