@@ -4,10 +4,11 @@ import GitHubDark from "../assets/icons/github-dark.png";
 import GitHubLight from "../assets/icons/github-light.png";
 
 export const ROUTES = Object.freeze([
-  { name: "Home", href: "/" },
+  // { name: "Home", href: "/" },
   { name: "Experience", href: "/experience" },
   { name: "Projects", href: "/projects" },
   { name: "About me", href: "/about" },
+  { name: "Contact", href: "/contact" },
 ]);
 
 export const TECHNOLOGIES = {
@@ -81,17 +82,20 @@ export const CONTACT_INFO = [
   {
     icon: LinkedIn,
     name: "LinkedIn",
-    uri: "https://www.linkedin.com/in/zaw-linn-naing-184931159",
+    text: "zlnaing",
+    uri: "https://www.linkedin.com/in/zlnaing/",
   },
   {
     icon: GitHubDark,
     iconLight: GitHubLight,
     name: "Github",
+    text: "zawlinnnaing",
     uri: "https://github.com/zawlinnnaing",
   },
   {
     icon: Email,
     name: "Gmail",
+    text: "zawlinnnaing0018@gmail.com",
     uri: "mailto://zawlinnnaing0018@gmail.com",
   },
 ];
