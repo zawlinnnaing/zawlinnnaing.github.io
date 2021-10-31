@@ -43,7 +43,7 @@ export default function Layout({ children, showFooter = true }) {
           />
         </Helmet>
         <Navbar />
-        <main className="flex-auto container mx-auto lg:px-8">{children}</main>
+        <main className="flex-auto container mx-auto xl:px-8">{children}</main>
         {showFooter && <Footer className="flex-shrink-0" />}
       </section>
     </AppContext.Provider>

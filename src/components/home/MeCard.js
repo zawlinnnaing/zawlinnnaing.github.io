@@ -9,7 +9,7 @@ export default function MeCard() {
   const { isDarkMode } = useAppContext();
   return (
     <>
-      <AppCard>
+      <AppCard className="app-card" size="small">
         <img
           src={MyImage}
           alt="My profile"
@@ -19,7 +19,8 @@ export default function MeCard() {
           <p className="">Hi, I am</p>
           <p className="text-2xl font-bold">Zaw Lin Naing</p>
           <p>
-            A software engineer, who builds things for fun and professionally.
+            A software engineer, who builds mostly web-related stuff but not
+            limited to it and likes to build things for fun and professionally.
           </p>
           <p className="py-2">
             {CONTACT_INFO.map((contact) => (

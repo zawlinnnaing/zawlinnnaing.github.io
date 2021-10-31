@@ -11,7 +11,7 @@ export default function HomeContainer() {
 
   return (
     <>
-      <div className="h-screen-90 text-center">
+      <div className="h-screen-4by6 text-center">
         <TransitionContainer>
           <MeCard />
         </TransitionContainer>

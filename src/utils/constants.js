@@ -20,6 +20,18 @@ export const TECHNOLOGIES = {
     text: "Node.js",
     url: "https://nodejs.org",
   },
+  gatsbyJs: {
+    text: "Gatsby.js",
+    url: "https://www.gatsbyjs.com/",
+  },
+  tailwindCSS: {
+    text: "Tailwind CSS",
+    url: "https://tailwindcss.com/",
+  },
+  githubPage: {
+    text: "GitHub Page",
+    url: "https://pages.github.com/",
+  },
   laravel: {
     text: "Laravel",
     url: "https://laravel.com/",

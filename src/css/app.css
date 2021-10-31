@@ -43,6 +43,15 @@ body {
   height: 90vh;
 }
 
+.app-card {
+  max-width: 500px;
+  margin: 0 1rem;
+}
+
+.min-h-1 {
+  min-height: 1rem;
+}
+
 .navbar-item {
   @apply px-3 py-2 text-base font-medium mx-2;
   @apply text-gray-500 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white;
