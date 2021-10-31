@@ -10,18 +10,12 @@ export default function ContactPage() {
   return (
     <>
       <Layout showFooter={false}>
-        <SEO title="Contact Information - Zaw Linn Naing" />
+        <SEO title="Contact Me - Zaw Linn Naing" />
         <div className="h-screen-4by6 text-center text-white dark:text-gray-900">
           <TransitionContainer>
-            <AppCard
-              title={
-                <div className="text-xl font-bold pl-8">
-                  Contact Information
-                </div>
-              }
-              className="top-1/4 text-left"
-            >
-              <p>
+            <AppCard className="top-1/4 text-left p-6" size="small">
+              <div className="text-xl font-bold mb-2">Contact Me</div>
+              <p className="mb-2">
                 I am currently looking for opportunities abroad and available to
                 hire. Feel free to drop me a message.
               </p>

@@ -35,7 +35,5 @@ export function getInitTheme() {
   if (!localStorage || !("theme" in localStorage)) {
     return defaultTheme;
   }
-  return localStorage.getItem("theme")
-    ? localStorage.getItem("theme")
-    : defaultTheme;
+  return localStorage.getItem("theme") || defaultTheme;
 }
