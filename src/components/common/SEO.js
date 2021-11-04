@@ -27,6 +27,9 @@ export default function SEO({
         <meta name="description" content={description} />
         <meta name="author" content="Zaw Linn Naing" />
         <meta name="robot" content="index nofollow" />
+        <meta property="og:title" content={title} />
+        <meta property="og:locale" content="en_GB" />
+        <meta property="og:type" content="website" />
       </Helmet>
     </>
   );

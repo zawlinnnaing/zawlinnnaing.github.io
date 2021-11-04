@@ -4,6 +4,12 @@
 
 :root {
   --accent-color: #10b981;
+  --mobile-card-width: {
+    max-width: 90vw;
+  }
+  --desktop-card-width: {
+    max-width: 500px;
+  }
 }
 
 ::selection {
@@ -43,8 +49,22 @@ body {
   height: 90vh;
 }
 
-.app-card {
+.max-w-90 {
   max-width: 90vw;
+}
+
+.max-w-500px {
+  max-width: 500px;
+}
+
+@media screen and (max-width: 1280px) {
+  .app-card {
+    max-width: 86vw;
+  }
+}
+
+.app-card {
+  max-width: 500px;
   margin: 0 1rem;
   overflow: hidden;
 }
