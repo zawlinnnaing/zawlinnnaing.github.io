@@ -11,7 +11,7 @@ export default function ProjectSection({ project }) {
   return (
     <>
       <div className="lg:flex">
-        <div className="p-2 lg:border-r-4 lg:w-96 text-center">
+        <div className="p-2 lg:border-r-2 lg:border-gray-500 lg:w-52 flex-none text-center">
           {!isEmpty(project.logo) && (
             <div className="my-2">
               <Avatar {...project.logo} size={64} />

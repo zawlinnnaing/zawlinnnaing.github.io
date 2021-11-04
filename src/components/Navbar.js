@@ -50,9 +50,6 @@ export default function Navbar({ className }) {
               <div className="flex items-center justify-center sm:items-stretch sm:justify-center w-full">
                 <div className="hidden sm:flex sm:mx-6 w-full">
                   <div className="flex flex-auto space-x-2 items-center">
-                    <div className="mt-2">
-                      <ThemeToggle />
-                    </div>
                     <AppAniLink to="/">
                       <h1 className="text-xl text-green-500 font-bold">
                         Zaw Linn Naing
@@ -83,6 +80,9 @@ export default function Navbar({ className }) {
                       </AniLink>
                     ))}
                     <ResumeLink />
+                    <div className="mt-2">
+                      <ThemeToggle />
+                    </div>
                   </div>
                 </div>
               </div>

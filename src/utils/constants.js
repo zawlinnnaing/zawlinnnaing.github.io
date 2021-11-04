@@ -88,6 +88,19 @@ export const TECHNOLOGIES = {
     text: "Nuxt.js",
     url: "https://nuxtjs.org/",
   },
+  flutter: {
+    text: "Flutter",
+    url: "https://flutter.dev/",
+  },
+
+  python: {
+    text: "Python",
+    url: "https://www.python.org/",
+  },
+  tensorflow: {
+    text: "Tensorflow",
+    url: "https://www.tensorflow.org/",
+  },
 };
 
 export const CONTACT_INFO = [

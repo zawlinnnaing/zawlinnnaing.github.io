@@ -19,7 +19,7 @@ export default function ContactPage() {
             >
               <div className="text-xl font-bold mb-2">Contact Me</div>
               <p className="mb-2">
-                I am currently available to hire. Feel free to drop me a
+                I am currently available for hire. Feel free to drop me a
                 message.
               </p>
               <section>

@@ -36,7 +36,9 @@ export default function Avatar({
   return (
     <>
       <img
-        className={`${shape === "circle" ? "rounded" : ""}`}
+        className={`${
+          shape === "circle" ? "rounded" : ""
+        } inline-block mx-auto`}
         alt={alt}
         src={src}
         height={size}
