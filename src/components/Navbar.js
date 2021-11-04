@@ -2,14 +2,27 @@
 import { Disclosure } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
-import React, { createRef, useEffect } from "react";
+import React, { useEffect } from "react";
 import { ROUTES } from "../utils/constants";
 import { getInitTheme, THEME_MODES } from "../utils/theme";
 import AppAniLink from "./common/AppAniLink";
+import AppLink from "./common/AppLink";
 import ThemeToggle from "./ThemeToggle";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
+}
+
+function ResumeLink({ className }) {
+  return (
+    <AppLink
+      href="https://docs.google.com/document/d/1h_xXqL4aGX7d1TeOchFUuPUt7CXGGj7j3J7zKJeKXGc/edit?usp=sharing"
+      openInNewWindow
+      className={`px-3 py-2 text-base font-medium mx-2 ${className}`}
+    >
+      Resume
+    </AppLink>
+  );
 }
 
 export default function Navbar({ className }) {
@@ -68,7 +81,8 @@ export default function Navbar({ className }) {
                       >
                         {item.name}
                       </AniLink>
-                    ))}{" "}
+                    ))}
+                    <ResumeLink />
                   </div>
                 </div>
               </div>
@@ -77,6 +91,20 @@ export default function Navbar({ className }) {
 
           <Disclosure.Panel className="sm:hidden transition-all px-4 divide-y divide-black dark:divide-white bg-gray-100 dark:bg-gray-800">
             <div className="p-2 space-y-1">
+              <AppAniLink
+                cover
+                key="home"
+                to="/"
+                getProps={({ isCurrent }) => ({
+                  className: classNames(
+                    "navbar-item",
+                    "block",
+                    isCurrent && "active-navbar-item-mobile"
+                  ),
+                })}
+              >
+                Home
+              </AppAniLink>
               {ROUTES.map((item) => (
                 <AppAniLink
                   cover
@@ -94,14 +122,12 @@ export default function Navbar({ className }) {
                   {item.name}
                 </AppAniLink>
               ))}
+              <ResumeLink className="mb-2 inline-block" />
             </div>
             <div className="flex">
               <div className="flex-auto p-2 pt-4">
                 <ThemeToggle />
               </div>
-              {/* <div className="p-2">
-                <LocalizationMenu />
-              </div> */}
             </div>
           </Disclosure.Panel>
         </>

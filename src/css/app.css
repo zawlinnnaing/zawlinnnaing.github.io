@@ -44,8 +44,9 @@ body {
 }
 
 .app-card {
-  max-width: 500px;
+  max-width: 90vw;
   margin: 0 1rem;
+  overflow: hidden;
 }
 
 .min-h-1 {
@@ -81,7 +82,7 @@ body {
 }
 
 .app-link {
-  @apply text-green-500 hover:underline;
+  @apply text-green-500 hover:underline text-base;
 }
 
 .app-list {
