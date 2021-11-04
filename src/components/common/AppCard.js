@@ -14,17 +14,13 @@ export default function AppCard({ className, children, title, size }) {
       >
         {title &&
           (isString(title) ? (
-            <div
-              className={`${sizeStyleClass} text-xl font-bold text-white dark:text-gray-900`}
-            >
+            <div className="text-xl font-bold text-white dark:text-gray-900">
               {title}
             </div>
           ) : (
             title
           ))}
-        <div className={`${sizeStyleClass} text-white dark:text-gray-900`}>
-          {children}
-        </div>
+        <div className="text-white dark:text-gray-900">{children}</div>
       </figure>
     </>
   );
