@@ -29,8 +29,8 @@ export default function MeCard() {
                   href={contact.uri}
                   src={
                     isDarkMode
-                      ? contact.icon
-                      : contact.iconLight || contact.icon
+                      ? contact.iconLight || contact.icon
+                      : contact.icon
                   }
                   key={contact.name}
                   size={24}

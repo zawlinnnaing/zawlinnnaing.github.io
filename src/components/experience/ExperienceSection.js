@@ -22,8 +22,8 @@ export default function ExperienceSection({ experience }) {
 
   return (
     <>
-      <div className="lg:flex max-w-screen">
-        <div className="lg:border-r-2 lg:border-gray-500 p-4 w-52 mx-auto">
+      <div className="my-2">
+        <div className=" lg:border-gray-500 p-4 mx-auto">
           <div className="m-auto text-center">
             <div className="mb-4">
               <Logo logo={experience.logo} />

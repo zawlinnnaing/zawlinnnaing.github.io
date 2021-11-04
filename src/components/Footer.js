@@ -8,7 +8,7 @@ export default function Footer({ className }) {
   return (
     <>
       <section
-        className={`text-center h-12 justify-center flex dark:bg-gray-700 bg-gray-200 ${className}`}
+        className={`text-center h-12 justify-center flex border-t-2 dark:border-gray-500 ${className}`}
       >
         <div className="my-auto">
           Contact me: &nbsp;{" "}
@@ -20,7 +20,7 @@ export default function Footer({ className }) {
                 key={contactInfo.name}
                 src={
                   isDarkMode
-                    ? contactInfo.icon || contactInfo.iconLight
+                    ? contactInfo.iconLight || contactInfo.icon
                     : contactInfo.icon
                 }
               />

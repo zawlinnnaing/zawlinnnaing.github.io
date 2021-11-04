@@ -35,9 +35,9 @@ export default function Navbar({ className }) {
     >
       {({ open }) => (
         <>
-          <div className="max-w-screen mx-auto px-4 sm:px-0 md:px-2">
+          <div className="max-w-screen mx-auto">
             <div className="relative flex items-center justify-between h-16">
-              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <div className="flex items-center sm:hidden">
                 <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
@@ -47,15 +47,8 @@ export default function Navbar({ className }) {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex items-center justify-center sm:items-stretch sm:justify-center w-full">
-                <div className="hidden sm:flex sm:mx-6 w-full">
-                  <div className="flex flex-auto space-x-2 items-center">
-                    <AppAniLink to="/">
-                      <h1 className="text-xl text-green-500 font-bold">
-                        Zaw Linn Naing
-                      </h1>
-                    </AppAniLink>
-                  </div>
+              <div className="flex items-center justify-center sm:items-stretch sm:justify-center">
+                <div className="hidden sm:block">
                   <div className="flex flex-none items-center">
                     {ROUTES.map((item) => (
                       <AniLink
@@ -91,20 +84,6 @@ export default function Navbar({ className }) {
 
           <Disclosure.Panel className="sm:hidden transition-all px-4 divide-y divide-black dark:divide-white bg-gray-100 dark:bg-gray-800">
             <div className="p-2 space-y-1">
-              <AppAniLink
-                cover
-                key="home"
-                to="/"
-                getProps={({ isCurrent }) => ({
-                  className: classNames(
-                    "navbar-item",
-                    "block",
-                    isCurrent && "active-navbar-item-mobile"
-                  ),
-                })}
-              >
-                Home
-              </AppAniLink>
               {ROUTES.map((item) => (
                 <AppAniLink
                   cover

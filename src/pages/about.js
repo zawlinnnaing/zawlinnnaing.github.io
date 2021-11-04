@@ -35,7 +35,7 @@ export default function AboutPage() {
       <Layout>
         <SEO title="About me - Zaw Lin Naing" />
         <ScrollingProvider>
-          <section className="lg:flex block lg:gap-4">
+          <section className="block">
             <AboutSidebar />
             <div
               className={`flex-grow max-w-screen ${styles.contentHeight} overflow-y-scroll ${styles.aboutContainer}`}

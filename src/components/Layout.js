@@ -34,14 +34,7 @@ export default function Layout({ children, showFooter = true }) {
         setIsDarkMode,
       }}
     >
-      <section className="flex flex-col h-screen">
-        <Helmet>
-          <title>Zaw Linn Naing</title>
-          <meta
-            name="description"
-            content="My portfolio website, I am software engineer"
-          />
-        </Helmet>
+      <section className="flex flex-col max-w-2xl mx-auto">
         <Navbar />
         <main className="flex-auto container mx-auto xl:px-8">{children}</main>
         {showFooter && <Footer className="flex-shrink-0" />}

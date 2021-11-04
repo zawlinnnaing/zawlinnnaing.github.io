@@ -18,7 +18,7 @@ export default function AboutSidebar({ activeId }) {
 
   return (
     <aside>
-      <div className="lg:border-r-2 lg:border-b-0 border-b-2 border-gray-900 dark:border-white p-4 min-w-200 hidden lg:block">
+      {/* <div className="lg:border-r-2 lg:border-b-0 border-b-2 border-gray-900 dark:border-white p-4 min-w-200 hidden lg:block">
         <p>Table of content</p>
         <ul className="my-8">
           {sections.map((appSection) => (
@@ -42,8 +42,8 @@ export default function AboutSidebar({ activeId }) {
             </li>
           ))}
         </ul>
-      </div>
-      <div className="lg:hidden block p-4">
+      </div> */}
+      <div className="block p-4 shadow-sm border-b-2">
         <div className="flex justify-between">
           <p>Table of content</p>
           <button className="block" type="button" onClick={onPanelBtnClick}>

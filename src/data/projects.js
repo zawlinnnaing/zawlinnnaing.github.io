@@ -42,14 +42,15 @@ export default [
     },
     summary: (
       <>
-        This is the first website I built using both{" "}
-        <i>Gatsby.js and Tailwind CSS</i>. I also implemented Continuous
-        Delivery (CD) mechanism using{" "}
+        This portfolio website is built using both{" "}
+        <i>Gatsby.js and Tailwind CSS</i>. I also enabled DevOps using{" "}
         <AppLink href="https://github.com/features/actions">
           GitHub Actions
         </AppLink>{" "}
-        to enable deploying the website to <i>GitHub Page</i> continuously every
-        time I push code changes to a specified branch.
+        which deploy the website to <i>GitHub Page</i> every time I push code
+        changes to a specified branch. I built this website as an opportunity to
+        learn two technologies I have been wanting to learn, <i>Gatsby.js</i>{" "}
+        and <i>DevOps</i>.
       </>
     ),
     technologies: [
@@ -75,7 +76,8 @@ export default [
     },
     summary: (
       <>
-        I forked from{" "}
+        I built this project as my graduation thesis and also a way to learn
+        in-depth about <i>Tensorflow</i>. I forked from{" "}
         <AppLink href="https://github.com/KIMSEUNGGYU/AI-Art-Lab/tree/master/Creative_adversarial_networks_tensorflow">
           the original repo
         </AppLink>{" "}
