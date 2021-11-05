@@ -8,6 +8,7 @@ import { getInitTheme, THEME_MODES } from "../utils/theme";
 import AppAniLink from "./common/AppAniLink";
 import AppLink from "./common/AppLink";
 import ThemeToggle from "./ThemeToggle";
+import ResumePDF from "../assets/resume-.pdf";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -16,7 +17,7 @@ function classNames(...classes) {
 function ResumeLink({ className }) {
   return (
     <AppLink
-      href="https://docs.google.com/document/d/1h_xXqL4aGX7d1TeOchFUuPUt7CXGGj7j3J7zKJeKXGc/edit?usp=sharing"
+      href={ResumePDF}
       openInNewWindow
       className={`px-3 py-2 text-base font-medium mx-2 ${className}`}
     >
