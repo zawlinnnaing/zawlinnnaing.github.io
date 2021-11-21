@@ -1,6 +1,7 @@
-import React from "react";
+import React, { Suspense } from "react";
 import useAppContext from "../../hooks/useAppContext";
-import MyImage from "../../images/me.jpg";
+import MyDarkImage from "../../assets/images/me-dark.jpg";
+import MyLightImage from "../../assets/images/me-light.jpg";
 import { CONTACT_INFO } from "../../utils/constants";
 import AppCard from "../common/AppCard";
 import AppLinkIcon from "../common/AppLinkIcon";
@@ -11,7 +12,7 @@ export default function MeCard() {
     <>
       <AppCard className="app-card" size="small">
         <img
-          src={MyImage}
+          src={isDarkMode ? MyDarkImage : MyLightImage}
           alt="My profile"
           className="h-32 w-auto rounded-full mx-auto"
         />

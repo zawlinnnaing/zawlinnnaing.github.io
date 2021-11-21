@@ -8,7 +8,7 @@ import { getInitTheme, THEME_MODES } from "../utils/theme";
 import AppAniLink from "./common/AppAniLink";
 import AppLink from "./common/AppLink";
 import ThemeToggle from "./ThemeToggle";
-import ResumePDF from "../assets/resume-.pdf";
+import ResumePDF from "../assets/Zaw-Linn-Naing-resume.pdf";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -32,7 +32,7 @@ export default function Navbar({ className }) {
   return (
     <Disclosure
       as="nav"
-      className={`dark:bg-gray-900 bg-white ${className} border-b-2 z-50 shadow-sm sticky top-0`}
+      className={`dark:bg-gray-900 bg-white ${className} border-b-2 z-50 shadow-sm fixed left-0 right-0 top-0`}
     >
       {({ open }) => (
         <>

@@ -117,3 +117,15 @@ body {
 .active-link {
   @apply border-b-2 border-green-500;
 }
+
+.app-content {
+  padding-top: 5rem;
+}
+
+.app-table-of-content {
+  position: fixed;
+  top: 4rem;
+  left: 0;
+  right: 0;
+  @apply bg-white dark:bg-gray-900;
+}

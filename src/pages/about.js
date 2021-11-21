@@ -1,10 +1,9 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 import { ScrollingProvider, Section } from "react-scroll-section";
 import styled from "styled-components";
-import AboutSidebar from "../components/about/AboutSidebar";
 import AppLink from "../components/common/AppLink";
 import SEO from "../components/common/SEO";
+import TableOfContent from "../components/common/TableOfContent";
 import Layout from "../components/Layout";
 import * as styles from "../css/about.module.css";
 
@@ -17,31 +16,23 @@ const SectionHr = styled.hr`
   margin: 0 1rem;
 `;
 
-const SECTIONS = [
-  {
-    id: "tldr",
-    text: "TLDR",
-  },
-  { id: "backend", text: "Backend Engineering" },
-  {
-    id: "frontend",
-    text: "Frontend Engineering",
-  },
-];
+const SECTION_MAP = {
+  frontend: "frontend",
+  backend: "backend",
+  tldr: "tldr",
+};
 
 export default function AboutPage() {
   return (
     <>
       <Layout>
-        <SEO title="About me - Zaw Lin Naing" />
-        <ScrollingProvider>
-          <section className="block">
-            <AboutSidebar />
-            <div
-              className={`flex-grow max-w-screen ${styles.contentHeight} overflow-y-scroll ${styles.aboutContainer}`}
-            >
+        <SEO title="About me - Zaw Linn Naing" />
+        <section className="block">
+          <ScrollingProvider>
+            <TableOfContent sectionIds={Object.values(SECTION_MAP)} />
+            <div className={`max-w-screen pt-16 ${styles.aboutContainer}`}>
               <Section
-                id="tldr"
+                id={SECTION_MAP.tldr}
                 className={styles.aboutSection}
                 meta={{
                   text: "TLDR",
@@ -91,7 +82,7 @@ export default function AboutPage() {
               </Section>
               <SectionHr />
               <Section
-                id="backend"
+                id={SECTION_MAP.backend}
                 className={styles.aboutSection}
                 meta={{
                   text: "Backend Engineering",
@@ -179,7 +170,7 @@ export default function AboutPage() {
               </Section>
               <SectionHr />
               <Section
-                id="frontend"
+                id={SECTION_MAP.frontend}
                 className={styles.aboutSection}
                 meta={{
                   text: "Frontend Engineering",
@@ -250,8 +241,8 @@ export default function AboutPage() {
                 </ul>
               </Section>
             </div>
-          </section>
-        </ScrollingProvider>
+          </ScrollingProvider>
+        </section>
       </Layout>
     </>
   );

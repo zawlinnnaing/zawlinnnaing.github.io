@@ -1,6 +1,5 @@
 /* This example requires Tailwind CSS v2.0+ */
 import React, { useEffect, useState } from "react";
-import { Helmet } from "react-helmet";
 import AppContext from "../contexts/AppContext";
 import "../css/app.css";
 import "../utils/i18n";
@@ -16,17 +15,6 @@ export default function Layout({ children, showFooter = true }) {
     setIsDarkMode(getInitTheme() === THEME_MODES.dark);
   }, []);
 
-  // useEffect(() => {
-  //   let yDown = null;
-  //   window.addEventListener("wheel", scrollWheelHandler, { capture: true });
-  //   window.addEventListener("touchstart", (event) => {
-  //     yDown = first(event.touches).clientY;
-  //   });
-  //   window.addEventListener("touchmove", (event) => {
-  //     touchMoveHandler(event, yDown);
-  //   });
-  // }, []);
-
   return (
     <AppContext.Provider
       value={{
@@ -34,9 +22,10 @@ export default function Layout({ children, showFooter = true }) {
         setIsDarkMode,
       }}
     >
-      <section className="flex flex-col max-w-2xl mx-auto">
-        <Navbar />
-        <main className="flex-auto container mx-auto xl:px-8">{children}</main>
+      <section className="max-w-2xl mx-auto">
+        <Navbar className="nav-bar" />
+        
+        <main className="relative container mx-auto xl:px-8 app-content">{children}</main>
         {showFooter && <Footer className="flex-shrink-0" />}
       </section>
     </AppContext.Provider>

@@ -28,11 +28,11 @@ export default function ExperienceSection({ experience }) {
             <div className="mb-4">
               <Logo logo={experience.logo} />
             </div>
-            <h4 className="text-xl font-bold mb-2">
+            <p className="text-xl font-bold mb-2">
               <a href={experience.companyUrl} target="_blank" rel="noreferrer">
                 {experience.companyName}
               </a>
-            </h4>
+            </p>
             <p>
               (<i>{experience.role}</i>)
             </p>
