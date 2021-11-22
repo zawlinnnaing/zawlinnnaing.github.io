@@ -12,14 +12,14 @@ const experienceIds = experiences.map(
 
 export default function ExperiencePage() {
   return (
-    <Layout>
-      <SEO title="My Experience - Zaw Linn Naing" />
-      <div>
-        <ScrollingProvider>
-          <TableOfContent
-            expandedPanelHeight="200px"
-            sectionIds={experienceIds}
-          />
+    <ScrollingProvider>
+      <Layout>
+        <SEO title="My Experience - Zaw Linn Naing" />
+        <TableOfContent
+          expandedPanelHeight="12rem"
+          sectionIds={experienceIds}
+        />
+        <div className="xl:px-8">
           <div className="py-4 pt-16">
             {experiences.map((experience) => (
               <Section
@@ -36,8 +36,8 @@ export default function ExperiencePage() {
               </Section>
             ))}
           </div>
-        </ScrollingProvider>
-      </div>
-    </Layout>
+        </div>
+      </Layout>
+    </ScrollingProvider>
   );
 }

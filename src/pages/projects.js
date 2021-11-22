@@ -13,10 +13,7 @@ export default function ProjectsPage() {
     <Layout>
       <SEO title="Projects - Zaw Linn Naing" />
       <ScrollingProvider>
-        <TableOfContent
-          sectionIds={projectIds}
-          outerClassName={`${24 * projects.length}px`}
-        />
+        <TableOfContent sectionIds={projectIds} outerClassName="12rem" />
         <div className="p-4 pt-16">
           {projects.map((project) => (
             <Section

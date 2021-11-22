@@ -74,6 +74,12 @@ body {
   min-height: 1rem;
 }
 
+.nav-bar {
+  z-index: 100;
+  width: 100%;
+  @apply max-w-2xl;
+}
+
 .navbar-item {
   @apply px-3 py-2 text-base font-medium mx-2;
   @apply text-gray-500 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white;
@@ -125,7 +131,7 @@ body {
 .app-table-of-content {
   position: fixed;
   top: 4rem;
-  left: 0;
-  right: 0;
-  @apply bg-white dark:bg-gray-900;
+  width: 100%;
+  z-index: 40;
+  @apply bg-white dark:bg-gray-900 max-w-2xl;
 }

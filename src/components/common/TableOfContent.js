@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/outline";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useScrollSections } from "react-scroll-section";
@@ -32,7 +33,12 @@ export default function TableOfContent({
   return (
     <section className={`app-table-of-content ${outerClassName}`}>
       <div className="block p-4 shadow-sm border-b-2">
-        <div className="flex justify-between">
+        <div
+          className="flex justify-between"
+          tabIndex={-1}
+          onClick={onPanelBtnClick}
+          role="button"
+        >
           <p>Table of content</p>
           <button className="block" type="button" onClick={onPanelBtnClick}>
             {isPanelOpen ? (
@@ -48,7 +54,7 @@ export default function TableOfContent({
         >
           <ul>
             {sectionsToShow.map((appSection) => (
-              <li className="p-4 sm:p-2 text-green-500" key={appSection.id}>
+              <li className="p-4 text-green-500" key={appSection.id}>
                 <a
                   href={`#${appSection.id}`}
                   className={`${appSection.selected ? "active-link" : ""} py-2`}

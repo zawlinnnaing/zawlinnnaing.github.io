@@ -7,7 +7,11 @@ import { changeTheme, getInitTheme, THEME_MODES } from "../utils/theme";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 
-export default function Layout({ children, showFooter = true }) {
+export default function Layout({
+  children,
+  showFooter = true,
+  header = <></>,
+}) {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
@@ -24,8 +28,10 @@ export default function Layout({ children, showFooter = true }) {
     >
       <section className="max-w-2xl mx-auto">
         <Navbar className="nav-bar" />
-        
-        <main className="relative container mx-auto xl:px-8 app-content">{children}</main>
+        {header}
+        <main className="relative container mx-auto app-content">
+          {children}
+        </main>
         {showFooter && <Footer className="flex-shrink-0" />}
       </section>
     </AppContext.Provider>

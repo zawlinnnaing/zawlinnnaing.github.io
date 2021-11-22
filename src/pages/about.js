@@ -29,7 +29,10 @@ export default function AboutPage() {
         <SEO title="About me - Zaw Linn Naing" />
         <section className="block">
           <ScrollingProvider>
-            <TableOfContent sectionIds={Object.values(SECTION_MAP)} />
+            <TableOfContent
+              sectionIds={Object.values(SECTION_MAP)}
+              expandedPanelHeight="12rem"
+            />
             <div className={`max-w-screen pt-16 ${styles.aboutContainer}`}>
               <Section
                 id={SECTION_MAP.tldr}

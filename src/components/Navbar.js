@@ -32,7 +32,7 @@ export default function Navbar({ className }) {
   return (
     <Disclosure
       as="nav"
-      className={`dark:bg-gray-900 bg-white ${className} border-b-2 z-50 shadow-sm fixed left-0 right-0 top-0`}
+      className={`dark:bg-gray-900 bg-white ${className} border-b-2 z-50 shadow-sm fixed top-0`}
     >
       {({ open }) => (
         <>
