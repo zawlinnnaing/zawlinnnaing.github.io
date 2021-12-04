@@ -3,9 +3,14 @@ import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/outline";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useScrollSections } from "react-scroll-section";
 import styled from "styled-components";
+import useScrollVisible from "../../hooks/useScrollVisible";
 
 const ExpandedPanel = styled.div`
   transition: height 0.5s;
+`;
+
+const Container = styled.section`
+  height: ${(props) => (props.isVisible ? "auto" : "0px")};
 `;
 
 export default function TableOfContent({
@@ -16,6 +21,7 @@ export default function TableOfContent({
   const [isPanelOpen, setIsPanelOpen] = useState(false);
   const panelRef = useRef();
   const sections = useScrollSections();
+  const isVisible = useScrollVisible();
 
   function onPanelBtnClick() {
     setIsPanelOpen(!isPanelOpen);
@@ -31,7 +37,10 @@ export default function TableOfContent({
   }, [isPanelOpen]);
 
   return (
-    <section className={`app-table-of-content ${outerClassName}`}>
+    <Container
+      className={`app-table-of-content ${outerClassName}`}
+      isVisible={isVisible}
+    >
       <div className="block p-4 shadow-sm border-b-2">
         <div
           className="flex justify-between"
@@ -70,6 +79,6 @@ export default function TableOfContent({
           </ul>
         </ExpandedPanel>
       </div>
-    </section>
+    </Container>
   );
 }

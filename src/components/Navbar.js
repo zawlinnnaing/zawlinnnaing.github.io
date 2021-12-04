@@ -23,7 +23,6 @@ function ResumeLink({ className }) {
       Resume
     </AppLink>
   );
-  // return <Link to="/resume">Resume</Link>;
 }
 
 export default function Navbar({ className }) {
