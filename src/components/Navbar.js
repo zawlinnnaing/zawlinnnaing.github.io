@@ -8,7 +8,6 @@ import { getInitTheme, THEME_MODES } from "../utils/theme";
 import AppAniLink from "./common/AppAniLink";
 import AppLink from "./common/AppLink";
 import ThemeToggle from "./ThemeToggle";
-import ResumePDF from "../assets/Zaw-Linn-Naing-resume.pdf";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -17,13 +16,14 @@ function classNames(...classes) {
 function ResumeLink({ className }) {
   return (
     <AppLink
-      href={ResumePDF}
+      href="https://docs.google.com/document/d/1PLzmX_DR6wARbjrEMneYnTu-hg0xR0Tmlpk0D0nPFA0/export?format=pdf&attachment=false"
       openInNewWindow
       className={`px-3 py-2 text-base font-medium mx-2 ${className}`}
     >
       Resume
     </AppLink>
   );
+  // return <Link to="/resume">Resume</Link>;
 }
 
 export default function Navbar({ className }) {
