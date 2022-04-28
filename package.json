@@ -1,6 +1,6 @@
 {
   "name": "zawlinnnaing",
-  "version": "1.0.3",
+  "version": "0.0.0-development",
   "private": true,
   "description": "zawlinnnaing",
   "author": "Zhiyu",
@@ -15,7 +15,8 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "i18n:extract": "i18next --config i18next-parser.js"
+    "i18n:extract": "i18next --config i18next-parser.js",
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
     "@headlessui/react": "^1.4.1",
@@ -66,6 +67,11 @@
     "i18next-parser": "^4.7.0",
     "postcss": "^8.3.6",
     "prettier": "^2.4.1",
-    "tailwindcss": "^2.2.15"
+    "tailwindcss": "^2.2.15",
+    "semantic-release": "^19.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zawlinnnaing/zawlinnnaing.github.io.git"
   }
 }
