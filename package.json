@@ -2,8 +2,8 @@
   "name": "zawlinnnaing",
   "version": "0.0.0-development",
   "private": true,
-  "description": "zawlinnnaing",
-  "author": "Zhiyu",
+  "description": "zawlinnnaing's personal website",
+  "author": "zawlinnnaing",
   "keywords": [
     "gatsby",
     "portfolio",
@@ -16,7 +16,8 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "i18n:extract": "i18next --config i18next-parser.js",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "lint": "eslint -c .eslintrc.json"
   },
   "dependencies": {
     "@headlessui/react": "^1.4.1",
@@ -55,6 +56,9 @@
     "styled-components": "^5.3.1"
   },
   "devDependencies": {
+    "@types/node": "^18.7.2",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
     "autoprefixer": "^10.3.4",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
@@ -67,8 +71,9 @@
     "i18next-parser": "^4.7.0",
     "postcss": "^8.3.6",
     "prettier": "^2.4.1",
+    "semantic-release": "^19.0.2",
     "tailwindcss": "^2.2.15",
-    "semantic-release": "^19.0.2"
+    "typescript": "^4.7.4"
   },
   "repository": {
     "type": "git",
