@@ -9,6 +9,9 @@
     "portfolio",
     "zawlinnaning"
   ],
+  "engines": {
+    "node": ">=16"
+  },
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
