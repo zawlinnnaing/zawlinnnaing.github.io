@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 import AppContext from "../contexts/AppContext";
 import "../css/app.css";
-import "../utils/i18n";
 import { changeTheme, getInitTheme, THEME_MODES } from "../utils/theme";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
