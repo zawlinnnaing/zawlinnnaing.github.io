@@ -44,11 +44,13 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: "gatsby-plugin-google-gtag",
       options: {
-        head: true,
-        trackingId: "G-YJMWXGMMH3",
+        trackingIds: ["G-YJMWXGMMH3"],
+        pluginConfig: {
+          head: true,
         },
+      },
     },
     // {
     //   resolve: `gatsby-source-filesystem`,
