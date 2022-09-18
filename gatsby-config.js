@@ -43,6 +43,15 @@ module.exports = {
         showSpinner: false,
       },
     },
+    {
+      resolve: "gatsby-plugin-google-gtag",
+      options: {
+        trackingIds: ["G-YJMWXGMMH3"],
+        pluginConfig: {
+          head: true,
+        },
+      },
+    },
     // {
     //   resolve: `gatsby-source-filesystem`,
     //   options: {

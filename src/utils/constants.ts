@@ -2,6 +2,7 @@ import LinkedIn from "../assets/icons/linkedin.png";
 import Email from "../assets/icons/gmail.png";
 import GitHubDark from "../assets/icons/github-dark.png";
 import GitHubLight from "../assets/icons/github-light.png";
+import { ITechnology } from "./types";
 
 export const ROUTES = Object.freeze([
   { name: "Home", href: "/" },
@@ -11,7 +12,7 @@ export const ROUTES = Object.freeze([
   { name: "Contact", href: "/contact" },
 ]);
 
-export const TECHNOLOGIES = {
+export const TECHNOLOGIES: Record<string, ITechnology> = {
   redis: {
     text: "Redis",
     url: "https://redis.io",
@@ -19,6 +20,18 @@ export const TECHNOLOGIES = {
   nodejs: {
     text: "Node.js",
     url: "https://nodejs.org",
+  },
+  elasticsearch: {
+    text: "Elasticsearch",
+    url: "https://www.elastic.co/",
+  },
+  websocket: {
+    text: "Real-time Websocket",
+    url: "https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API",
+  },
+  typescript: {
+    text: "Typescript",
+    url: "https://www.typescriptlang.org/",
   },
   gatsbyJs: {
     text: "Gatsby.js",
