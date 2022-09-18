@@ -43,6 +43,13 @@ module.exports = {
         showSpinner: false,
       },
     },
+    {
+      resolve: "gatsby-plugin-google-analytics",
+      options: {
+        head: true,
+        trackingId: "G-YJMWXGMMH3",
+        },
+    },
     // {
     //   resolve: `gatsby-source-filesystem`,
     //   options: {
