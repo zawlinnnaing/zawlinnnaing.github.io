@@ -6,7 +6,7 @@ My portfolio website built with `Gatsby.js`.
 
 - CSS framework: TailwindCSS
 
-It is available in https://zawlinnnaing.ml
+It is available in https://zawlinnnaing.com
 
 Contact Information:
 
