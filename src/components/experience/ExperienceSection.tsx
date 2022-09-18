@@ -1,11 +1,8 @@
 /* eslint-disable react/no-danger */
-import { ChevronDoubleRightIcon } from "@heroicons/react/outline";
-import { Link } from "gatsby";
-import { isEmpty } from "lodash";
 import React, { useState } from "react";
+import * as styles from "../../css/experience.module.css";
 import Subtitle from "../common/Subtitle";
 import Tag from "../common/Tag";
-import * as styles from "../../css/experience.module.css";
 
 function Logo({ logo }) {
   return (
@@ -40,16 +37,11 @@ export default function ExperienceSection({ experience }) {
         </div>
         <div className="p-4 lg:flex-1">
           <Subtitle className="mb-2 lg:relative lg:-left-5 border-l-8 border-green-500 px-2">
-            {experience.employmentPeriod.start} -{" "}
-            {experience.employmentPeriod.end} (
-            {experience.employmentPeriod.duration})
+            {experience.employmentPeriod.start.toString()} -{" "}
+            {experience.employmentPeriod.end ?? "Present"} (
+            {experience.employmentPeriod.duration.toString()})
           </Subtitle>
-          <p
-            className={`break-words list-disc ${styles.summary}`}
-            // dangerouslySetInnerHTML={{
-            //   __html: experience.summary,
-            // }}
-          >
+          <p className={`break-words list-disc ${styles.summary}`}>
             {experience.summary}
           </p>
           <div

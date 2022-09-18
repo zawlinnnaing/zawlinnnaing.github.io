@@ -2,16 +2,51 @@ import React from "react";
 import ExpaAI from "../assets/logos/expa-ai.png";
 import Mounts from "../assets/logos/mounts.jpg";
 import Nexlabs from "../assets/logos/nexlabs.jpg";
+import Taskworld from "../assets/logos/taskworld.png";
+import TaskworldSummary from "../components/experience/TaskworldSummary";
 import { TECHNOLOGIES } from "../utils/constants";
+import { formatDuration } from "../utils/dateTime";
+import { IExperience } from "./types";
 
-export default [
+const experiences: IExperience[] = [
+  {
+    id: "taskworld",
+    companyName: "Taskworld",
+    url: "/experience/taskworld",
+    role: "Full Stack Engineer",
+    employmentPeriod: {
+      start: "Jan 2022",
+      get duration() {
+        return formatDuration(this.start);
+      },
+    },
+    logo: {
+      uri: Taskworld,
+      isHorizontal: true,
+    },
+    technologies: [
+      TECHNOLOGIES.typescript,
+      TECHNOLOGIES.nodejs,
+      TECHNOLOGIES.mongodb,
+      TECHNOLOGIES.elasticsearch,
+      TECHNOLOGIES.reactJs,
+      TECHNOLOGIES.redux,
+      TECHNOLOGIES.redis,
+      TECHNOLOGIES.websocket,
+      TECHNOLOGIES.docker,
+      TECHNOLOGIES.kubernetes,
+    ],
+    summary: <TaskworldSummary />,
+  },
   {
     id: "expa-ai",
     companyName: "Expa.AI",
     employmentPeriod: {
       start: "Jan 2020",
       end: "Aug 2021",
-      duration: "1 yr 8 mos",
+      get duration() {
+        return formatDuration(this.start, this.end);
+      },
     },
     url: "/experience/expa-ai",
     role: "Software Engineer",
@@ -88,7 +123,9 @@ export default [
     employmentPeriod: {
       start: "May 2019",
       end: "Nov 2019",
-      duration: "7 mos",
+      get duration() {
+        return formatDuration(this.start, this.end);
+      },
     },
     logo: {
       uri: Mounts,
@@ -150,11 +187,14 @@ export default [
     id: "nexlabs",
     companyName: "Nexlabs",
     companyUrl: "https://www.nexlabs.co/",
+    url: "/experience/nexlabs",
     role: "Intern",
     employmentPeriod: {
       start: "Dec 2018",
       end: "Feb 2019",
-      duration: "3 mos",
+      get duration() {
+        return formatDuration(this.start, this.end);
+      },
     },
     logo: {
       uri: Nexlabs,
@@ -189,3 +229,5 @@ export default [
     ),
   },
 ];
+
+export default experiences;

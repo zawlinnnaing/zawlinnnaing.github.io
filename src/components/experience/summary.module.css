@@ -1,0 +1,7 @@
+.sectionTitle {
+  @apply text-xl pb-1 font-light;
+}
+
+.list {
+  @apply list-disc pl-6;
+}

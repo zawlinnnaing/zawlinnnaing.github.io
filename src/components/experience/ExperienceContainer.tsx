@@ -8,14 +8,24 @@ import Tag from "../common/Tag";
 import Layout from "../Layout";
 import useGetExperience from "./useGetExperience";
 
-export default function ExperienceContainer({ children, location }) {
+export default function ExperienceContainer({
+  children,
+  location,
+}: {
+  children: React.ReactNode;
+  location: Location;
+}) {
   const experience = useGetExperience(location);
+
+  if (!experience) {
+    return null;
+  }
 
   return (
     <>
       <SEO
         title={`${experience.companyName} - Zaw Linn Naing`}
-        description={experience.description}
+        description={`Zaw's Experience at ${experience.companyName}`}
       />
       <Layout>
         <>
@@ -39,9 +49,9 @@ export default function ExperienceContainer({ children, location }) {
                 - <i>{experience.role}</i>
                 {!isEmpty(experience.employmentPeriod) && (
                   <Subtitle>
-                    {experience.employmentPeriod.start} -{" "}
-                    {experience.employmentPeriod.end} (
-                    {experience.employmentPeriod.duration})
+                    {experience.employmentPeriod.start.toString()} -{" "}
+                    {experience.employmentPeriod.end ?? "Present"} (
+                    {experience.employmentPeriod.duration.toString()})
                   </Subtitle>
                 )}
               </div>
