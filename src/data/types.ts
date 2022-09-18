@@ -6,8 +6,8 @@ export interface IExperience {
   url: string;
   role: string;
   employmentPeriod: {
-    start: string;
-    end?: string;
+    start: Date;
+    end?: Date;
     duration: string;
   };
   logo: {

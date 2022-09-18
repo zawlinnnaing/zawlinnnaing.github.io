@@ -1,6 +1,6 @@
 import moment from "moment";
 
-export function formatDuration(startTime: string, endTime?: string): string {
+export function formatDuration(startTime: Date, endTime?: Date): string {
   const startMoment = moment(startTime).startOf("month");
   const endMoment = endTime
     ? moment(endTime).endOf("month")

@@ -15,7 +15,7 @@ const experiences: IExperience[] = [
     url: "/experience/taskworld",
     role: "Full Stack Engineer",
     employmentPeriod: {
-      start: "Jan 2022",
+      start: new Date(2022, 0),
       get duration() {
         return formatDuration(this.start);
       },
@@ -42,8 +42,8 @@ const experiences: IExperience[] = [
     id: "expa-ai",
     companyName: "Expa.AI",
     employmentPeriod: {
-      start: "Jan 2020",
-      end: "Aug 2021",
+      start: new Date(2020, 0),
+      end: new Date(2021, 7),
       get duration() {
         return formatDuration(this.start, this.end);
       },
@@ -121,8 +121,8 @@ const experiences: IExperience[] = [
     companyName: "Mounts Digital",
     companyUrl: "#",
     employmentPeriod: {
-      start: "May 2019",
-      end: "Nov 2019",
+      start: new Date(2019, 4),
+      end: new Date(2019, 10),
       get duration() {
         return formatDuration(this.start, this.end);
       },
@@ -190,8 +190,8 @@ const experiences: IExperience[] = [
     url: "/experience/nexlabs",
     role: "Intern",
     employmentPeriod: {
-      start: "Dec 2018",
-      end: "Feb 2019",
+      start: new Date(2018, 11),
+      end: new Date(2019, 1),
       get duration() {
         return formatDuration(this.start, this.end);
       },

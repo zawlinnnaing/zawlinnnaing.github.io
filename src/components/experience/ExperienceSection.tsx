@@ -1,6 +1,8 @@
 /* eslint-disable react/no-danger */
+import moment from "moment";
 import React, { useState } from "react";
 import * as styles from "../../css/experience.module.css";
+import { IExperience } from "../../data/types";
 import Subtitle from "../common/Subtitle";
 import Tag from "../common/Tag";
 
@@ -10,7 +12,11 @@ function Logo({ logo }) {
   );
 }
 
-export default function ExperienceSection({ experience }) {
+export default function ExperienceSection({
+  experience,
+}: {
+  experience: IExperience;
+}) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   function toggleExpanded() {
@@ -37,18 +43,15 @@ export default function ExperienceSection({ experience }) {
         </div>
         <div className="p-4 lg:flex-1">
           <Subtitle className="mb-2 lg:relative lg:-left-5 border-l-8 border-green-500 px-2">
-            {experience.employmentPeriod.start.toString()} -{" "}
-            {experience.employmentPeriod.end ?? "Present"} (
-            {experience.employmentPeriod.duration.toString()})
+            {moment(experience.employmentPeriod.start).format("MMM YYYY")} -{" "}
+            {experience.employmentPeriod.end
+              ? moment(experience.employmentPeriod.end).format("MMM YYYY")
+              : "Present"}{" "}
+            ({experience.employmentPeriod.duration.toString()})
           </Subtitle>
           <p className={`break-words list-disc ${styles.summary}`}>
             {experience.summary}
           </p>
-          <div
-            className={`overflow-hidden my-2 ${isExpanded ? "h-auto" : "h-0"}`}
-          >
-            {experience.description}
-          </div>
           <div className="my-2">
             <i>Technologies</i>: &nbsp;
             {experience.technologies.map((technology) => (
@@ -59,16 +62,6 @@ export default function ExperienceSection({ experience }) {
               />
             ))}
           </div>
-
-          {/* <div>
-            <Link
-              className="text-green-500 hover:underline"
-              to={`./${experience.id}`}
-            >
-              More details &nbsp;{" "}
-              <ChevronDoubleRightIcon className="w-3 h-3 inline-block" />
-            </Link>
-          </div> */}
         </div>
       </div>
     </>
