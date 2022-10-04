@@ -36,8 +36,8 @@ export default function Navbar({ className }) {
       {({ open }) => (
         <>
           <div className="max-w-screen mx-auto">
-            <div className="relative flex items-center justify-between h-16">
-              <div className="flex items-center sm:hidden">
+            <div className="relative pt-4 h-16">
+              <div className="md:hidden">
                 <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
@@ -47,42 +47,40 @@ export default function Navbar({ className }) {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex items-center justify-center sm:items-stretch sm:justify-center">
-                <div className="hidden sm:block">
-                  <div className="flex flex-none items-center">
-                    {ROUTES.map((item) => (
-                      <AniLink
-                        cover
-                        bg={
-                          getInitTheme() === THEME_MODES.dark
-                            ? "#111827"
-                            : "#F9FAFB"
-                        }
-                        duration={1}
-                        key={item.name}
-                        to={item.href}
-                        getProps={({ isCurrent }) => ({
-                          className: classNames(
-                            "navbar-item",
-                            isCurrent && "active-navbar-item"
-                          ),
-                        })}
-                        aria-current={item.current ? "page" : undefined}
-                      >
-                        {item.name}
-                      </AniLink>
-                    ))}
-                    <ResumeLink />
-                    <div className="mt-2">
-                      <ThemeToggle />
-                    </div>
+              <div className="hidden md:block">
+                <div className="flex flex-none items-center justify-around w-full">
+                  {ROUTES.map((item) => (
+                    <AniLink
+                      cover
+                      bg={
+                        getInitTheme() === THEME_MODES.dark
+                          ? "#111827"
+                          : "#F9FAFB"
+                      }
+                      duration={1}
+                      key={item.name}
+                      to={item.href}
+                      getProps={({ isCurrent }) => ({
+                        className: classNames(
+                          "navbar-item",
+                          isCurrent && "active-navbar-item"
+                        ),
+                      })}
+                      aria-current={item.current ? "page" : undefined}
+                    >
+                      {item.name}
+                    </AniLink>
+                  ))}
+                  <ResumeLink />
+                  <div className="mt-2">
+                    <ThemeToggle />
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <Disclosure.Panel className="sm:hidden transition-all px-4 divide-y divide-black dark:divide-white bg-gray-100 dark:bg-gray-800">
+          <Disclosure.Panel className="md:hidden transition-all px-4 divide-y divide-black dark:divide-white bg-gray-100 dark:bg-gray-800">
             <div className="p-2 space-y-1">
               {ROUTES.map((item) => (
                 <AppAniLink

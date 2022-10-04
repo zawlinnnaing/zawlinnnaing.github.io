@@ -1,7 +1,17 @@
 import { isString } from "lodash";
 import React, { useMemo } from "react";
 
-export default function AppCard({ className, children, title, size }) {
+export default function AppCard({
+  className,
+  children,
+  title,
+  size,
+}: {
+  className?: string;
+  children: React.ReactNode;
+  title?: string;
+  size: "small" | "large";
+}) {
   const sizeStyleClass = useMemo(
     () => (size === "small" ? "p-4" : "p-8"),
     [size]
@@ -9,7 +19,7 @@ export default function AppCard({ className, children, title, size }) {
 
   return (
     <>
-      <figure
+      <div
         className={`dark:bg-gray-100 bg-gray-900 rounded ${sizeStyleClass} shadow-md ${className}`}
       >
         {title &&
@@ -21,7 +31,7 @@ export default function AppCard({ className, children, title, size }) {
             title
           ))}
         <div className="text-white dark:text-gray-900">{children}</div>
-      </figure>
+      </div>
     </>
   );
 }
