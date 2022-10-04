@@ -9,7 +9,6 @@ export const ROUTES = Object.freeze([
   { name: "Experience", href: "/experience" },
   { name: "Projects", href: "/projects" },
   { name: "About me", href: "/about" },
-  { name: "Contact", href: "/contact" },
 ]);
 
 export const TECHNOLOGIES: Record<string, ITechnology> = {
