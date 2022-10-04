@@ -10,16 +10,21 @@ const ExpandedPanel = styled.div`
 `;
 
 const Container = styled.section`
-  height: ${(props) => (props.isVisible ? "auto" : "0px")};
+  height: ${(props: { isVisible?: boolean }) =>
+    props.isVisible ? "auto" : "0px"};
 `;
 
 export default function TableOfContent({
   expandedPanelHeight = "170px",
   outerClassName = "",
   sectionIds,
+}: {
+  expandedPanelHeight?: string;
+  outerClassName?: string;
+  sectionIds: string[];
 }) {
   const [isPanelOpen, setIsPanelOpen] = useState(false);
-  const panelRef = useRef();
+  const panelRef = useRef<HTMLDivElement>(null);
   const sections = useScrollSections();
   const isVisible = useScrollVisible();
 
@@ -33,6 +38,9 @@ export default function TableOfContent({
   );
 
   useEffect(() => {
+    if (!panelRef.current) {
+      return;
+    }
     panelRef.current.style.height = !isPanelOpen ? "0px" : expandedPanelHeight;
   }, [isPanelOpen]);
 
@@ -58,7 +66,7 @@ export default function TableOfContent({
           </button>
         </div>
         <ExpandedPanel
-          className={`h-0 overflow-hidden ${isPanelOpen ? "mt-4" : ""}`}
+          className={`h-0 overflow-y-scroll ${isPanelOpen ? "mt-4" : ""}`}
           ref={panelRef}
         >
           <ul>
