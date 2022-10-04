@@ -1,24 +1,20 @@
-import React, { Suspense } from "react";
+import React from "react";
 import useAppContext from "../../hooks/useAppContext";
-import MyDarkImage from "../../assets/images/me-dark.jpg";
-import MyLightImage from "../../assets/images/me-light.jpg";
 import { CONTACT_INFO } from "../../utils/constants";
 import AppCard from "../common/AppCard";
 import AppLinkIcon from "../common/AppLinkIcon";
+import * as styles from "./me.module.css";
 
 export default function MeCard() {
   const { isDarkMode } = useAppContext();
   return (
     <>
-      <AppCard className="app-card" size="small">
-        <img
-          src={isDarkMode ? MyDarkImage : MyLightImage}
-          alt="My profile"
-          className="h-32 w-auto rounded-full mx-auto"
-        />
+      <AppCard className={`app-card  ${styles.meCard}`} size="small">
         <section>
           <p className="">Hi, I am</p>
-          <p className="text-2xl font-bold">Zaw Lin Naing</p>
+          <p className="text-2xl font-bold text-green-500 py-4">
+            Zaw Lin Naing
+          </p>
           <p>
             A software engineer, who builds mostly web-related stuff but not
             limited to it and likes to build things for fun and professionally.
