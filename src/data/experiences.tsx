@@ -3,21 +3,60 @@ import ExpaAI from "../assets/logos/expa-ai.png";
 import Mounts from "../assets/logos/mounts.jpg";
 import Nexlabs from "../assets/logos/nexlabs.jpg";
 import Taskworld from "../assets/logos/taskworld.png";
+import BriklLogo from "../assets/logos/brikl.jpg";
 import TaskworldSummary from "../components/experience/TaskworldSummary";
 import { TECHNOLOGIES } from "../utils/constants";
 import { formatDuration } from "../utils/dateTime";
 import { IExperience } from "./types";
+import BriklSummary from "../components/experience/BriklSummary";
+
+function createEmploymentPeriod(
+  start: Date,
+  end?: Date
+): IExperience["employmentPeriod"] {
+  return {
+    start,
+    end,
+    get duration() {
+      return formatDuration(this.start, this.end);
+    },
+  };
+}
 
 const experiences: IExperience[] = [
   {
+    id: "brikl",
+    companyName: "Brikl",
+    url: "/experience/brikl",
+    companyUrl: "https://www.brikl.com/",
+    role: "Software Engineer - Backend",
+    employmentPeriod: createEmploymentPeriod(new Date(2023, 1)),
+    logo: {
+      uri: BriklLogo,
+      isHorizontal: false,
+    },
+    technologies: [
+      TECHNOLOGIES.typescript,
+      TECHNOLOGIES.nodejs,
+      TECHNOLOGIES.postgresql,
+      TECHNOLOGIES.prisma,
+      TECHNOLOGIES.redis,
+      TECHNOLOGIES.aws,
+      TECHNOLOGIES.serverless,
+    ],
+    summary: <BriklSummary />,
+  },
+  {
     id: "taskworld",
     companyName: "Taskworld",
+    companyUrl: "https://taskworld.com/",
     url: "/experience/taskworld",
     role: "Full Stack Engineer",
     employmentPeriod: {
       start: new Date(2022, 0),
+      end: new Date(2023, 1),
       get duration() {
-        return formatDuration(this.start);
+        return formatDuration(this.start, this.end);
       },
     },
     logo: {

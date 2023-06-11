@@ -6,7 +6,7 @@ import { IExperience } from "../../data/types";
 import Subtitle from "../common/Subtitle";
 import Tag from "../common/Tag";
 
-function Logo({ logo }) {
+function Logo({ logo }: { logo: { uri: string } }) {
   return (
     <img src={logo.uri} alt="Company logo" className="w-20 h-auto mx-auto" />
   );
@@ -28,9 +28,14 @@ export default function ExperienceSection({
       <div className="my-2">
         <div className=" lg:border-gray-500 p-4 mx-auto">
           <div className="m-auto text-center">
-            <div className="mb-4">
+            <a
+              className="mb-4"
+              href={experience.companyUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
               <Logo logo={experience.logo} />
-            </div>
+            </a>
             <p className="text-xl font-bold mb-2">
               <a href={experience.companyUrl} target="_blank" rel="noreferrer">
                 {experience.companyName}
