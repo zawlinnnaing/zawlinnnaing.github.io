@@ -7,6 +7,7 @@ on:
 
 jobs:
   release:
+    permissions: write-all
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
@@ -21,6 +22,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-22.04
+    permissions: write-all
     steps:
       - uses: actions/checkout@v3
       - name: Setup Node.js

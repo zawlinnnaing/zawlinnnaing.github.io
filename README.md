@@ -2,15 +2,17 @@
 
 My portfolio website built with `Gatsby.js`.
 
-**Used Technologies:**
+## Used Technologies
 
 - CSS framework: TailwindCSS
+- JS framework: Gatsby
+- Deployment: Github Pages
 
-It is available in https://zawlinnnaing.com
+It is available on https://zawlinnnaing.com
 
 Contact Information:
 
-LinkedIn: https://www.linkedin.com/in/zaw-linn-naing-184931159/
+LinkedIn: https://www.linkedin.com/in/zlnaing/
 
 ## Development
 
