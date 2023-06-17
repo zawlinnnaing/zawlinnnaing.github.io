@@ -5,6 +5,7 @@ import * as styles from "../../css/experience.module.css";
 import { IExperience } from "../../data/types";
 import Subtitle from "../common/Subtitle";
 import Tag from "../common/Tag";
+import AppLink from "../common/AppLink";
 
 function Logo({ logo }: { logo: { uri: string } }) {
   return (
@@ -28,18 +29,17 @@ export default function ExperienceSection({
       <div className="my-2">
         <div className=" lg:border-gray-500 p-4 mx-auto">
           <div className="m-auto text-center">
-            <a
+            <AppLink
               className="mb-4"
               href={experience.companyUrl}
-              target="_blank"
-              rel="noreferrer"
+              openInNewWindow
             >
               <Logo logo={experience.logo} />
-            </a>
+            </AppLink>
             <p className="text-xl font-bold mb-2">
-              <a href={experience.companyUrl} target="_blank" rel="noreferrer">
+              <AppLink href={experience.companyUrl}>
                 {experience.companyName}
-              </a>
+              </AppLink>
             </p>
             <p>
               (<i>{experience.role}</i>)
