@@ -1,54 +1,54 @@
 import React from "react";
-import * as SummaryStyles from "./summary.module.css";
+import {
+  SummaryList,
+  SummaryListItem,
+  SummarySection,
+  SummaryTitle,
+} from "./summary";
+import AppLink from "../common/AppLink";
 
 export default function TaskworldSummary() {
   return (
     <div>
-      <section className="py-2">
-        <h1 className={SummaryStyles.sectionTitle}>CONTRIBUTIONS</h1>
-        <ul className={SummaryStyles.list}>
-          <li>
+      <SummarySection>
+        <SummaryTitle title="CONTRIBUTIONS" />
+        <SummaryList>
+          <SummaryListItem>
             Optimized Kanban board performance and memory usage (from linear
             space complexity to constant space complexity), enabling smooth user
             interaction and experience even when there are thousands of items
             inside the board.
-          </li>
-          <li>
+          </SummaryListItem>
+          <SummaryListItem>
             Extracted and deployed a micro service from legacy monolith
             codebase, allowing easier maintenance and faster development speed.
-          </li>
-          <li>
+          </SummaryListItem>
+          <SummaryListItem>
             Developed{" "}
-            <a
-              href="https://help.taskworld.com/en/articles/6357351-project-templates"
-              target="_blank"
-            >
+            <AppLink href="https://help.taskworld.com/en/articles/6357351-project-templates">
               project templates
-            </a>
+            </AppLink>
             , starter templates, and{" "}
-            <a
-              href="https://help.taskworld.com/en/articles/6521209-pin-task-note-and-subtask-to-tasklist"
-              target="_blank"
-            >
+            <AppLink href="https://help.taskworld.com/en/articles/6521209-pin-task-note-and-subtask-to-tasklist">
               pinned task
-            </a>{" "}
+            </AppLink>{" "}
             features in a timely manner.
-          </li>
-        </ul>
-      </section>
-      <section>
-        <h1 className={SummaryStyles.sectionTitle}>CHALLENGES</h1>
-        <ul className={SummaryStyles.list}>
-          <li>
+          </SummaryListItem>
+        </SummaryList>
+      </SummarySection>
+      <SummarySection>
+        <SummaryTitle title="CHALLENGES" />
+        <SummaryList>
+          <SummaryListItem>
             Developed and modified complex features on the platform with little
             or no regression.
-          </li>
-          <li>
+          </SummaryListItem>
+          <SummaryListItem>
             Navigated through complex and legacy codebase to identify
             performance bottlenecks and implemented optimization solutions.
-          </li>
-        </ul>
-      </section>
+          </SummaryListItem>
+        </SummaryList>
+      </SummarySection>
     </div>
   );
 }

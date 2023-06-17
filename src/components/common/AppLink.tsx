@@ -5,7 +5,11 @@ export default function AppLink({
   className = "",
   href = "",
   openInNewWindow = true,
-}) {
+}: React.PropsWithChildren<{
+  className?: string;
+  href?: string;
+  openInNewWindow?: boolean;
+}>) {
   return (
     <a
       className={`app-link ${className}`}

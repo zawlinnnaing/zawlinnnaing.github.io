@@ -1,8 +1,7 @@
-import LinkedIn from "../assets/icons/linkedin.png";
-import Email from "../assets/icons/gmail.png";
 import GitHubDark from "../assets/icons/github-dark.png";
 import GitHubLight from "../assets/icons/github-light.png";
-import { ITechnology } from "./types";
+import Email from "../assets/icons/gmail.png";
+import LinkedIn from "../assets/icons/linkedin.png";
 
 export const ROUTES = Object.freeze([
   { name: "Home", href: "/" },
@@ -11,7 +10,7 @@ export const ROUTES = Object.freeze([
   { name: "About me", href: "/about" },
 ]);
 
-export const TECHNOLOGIES: Record<string, ITechnology> = {
+export const TECHNOLOGIES = {
   redis: {
     text: "Redis",
     url: "https://redis.io",
@@ -112,6 +111,18 @@ export const TECHNOLOGIES: Record<string, ITechnology> = {
   tensorflow: {
     text: "Tensorflow",
     url: "https://www.tensorflow.org/",
+  },
+  aws: {
+    text: "Amazon Web Services",
+    url: "https://aws.amazon.com/",
+  },
+  serverless: {
+    text: "Serverless",
+    url: "https://www.serverless.com/",
+  },
+  prisma: {
+    text: "Prisma ORM",
+    url: "https://www.prisma.io/",
   },
 };
 
