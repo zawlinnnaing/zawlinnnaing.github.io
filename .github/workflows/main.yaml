@@ -31,5 +31,6 @@ jobs:
           node-version-file: ".nvmrc"
       - uses: enriikke/gatsby-gh-pages-action@v2
         with:
+          # Needs to use `ACCESS_TOKEN` instead of `GITHUB_TOKEN`
           access-token: ${{ secrets.ACCESS_TOKEN }}
           deploy-branch: gh-pages
