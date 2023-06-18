@@ -124,6 +124,14 @@ export const TECHNOLOGIES = {
     text: "Prisma ORM",
     url: "https://www.prisma.io/",
   },
+  vite: {
+    text: "Vite",
+    url: "https://vitejs.dev/",
+  },
+  chromeExtension: {
+    text: "Chrome Web Extension",
+    url: "https://developer.chrome.com/docs/extensions/mv3/",
+  },
 };
 
 export const CONTACT_INFO = [

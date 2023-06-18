@@ -1,13 +1,12 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import { isEmpty } from "lodash";
-import { ChevronDoubleRightIcon } from "@heroicons/react/outline";
 import React from "react";
+import { IProject } from "../../data/types";
 import AppLink from "../common/AppLink";
-import AppAniLink from "../common/AppAniLink";
 import Avatar from "../common/Avatar";
 import Tag from "../common/Tag";
 
-export default function ProjectSection({ project }) {
+export default function ProjectSection({ project }: { project: IProject }) {
   return (
     <>
       <div className="my-2">
@@ -46,21 +45,6 @@ export default function ProjectSection({ project }) {
                   key={technology.text}
                 />
               ))}
-            </div>
-          )}
-          {!isEmpty(project.detailConfig) && (
-            <div className="py-2 px-2 bg-green-500 text-white inline-block hover:underline">
-              {project.detailConfig.isExternal ? (
-                <AppLink href={project.detailConfig.url} openInNewWindow>
-                  More details &nbsp;
-                  <ChevronDoubleRightIcon className="w-3 h-3 inline-block" />
-                </AppLink>
-              ) : (
-                <AppAniLink to={project.detailConfig.url}>
-                  More details &nbsp;
-                  <ChevronDoubleRightIcon className="w-3 h-3 inline-block" />
-                </AppAniLink>
-              )}
             </div>
           )}
         </div>

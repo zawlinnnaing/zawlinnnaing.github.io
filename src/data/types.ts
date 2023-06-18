@@ -18,3 +18,21 @@ export interface IExperience {
   summary?: React.ReactNode;
   companyUrl?: string;
 }
+
+export interface IProject {
+  logo: any;
+  links: {
+    text: string;
+    url?: string;
+  }[];
+  name: string;
+  technologies: {
+    text: string;
+    url: string;
+  }[];
+  detailConfig?: {
+    isExternal: boolean;
+    url: string;
+  };
+  summary: React.ReactNode;
+}
