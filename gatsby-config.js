@@ -2,7 +2,10 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
-module.exports = {
+/**
+ * @type {import("gatsby").GatsbyConfig}
+ */
+const config = {
   siteMetadata: {
     siteUrl: "https://zawlinnnaing.ml",
     title: "zawlinnnaing",
@@ -52,6 +55,9 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: "notion-source-plugin",
+    },
     // {
     //   resolve: `gatsby-source-filesystem`,
     //   options: {
@@ -85,3 +91,5 @@ module.exports = {
     // },
   ],
 };
+
+module.exports = config;
