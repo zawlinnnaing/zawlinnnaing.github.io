@@ -1,7 +1,10 @@
-node_modules/
+# Built artifacts
 .cache/
 public
+**/dist
+**/node_modules
 
+# Env files
 .env*
 !.env.example
 

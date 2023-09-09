@@ -1,0 +1,23 @@
+{
+  "name": "notion-source-plugin",
+  "version": "0.0.0",
+  "description": "notion source plugin for gatsby",
+  "main": "index.js",
+  "scripts": {
+    "clean": "del-cli dist",
+    "prepare": "npm run clean && npm run build",
+    "develop": "tsc --watch",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin"
+  ],
+  "author": "zawlinnnaing",
+  "license": "ISC",
+  "devDependencies": {
+    "del-cli": "^5.1.0",
+    "typescript": "^5.2.2"
+  }
+}
