@@ -1,12 +1,16 @@
 import { Transition } from "@headlessui/react";
 import React, { Fragment, useEffect, useState } from "react";
 
-export default function TransitionContainer({ children }) {
+export default function TransitionContainer({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const [isShowing, setIsShowing] = useState(false);
 
   useEffect(() => {
     setIsShowing(true);
-  }, [isShowing]);
+  }, []);
 
   return (
     <Transition
