@@ -13,7 +13,7 @@ const projects: IProject[] = [
       },
       {
         text: "download extension",
-        url: "https://github.com/zen-suite/focus-mode-extension/releases",
+        url: "https://chrome.google.com/webstore/detail/zen-mode-block-distractio/cblailchdcmjcjjklmninjaoifijfdmg",
       },
     ],
     logo: {
@@ -127,7 +127,7 @@ const projects: IProject[] = [
         </AppLink>
         . My main contribution for the project includes;
         <br />
-        <ul className="list-disc ml-6">
+        <ul className="ml-6 list-disc">
           <li>
             Up-scaled Generator model output image by 2 times, including its
             neural network Parameters. (from 256x256 to 512x512)

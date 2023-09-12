@@ -152,6 +152,6 @@ export const CONTACT_INFO = [
     icon: Email,
     name: "Gmail",
     text: "zawlinnnaing0018@gmail.com",
-    uri: "mailto://zawlinnnaing0018@gmail.com",
+    uri: "mailto:zawlinnnaing0018@gmail.com",
   },
 ];
