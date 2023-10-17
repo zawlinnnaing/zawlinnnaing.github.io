@@ -1,30 +1,19 @@
-/* This example requires Tailwind CSS v2.0+ */
-import React, { useEffect, useState } from "react";
-import AppContext from "../contexts/AppContext";
+import React from "react";
 import "../css/app.css";
-import { changeTheme, getInitTheme, THEME_MODES } from "../utils/theme";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
+import ThemeProvider from "./ThemeProvider";
 
 export default function Layout({
   children,
   showFooter = true,
   header = <></>,
-}) {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  useEffect(() => {
-    changeTheme(getInitTheme());
-    setIsDarkMode(getInitTheme() === THEME_MODES.dark);
-  }, []);
-
+}: React.PropsWithChildren<{
+  showFooter?: boolean;
+  header?: React.ReactNode;
+}>) {
   return (
-    <AppContext.Provider
-      value={{
-        isDarkMode,
-        setIsDarkMode,
-      }}
-    >
+    <ThemeProvider>
       <section className="max-w-2xl mx-auto">
         <Navbar className="nav-bar" />
         {header}
@@ -33,6 +22,6 @@ export default function Layout({
         </main>
         {showFooter && <Footer className="flex-shrink-0" />}
       </section>
-    </AppContext.Provider>
+    </ThemeProvider>
   );
 }
