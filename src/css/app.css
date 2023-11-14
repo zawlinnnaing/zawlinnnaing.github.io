@@ -23,8 +23,6 @@
 }
 
 body {
-  @apply bg-white dark:bg-gray-900;
-  @apply min-h-screen;
   line-height: 2;
   @apply text-black dark:text-white;
   @apply transition-colors duration-700;

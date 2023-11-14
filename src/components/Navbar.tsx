@@ -1,12 +1,12 @@
 import { Disclosure } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
-import React, { useEffect } from "react";
+import React from "react";
 import { ROUTES } from "../utils/constants";
-import { getInitTheme, THEME_MODES } from "../utils/theme";
+import { THEME_MODES, getInitTheme } from "../utils/theme";
+import ThemeToggle from "./ThemeToggle";
 import AppAniLink from "./common/AppAniLink";
 import AppLink from "./common/AppLink";
-import ThemeToggle from "./ThemeToggle";
 
 function classNames(...classes: (string | boolean)[]) {
   return classes.filter(Boolean).join(" ");
@@ -25,8 +25,6 @@ function ResumeLink({ className }: { className?: string }) {
 }
 
 export default function Navbar({ className }: { className?: string }) {
-  useEffect(() => {}, []);
-
   return (
     <Disclosure
       as="nav"
@@ -50,7 +48,8 @@ export default function Navbar({ className }: { className?: string }) {
                 <div className="flex flex-none items-center justify-around w-full">
                   {ROUTES.map((item) => (
                     <AniLink
-                      cover
+                      swipe
+                      direction="left"
                       bg={
                         getInitTheme() === THEME_MODES.dark
                           ? "#111827"
@@ -82,7 +81,8 @@ export default function Navbar({ className }: { className?: string }) {
             <div className="p-2 space-y-1">
               {ROUTES.map((item) => (
                 <AppAniLink
-                  cover
+                  swipe
+                  direction="left"
                   duration={1}
                   key={item.name}
                   to={item.href}

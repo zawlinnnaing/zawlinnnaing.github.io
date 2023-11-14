@@ -22,10 +22,10 @@ const SECTION_MAP = {
   tldr: "tldr",
 };
 
-export default function AboutPage() {
+export default function AboutPage(props: { location: Location }) {
   return (
     <>
-      <Layout>
+      <Layout location={props.location}>
         <SEO title="About me - Zaw Linn Naing" />
         <section className="block">
           <ScrollingProvider>

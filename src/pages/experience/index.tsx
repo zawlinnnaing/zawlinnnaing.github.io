@@ -1,19 +1,20 @@
+import { PageProps } from "gatsby";
 import React from "react";
 import { ScrollingProvider, Section } from "react-scroll-section";
+import Layout from "../../components/Layout";
 import SEO from "../../components/common/SEO";
 import TableOfContent from "../../components/common/TableOfContent";
 import ExperienceSection from "../../components/experience/ExperienceSection";
-import Layout from "../../components/Layout";
 import experiences from "../../data/experiences";
 
 const experienceIds = experiences.map(
   (experience) => `experience-${experience.id}`
 );
 
-export default function ExperiencePage() {
+export default function ExperiencePage(props: PageProps) {
   return (
     <ScrollingProvider>
-      <Layout>
+      <Layout location={props.location}>
         <SEO title="My Experience - Zaw Linn Naing" />
         <TableOfContent
           expandedPanelHeight="12rem"

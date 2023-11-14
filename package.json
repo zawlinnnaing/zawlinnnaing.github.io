@@ -20,7 +20,7 @@
     "clean": "gatsby clean",
     "i18n:extract": "i18next --config i18next-parser.js",
     "semantic-release": "semantic-release",
-    "lint": "eslint -c .eslintrc.json"
+    "lint": "eslint -c .eslintrc"
   },
   "dependencies": {
     "@headlessui/react": "^1.4.1",
