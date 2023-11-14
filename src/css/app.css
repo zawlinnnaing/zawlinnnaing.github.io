@@ -136,3 +136,7 @@ body {
   overflow: hidden;
   @apply bg-white dark:bg-gray-900 max-w-2xl;
 }
+
+a {
+  cursor: pointer;
+}

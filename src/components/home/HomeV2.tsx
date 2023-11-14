@@ -1,9 +1,33 @@
-import React from "react";
-import Tag from "../common/Tag";
-import { TECHNOLOGIES } from "../../utils/constants";
 import { ChevronDownIcon } from "@heroicons/react/outline";
+import { Link } from "gatsby";
+import React from "react";
+import { RESUME_LINK, TECHNOLOGIES } from "../../utils/constants";
+import Tag from "../common/Tag";
+import * as styles from "./HomeV2.module.css";
+import classNames from "classnames";
 
 export default function HomeV2() {
+  const links = [
+    {
+      text: "Experience",
+      href: "/experience",
+    },
+    {
+      text: "Projects",
+      href: "/projects",
+    },
+    {
+      text: "About me",
+      href: "/about",
+    },
+    {
+      text: "Resume",
+      href: RESUME_LINK,
+      target: "_blank",
+      className: styles.resumeLink,
+    },
+  ];
+
   return (
     <main className="h-screen flex justify-center items-center">
       <div className="px-4 lg:max-w-screen-sm">
@@ -40,7 +64,20 @@ export default function HomeV2() {
             Learn more
             <ChevronDownIcon width={12} height={12} />
           </p>
-          <div className="flex flex-wrap"></div>
+          <div className="flex flex-wrap justify-between">
+            {links.map((link) => {
+              return (
+                <Link
+                  to={link.href}
+                  target={link.target}
+                  key={link.text}
+                  className={classNames(styles.navLink, link.className)}
+                >
+                  {link.text}
+                </Link>
+              );
+            })}
+          </div>
         </div>
       </div>
     </main>

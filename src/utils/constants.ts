@@ -155,3 +155,6 @@ export const CONTACT_INFO = [
     uri: "mailto:zawlinnnaing0018@gmail.com",
   },
 ];
+
+export const RESUME_LINK =
+  "https://docs.google.com/document/d/1PLzmX_DR6wARbjrEMneYnTu-hg0xR0Tmlpk0D0nPFA0/export?format=pdf&attachment=false";
