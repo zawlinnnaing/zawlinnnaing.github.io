@@ -30,7 +30,7 @@ export default function HomeV2() {
   ];
 
   return (
-    <main className="h-screen flex justify-center items-center dark:bg-gray-900 bg-gray-100">
+    <main className="h-screen flex justify-center items-center dark:bg-gray-900 bg-white">
       <div className="px-4 lg:max-w-screen-sm">
         <p className="text-sm my-4">Hi, I am</p>
         <h1 className="text-2xl text-green-500 my-4">Zaw Lin Naing</h1>
