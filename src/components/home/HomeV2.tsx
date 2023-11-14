@@ -1,13 +1,16 @@
 import { ChevronDownIcon } from "@heroicons/react/outline";
 import { Link } from "gatsby";
 import React from "react";
-import { RESUME_LINK, TECHNOLOGIES } from "../../utils/constants";
+import { CONTACT_INFO, RESUME_LINK, TECHNOLOGIES } from "../../utils/constants";
 import Tag from "../common/Tag";
 import * as styles from "./HomeV2.module.css";
 import classNames from "classnames";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
+import AppLinkIcon from "../common/AppLinkIcon";
+import useAppContext from "../../hooks/useAppContext";
 
 export default function HomeV2() {
+  const { isDarkMode } = useAppContext();
   const links = [
     {
       text: "Experience",
@@ -39,7 +42,7 @@ export default function HomeV2() {
           building software both professionally and for fun. Always eager to
           learn new things ✨.
         </p>
-        <div className="my-4 flex">
+        <section className="my-4 flex">
           <span className="mr-4">Skills:</span>
           <div className="inline-flex flex-wrap">
             {[
@@ -61,7 +64,21 @@ export default function HomeV2() {
               );
             })}
           </div>
-        </div>
+        </section>
+        <section className="my-4 flex justify-center items-center">
+          {CONTACT_INFO.map((contact) => (
+            <span className="px-1" key={contact.name}>
+              <AppLinkIcon
+                href={contact.uri}
+                src={
+                  isDarkMode ? contact.icon : contact.iconLight || contact.icon
+                }
+                key={contact.name}
+                size={24}
+              />
+            </span>
+          ))}
+        </section>
         <div className="my-4">
           <p className="my-2 flex flex-col items-center">
             Learn more

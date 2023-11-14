@@ -1,5 +1,5 @@
 .navLink {
-  @apply text-sm underline text-gray-700 dark:text-gray-300 mx-2 hover:text-green-500;
+  @apply text-sm underline  text-gray-200 mx-2 hover:text-green-500;
 }
 
 .resumeLink::after {

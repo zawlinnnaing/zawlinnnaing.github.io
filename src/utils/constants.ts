@@ -142,8 +142,8 @@ export const CONTACT_INFO = [
     uri: "https://www.linkedin.com/in/zlnaing/",
   },
   {
-    icon: GitHubDark,
-    iconLight: GitHubLight,
+    icon: GitHubLight,
+    iconLight: GitHubDark,
     name: "Github",
     text: "zawlinnnaing",
     uri: "https://github.com/zawlinnnaing",
