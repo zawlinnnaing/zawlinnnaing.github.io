@@ -5,6 +5,7 @@ import { RESUME_LINK, TECHNOLOGIES } from "../../utils/constants";
 import Tag from "../common/Tag";
 import * as styles from "./HomeV2.module.css";
 import classNames from "classnames";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 export default function HomeV2() {
   const links = [
@@ -29,13 +30,14 @@ export default function HomeV2() {
   ];
 
   return (
-    <main className="h-screen flex justify-center items-center">
+    <main className="h-screen flex justify-center items-center dark:bg-gray-900 bg-gray-100">
       <div className="px-4 lg:max-w-screen-sm">
         <p className="text-sm my-4">Hi, I am</p>
         <h1 className="text-2xl text-green-500 my-4">Zaw Lin Naing</h1>
         <p className="my-4">
-          A software engineer, who builds mostly web-related stuff but not
-          limited to it and likes to build things for fun and professionally.
+          A full-stack engineer with 5 years of experience and passion about
+          building software both professionally and for fun. Always eager to
+          learn new things ✨.
         </p>
         <div className="my-4 flex">
           <span className="mr-4">Skills:</span>
@@ -48,6 +50,7 @@ export default function HomeV2() {
               TECHNOLOGIES.postgresql,
               TECHNOLOGIES.graphql,
               TECHNOLOGIES.mongodb,
+              TECHNOLOGIES.aws,
             ].map((technology) => {
               return (
                 <Tag
@@ -66,15 +69,29 @@ export default function HomeV2() {
           </p>
           <div className="flex flex-wrap justify-between">
             {links.map((link) => {
+              if (link.target) {
+                return (
+                  <Link
+                    to={link.href}
+                    target={link.target}
+                    key={link.text}
+                    className={classNames(styles.navLink, link.className)}
+                  >
+                    {link.text}
+                  </Link>
+                );
+              }
               return (
-                <Link
+                <AniLink
                   to={link.href}
-                  target={link.target}
                   key={link.text}
+                  swipe
+                  direction="up"
+                  duration={1}
                   className={classNames(styles.navLink, link.className)}
                 >
                   {link.text}
-                </Link>
+                </AniLink>
               );
             })}
           </div>
