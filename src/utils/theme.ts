@@ -9,7 +9,7 @@ const isBrowser = typeof window !== "undefined";
  *
  * @param {String} themMode
  */
-export function changeTheme(themMode) {
+export function changeTheme(themMode: string) {
   if (themMode === THEME_MODES.dark) {
     document.documentElement.classList.add("dark");
   } else {
@@ -25,9 +25,9 @@ export function changeTheme(themMode) {
  *
  * @returns {String}
  */
-export function getInitTheme() {
+export function getInitTheme(): string {
   if (!isBrowser) {
-    return THEME_MODES.light;
+    return THEME_MODES.dark;
   }
   const defaultTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
     ? THEME_MODES.dark

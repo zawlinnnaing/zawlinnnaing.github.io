@@ -132,6 +132,10 @@ export const TECHNOLOGIES = {
     text: "Chrome Web Extension",
     url: "https://developer.chrome.com/docs/extensions/mv3/",
   },
+  nextJS: {
+    text: "Next.js",
+    url: "https://nextjs.org",
+  },
 };
 
 export const CONTACT_INFO = [
@@ -142,8 +146,8 @@ export const CONTACT_INFO = [
     uri: "https://www.linkedin.com/in/zlnaing/",
   },
   {
-    icon: GitHubDark,
-    iconLight: GitHubLight,
+    icon: GitHubLight,
+    iconLight: GitHubDark,
     name: "Github",
     text: "zawlinnnaing",
     uri: "https://github.com/zawlinnnaing",
@@ -155,3 +159,6 @@ export const CONTACT_INFO = [
     uri: "mailto:zawlinnnaing0018@gmail.com",
   },
 ];
+
+export const RESUME_LINK =
+  "https://docs.google.com/document/d/1PLzmX_DR6wARbjrEMneYnTu-hg0xR0Tmlpk0D0nPFA0/export?format=pdf&attachment=false";

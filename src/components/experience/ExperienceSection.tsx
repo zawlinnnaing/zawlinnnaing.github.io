@@ -20,10 +20,6 @@ export default function ExperienceSection({
 }) {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  function toggleExpanded() {
-    setIsExpanded(!isExpanded);
-  }
-
   return (
     <>
       <div className="my-2">

@@ -3,16 +3,14 @@ import React from "react";
 import { getInitTheme, THEME_MODES } from "../../utils/theme";
 
 export default function AppAniLink({
-  key,
   duration = 1,
   to,
   getProps,
   children,
-}) {
+}: React.PropsWithChildren<React.ComponentProps<typeof AniLink>>) {
   return (
     <>
       <AniLink
-        key={key}
         getProps={getProps}
         duration={duration}
         to={to}

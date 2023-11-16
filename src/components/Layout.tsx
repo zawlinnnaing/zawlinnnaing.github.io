@@ -1,38 +1,34 @@
-/* This example requires Tailwind CSS v2.0+ */
-import React, { useEffect, useState } from "react";
-import AppContext from "../contexts/AppContext";
+import React from "react";
 import "../css/app.css";
-import { changeTheme, getInitTheme, THEME_MODES } from "../utils/theme";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
+import ThemeProvider from "./ThemeProvider";
+import { LocationProvider } from "./LocationProvider";
 
 export default function Layout({
   children,
   showFooter = true,
   header = <></>,
-}) {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  useEffect(() => {
-    changeTheme(getInitTheme());
-    setIsDarkMode(getInitTheme() === THEME_MODES.dark);
-  }, []);
-
+  location,
+}: React.PropsWithChildren<{
+  showFooter?: boolean;
+  header?: React.ReactNode;
+  location: Location;
+}>) {
   return (
-    <AppContext.Provider
-      value={{
-        isDarkMode,
-        setIsDarkMode,
-      }}
-    >
-      <section className="max-w-2xl mx-auto">
-        <Navbar className="nav-bar" />
-        {header}
-        <main className="relative container mx-auto app-content">
-          {children}
+    <LocationProvider location={location}>
+      <ThemeProvider>
+        <main className="bg-white dark:bg-gray-900 min-h-screen">
+          <section className="max-w-2xl mx-auto">
+            <Navbar className="nav-bar" />
+            {header}
+            <main className="relative container mx-auto app-content">
+              {children}
+            </main>
+            {showFooter && <Footer className="flex-shrink-0" />}
+          </section>
         </main>
-        {showFooter && <Footer className="flex-shrink-0" />}
-      </section>
-    </AppContext.Provider>
+      </ThemeProvider>
+    </LocationProvider>
   );
 }

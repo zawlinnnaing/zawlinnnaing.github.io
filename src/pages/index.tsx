@@ -1,15 +1,17 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import HomeContainer from "../components/home/HomeContainer";
-import Layout from "../components/Layout";
+import HomeV2 from "../components/home/HomeV2";
+import ThemeProvider from "../components/ThemeProvider";
 
 export default function IndexPage() {
   return (
-    <Layout showFooter={false}>
+    <>
       <Helmet>
-        <title>Hi, I am Zaw Linn Naing</title>
+        <title>Hi, I am Zaw Lin Naing</title>
       </Helmet>
-      <HomeContainer />
-    </Layout>
+      <ThemeProvider>
+        <HomeV2 />
+      </ThemeProvider>
+    </>
   );
 }
