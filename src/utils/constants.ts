@@ -132,6 +132,10 @@ export const TECHNOLOGIES = {
     text: "Chrome Web Extension",
     url: "https://developer.chrome.com/docs/extensions/mv3/",
   },
+  nextJS: {
+    text: "Next.js",
+    url: "https://nextjs.org",
+  },
 };
 
 export const CONTACT_INFO = [

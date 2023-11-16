@@ -6,6 +6,7 @@ import SEO from "../components/common/SEO";
 import TableOfContent from "../components/common/TableOfContent";
 import Layout from "../components/Layout";
 import * as styles from "../css/about.module.css";
+import { TECHNOLOGIES } from "../utils/constants";
 
 const PrimarySpan = styled.span`
   color: var(--accent-color);
@@ -26,7 +27,10 @@ export default function AboutPage(props: { location: Location }) {
   return (
     <>
       <Layout location={props.location}>
-        <SEO title="About me - Zaw Linn Naing" />
+        <SEO
+          title="About me - Zaw Lin Naing"
+          description="I am a software engineer with 5 years of professional experience in developing web applications, using Node.js, React.js, Vue.js and Laravel. I also have hands-on experience in Docker, Kubernetes, AWS and Deep Learning/Machine Learning."
+        />
         <section className="block">
           <ScrollingProvider>
             <TableOfContent
@@ -41,44 +45,45 @@ export default function AboutPage(props: { location: Location }) {
                   text: "TLDR",
                 }}
               >
-                <h1 className={styles.aboutSectionTitle}>TLDR</h1>
+                <h1 className={styles.aboutSectionTitle}>TLDR;</h1>
                 <p>
-                  I am <PrimarySpan>a software engineer</PrimarySpan>, who
-                  mainly works on <PrimarySpan>web development</PrimarySpan>. I
-                  have at least <PrimarySpan>3 years of experience</PrimarySpan>{" "}
-                  in <PrimarySpan>backend development</PrimarySpan> using{" "}
-                  <AppLink href="https://nodejs.org/en/">Node.js</AppLink> and{" "}
-                  <AppLink href="https://laravel.com/">Laravel</AppLink>. For{" "}
-                  <PrimarySpan>frontend development</PrimarySpan>, I specialize
-                  mainly in{" "}
-                  <AppLink href="https://reactjs.org/">React.js</AppLink> and
-                  have intermediate experience in{" "}
-                  <AppLink href="https://vuejs.org/">Vue.js</AppLink>. I also
-                  have hands-on experience in{" "}
+                  I am a software engineer with 5 years of professional
+                  experience in developing web applications, using{" "}
+                  <AppLink href={TECHNOLOGIES.nodejs.url}>Node.js</AppLink>,{" "}
+                  <AppLink href={TECHNOLOGIES.reactJs.url}>React.js</AppLink>,{" "}
+                  <AppLink href={TECHNOLOGIES.vue.url}>Vue.js</AppLink> and{" "}
+                  <AppLink href={TECHNOLOGIES.laravel.url}>Laravel</AppLink>. I
+                  also have hands-on experience in{" "}
                   <PrimarySpan>
-                    Docker, Kubernetes, and Deep Learning/Machine Learning
+                    Docker, Kubernetes, AWS and Deep Learning/Machine Learning
                   </PrimarySpan>
                   . I love to build scalable and maintainable software and
-                  always prioritize good software architecture in software
+                  always prioritize clean software architecture in software
                   development. I am always eager to learn new technologies and
-                  concepts depending on requirements.
+                  concepts to contribute more.
                 </p>
-                <p className="italic">What I can offer:</p>
-
+                <p className="italic font-bold text-green-500">
+                  What I can offer:
+                </p>
                 <ol className="list-disc ml-8">
                   <li>
-                    Architect and develop web apps both backend and frontend.
+                    Architect and develop web applications both backend and
+                    frontend.
                   </li>
                   <li>
-                    Can also work on Deep learning/Machine learning projects if
+                    Setup and Deploy web apps on cloud providers, e.g,{" "}
+                    <AppLink href="https://aws.amazon.com/">AWS</AppLink>,{" "}
+                    <AppLink href="https://www.digitalocean.com/">
+                      Digital Ocean
+                    </AppLink>{" "}
+                    using Docker, Kubernetes and Serverless.
+                  </li>
+                  <li>
+                    Can work on Deep learning/Machine learning projects if
                     needed.
                   </li>
                   <li>
-                    Setup and Deploy web apps on Docker, Kubernetes and
-                    DigitalOcean droplets.
-                  </li>
-                  <li>
-                    Research about new technologies to solve particular
+                    Research about new technologies to solve complex business
                     problems.
                   </li>
                 </ol>
@@ -95,14 +100,12 @@ export default function AboutPage(props: { location: Location }) {
                   Backend Engineering
                 </h1>
                 <p className="my-4">
-                  I have at least 1 year of experience working with{" "}
-                  <AppLink href="https://laravel.com/">PHP(Laravel)</AppLink>{" "}
-                  and over 2 years of experience with{" "}
-                  <AppLink href="https://nodejs.org/en/">
-                    Javascript(Node.js)
-                  </AppLink>
-                  . I can also design and solve business problems with following
-                  data storage technologies.
+                  I can design and build scalable services with either{" "}
+                  <PrimarySpan>microservice</PrimarySpan> or{" "}
+                  <PrimarySpan>monolith</PrimarySpan> architectures. I can also
+                  provide insights on which architecture to choose depending on
+                  business requirements and constraints. I can solve business
+                  problems with the following data storage technologies.
                 </p>
                 <ul className="list-disc ml-8">
                   <li>
@@ -125,11 +128,8 @@ export default function AboutPage(props: { location: Location }) {
                     <AppLink href="https://redis.io/">Redis</AppLink>.
                   </li>
                   <li>
-                    Cloud Storage:{" "}
-                    <AppLink href="https://www.digitalocean.com/products/spaces/">
-                      DigitalOcean S3
-                    </AppLink>
-                    .
+                    Cloud Object Storage:{" "}
+                    <AppLink href="https://aws.amazon.com/s3">S3</AppLink>.
                   </li>
                 </ul>
                 <p>
@@ -147,11 +147,18 @@ export default function AboutPage(props: { location: Location }) {
                   </li>
                   <li>
                     Refactoring existing backend code by improving readability,
-                    separating concerns into separate classes/functions/modules,
-                    decoupling business logic from request/response layer or
-                    framework-specific functions into separate modules. Changing
-                    layered architecture into modular architecture for ease of
-                    splitting monolithic app into micro-services.
+                    separation of concerns, decoupling business logic from
+                    request/response layer or framework-specific functions into
+                    separate modules. Changing layered architecture into modular
+                    architecture for ease of splitting monolithic app into
+                    micro-services.
+                  </li>
+                  <li>
+                    Migrate monolith applications into micro-services and ensure{" "}
+                    <AppLink href="https://en.wikipedia.org/wiki/Eventual_consistency">
+                      eventual data consistency
+                    </AppLink>{" "}
+                    for such distributed services
                   </li>
                   <li>
                     Database schema design, including SQL and NoSQL to satisfy
@@ -184,19 +191,21 @@ export default function AboutPage(props: { location: Location }) {
                 </h1>
                 <p>
                   I have built{" "}
-                  <span className="font-bold">3 enterprise-level web apps</span>{" "}
-                  and <span className="font-bold">2 websites</span> (including
-                  this one) using{" "}
-                  <AppLink href="https://reactjs.org/">React.js</AppLink>. I
-                  also have experience in building{" "}
+                  <span className="font-bold">
+                    several enterprise-level web apps
+                  </span>{" "}
+                  using <AppLink href="https://reactjs.org/">React.js</AppLink>{" "}
+                  and <AppLink href={TECHNOLOGIES.nextJS.url}>Next.js</AppLink>.
+                  I also have experience in building{" "}
                   <span className="font-bold">
                     3+ small to medium sized applications
                   </span>{" "}
                   using <AppLink href="https://vuejs.org/">Vue.js</AppLink>.
-                  Even though I am not as experience in Vue.js as React.js, I
-                  can transfer my knowledge regarding with architectural
-                  patterns and principles from React. Thus, I believe that I can
-                  build quality apps with both frameworks. I can also setup{" "}
+                  Even though I am not as experience in Vue.js as React.js, I am
+                  confident that I can transfer my knowledge regarding with
+                  architectural patterns and principles from React. Thus, I
+                  believe that I can build quality apps with both frameworks. I
+                  can also setup{" "}
                   <AppLink href="https://web.dev/progressive-web-apps/">
                     PWA
                   </AppLink>{" "}
@@ -209,8 +218,9 @@ export default function AboutPage(props: { location: Location }) {
                   <AppLink href="https://redux.js.org/tutorials/fundamentals/part-1-overview">
                     redux architecture
                   </AppLink>
+                  .
                 </p>
-                .<br /> On the frontend-side, I can help you with:
+                On the frontend-side, I can help you with:
                 <ul className="list-disc ml-8">
                   <li>
                     Development of enterprise level applications with{" "}
