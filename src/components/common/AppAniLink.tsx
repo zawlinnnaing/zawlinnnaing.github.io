@@ -1,6 +1,5 @@
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 import React from "react";
-import { getInitTheme, THEME_MODES } from "../../utils/theme";
 
 export default function AppAniLink({
   duration = 1,
@@ -15,7 +14,7 @@ export default function AppAniLink({
         duration={duration}
         to={to}
         cover
-        bg={getInitTheme() === THEME_MODES.dark ? "#111827" : "#F9FAFB"}
+        bg={"#111827"}
       >
         {children}
       </AniLink>

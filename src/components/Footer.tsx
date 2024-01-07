@@ -1,14 +1,12 @@
 import React from "react";
-import useAppContext from "../hooks/useAppContext";
 import { CONTACT_INFO } from "../utils/constants";
 import AppLinkIcon from "./common/AppLinkIcon";
 
-export default function Footer({ className }) {
-  const { isDarkMode } = useAppContext();
+export default function Footer({ className }: { className?: string }) {
   return (
     <>
       <section
-        className={`text-center h-12 justify-center flex border-t-2 dark:border-gray-500 ${className}`}
+        className={`text-center h-12 justify-center flex border-t-2 border-gray-500 ${className}`}
       >
         <div className="my-auto">
           Contact me: &nbsp;{" "}
@@ -18,11 +16,7 @@ export default function Footer({ className }) {
                 size={20}
                 href={contactInfo.uri}
                 key={contactInfo.name}
-                src={
-                  isDarkMode
-                    ? contactInfo.iconLight || contactInfo.icon
-                    : contactInfo.icon
-                }
+                src={contactInfo.icon}
               />
               &nbsp;
             </span>

@@ -20,17 +20,15 @@ export default function AppCard({
   return (
     <>
       <div
-        className={`dark:bg-gray-100 bg-gray-900 rounded ${sizeStyleClass} shadow-md ${className}`}
+        className={`bg-gray-100 rounded ${sizeStyleClass} shadow-md ${className}`}
       >
         {title &&
           (isString(title) ? (
-            <div className="text-xl font-bold text-white dark:text-gray-900">
-              {title}
-            </div>
+            <div className="text-xl font-bold text-gray-900">{title}</div>
           ) : (
             title
           ))}
-        <div className="text-white dark:text-gray-900">{children}</div>
+        <div className="text-gray-900">{children}</div>
       </div>
     </>
   );

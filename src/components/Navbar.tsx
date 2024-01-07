@@ -3,7 +3,6 @@ import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 import React from "react";
 import { ROUTES } from "../utils/constants";
-import { THEME_MODES, getInitTheme } from "../utils/theme";
 import AppAniLink from "./common/AppAniLink";
 import AppLink from "./common/AppLink";
 
@@ -27,7 +26,7 @@ export default function Navbar({ className }: { className?: string }) {
   return (
     <Disclosure
       as="nav"
-      className={`dark:bg-gray-900 bg-white ${className} border-b-2 z-50 shadow-sm fixed top-0`}
+      className={`bg-gray-900 border-b-2 z-50 shadow-sm fixed top-0 ${className}`}
     >
       {({ open }) => (
         <>
@@ -49,11 +48,7 @@ export default function Navbar({ className }: { className?: string }) {
                     <AniLink
                       swipe
                       direction="left"
-                      bg={
-                        getInitTheme() === THEME_MODES.dark
-                          ? "#111827"
-                          : "#F9FAFB"
-                      }
+                      bg={"#111827"}
                       duration={1}
                       key={item.name}
                       to={item.href}
@@ -73,7 +68,7 @@ export default function Navbar({ className }: { className?: string }) {
             </div>
           </div>
 
-          <Disclosure.Panel className="md:hidden transition-all px-4 divide-y divide-black dark:divide-white bg-gray-100 dark:bg-gray-900">
+          <Disclosure.Panel className="md:hidden transition-all px-4 divide-y  divide-white bg-gray-900">
             <div className="p-2 space-y-1">
               {ROUTES.map((item) => (
                 <AppAniLink

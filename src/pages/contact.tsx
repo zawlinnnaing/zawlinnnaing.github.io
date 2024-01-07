@@ -12,7 +12,7 @@ export default function ContactPage(props: PageProps) {
     <>
       <Layout showFooter={false} location={props.location}>
         <SEO title="Contact Me - Zaw Linn Naing" />
-        <div className="h-screen-90 text-center text-white dark:text-gray-900">
+        <div className="h-screen-90 text-center">
           <TransitionContainer>
             <AppCard
               className="top-1/4 text-left p-6 app-card break-words"
