@@ -25,7 +25,7 @@
 
   body {
     line-height: 2;
-    @apply text-black dark:text-white;
+    @apply text-white;
     @apply transition-colors duration-700;
   }
 
@@ -81,12 +81,12 @@
 
   .navbar-item {
     @apply px-3 py-2 text-base font-medium mx-2;
-    @apply text-gray-500 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white;
-    @apply md:hover:border-black border-b-4 border-transparent md:dark:hover:border-white;
+    @apply text-gray-200 hover:text-white;
+    @apply border-b-4 border-transparent md:hover:border-white;
   }
 
   .active-navbar-item {
-    @apply md:border-black md:dark:border-gray-100 font-bold;
+    @apply md:border-gray-100 font-bold;
   }
 
   .active-navbar-item-mobile {
@@ -99,7 +99,7 @@
   }
 
   .subtitle {
-    @apply text-gray-500 dark:text-gray-400;
+    @apply text-gray-400;
   }
 
   .min-w-200 {
@@ -132,7 +132,7 @@
     width: 100%;
     z-index: 40;
     overflow: hidden;
-    @apply bg-white dark:bg-gray-900 max-w-2xl;
+    @apply bg-gray-900 max-w-2xl;
   }
 
   a {

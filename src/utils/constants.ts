@@ -146,15 +146,15 @@ export const CONTACT_INFO = [
     uri: "https://www.linkedin.com/in/zlnaing/",
   },
   {
-    icon: GitHubLight,
-    iconLight: GitHubDark,
+    icon: GitHubDark,
+    iconLight: GitHubLight,
     name: "Github",
     text: "zawlinnnaing",
     uri: "https://github.com/zawlinnnaing",
   },
   {
     icon: Email,
-    name: "Gmail",
+    name: "Email",
     text: "zawlinnnaing0018@gmail.com",
     uri: "mailto:zawlinnnaing0018@gmail.com",
   },

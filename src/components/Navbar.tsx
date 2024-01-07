@@ -27,7 +27,7 @@ export default function Navbar({ className }: { className?: string }) {
   return (
     <Disclosure
       as="nav"
-      className={`dark:bg-gray-900 bg-white ${className} border-b-2 z-50 shadow-sm fixed top-0`}
+      className={`bg-gray-900 border-b-2 z-50 shadow-sm fixed top-0 ${className}`}
     >
       {({ open }) => (
         <>
@@ -73,7 +73,7 @@ export default function Navbar({ className }: { className?: string }) {
             </div>
           </div>
 
-          <Disclosure.Panel className="md:hidden transition-all px-4 divide-y divide-black dark:divide-white bg-gray-100 dark:bg-gray-900">
+          <Disclosure.Panel className="md:hidden transition-all px-4 divide-y  divide-white bg-gray-900">
             <div className="p-2 space-y-1">
               {ROUTES.map((item) => (
                 <AppAniLink

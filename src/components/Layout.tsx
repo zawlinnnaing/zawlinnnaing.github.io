@@ -18,7 +18,7 @@ export default function Layout({
   return (
     <LocationProvider location={location}>
       <ThemeProvider>
-        <main className="bg-white dark:bg-gray-900 min-h-screen">
+        <main className="bg-gray-900 min-h-screen">
           <section className="max-w-2xl mx-auto">
             <Navbar className="nav-bar" />
             {header}

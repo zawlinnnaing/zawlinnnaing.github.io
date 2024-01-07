@@ -1,15 +1,15 @@
 import { ChevronDownIcon } from "@heroicons/react/outline";
-import { Link } from "gatsby";
-import React from "react";
-import { CONTACT_INFO, RESUME_LINK, TECHNOLOGIES } from "../../utils/constants";
-import Tag from "../common/Tag";
-import * as styles from "./HomeV2.module.css";
 import classNames from "classnames";
+import { Link } from "gatsby";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
-import AppLinkIcon from "../common/AppLinkIcon";
+import React from "react";
 import useAppContext from "../../hooks/useAppContext";
+import { CONTACT_INFO, RESUME_LINK, TECHNOLOGIES } from "../../utils/constants";
+import AppLinkIcon from "../common/AppLinkIcon";
+import Tag from "../common/Tag";
+import * as styles from "./Home.module.css";
 
-export default function HomeV2() {
+export default function Home() {
   const { isDarkMode } = useAppContext();
   const links = [
     {
@@ -33,7 +33,7 @@ export default function HomeV2() {
   ];
 
   return (
-    <main className="h-screen flex justify-center items-center dark:bg-gray-900 bg-white">
+    <main className="h-screen flex justify-center items-center bg-gray-900">
       <div className="px-4 lg:max-w-screen-sm">
         <p className="text-sm my-4">Hi, I am</p>
         <h1 className="text-2xl text-green-500 my-4">Zaw Lin Naing</h1>

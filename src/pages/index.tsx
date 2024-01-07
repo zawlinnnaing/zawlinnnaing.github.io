@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import HomeV2 from "../components/home/HomeV2";
+import Home from "../components/home/Home";
 import ThemeProvider from "../components/ThemeProvider";
 
 export default function IndexPage() {
@@ -10,7 +10,7 @@ export default function IndexPage() {
         <title>Hi, I am Zaw Lin Naing</title>
       </Helmet>
       <ThemeProvider>
-        <HomeV2 />
+        <Home />
       </ThemeProvider>
     </>
   );
