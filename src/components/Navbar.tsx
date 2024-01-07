@@ -3,7 +3,6 @@ import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 import React from "react";
 import { ROUTES } from "../utils/constants";
-import { THEME_MODES, getInitTheme } from "../utils/theme";
 import AppAniLink from "./common/AppAniLink";
 import AppLink from "./common/AppLink";
 
@@ -49,11 +48,7 @@ export default function Navbar({ className }: { className?: string }) {
                     <AniLink
                       swipe
                       direction="left"
-                      bg={
-                        getInitTheme() === THEME_MODES.dark
-                          ? "#111827"
-                          : "#F9FAFB"
-                      }
+                      bg={"#111827"}
                       duration={1}
                       key={item.name}
                       to={item.href}
