@@ -21,6 +21,12 @@ module.exports = {
     "gatsby-plugin-transition-link",
     "gatsby-plugin-react-helmet",
     {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        icon: "src/assets/icons/favicon.jpg",
+      },
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "assets",

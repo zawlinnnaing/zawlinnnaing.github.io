@@ -5,11 +5,12 @@ import TransitionContainer from "../components/common/TransitionContainer";
 import SEO from "../components/common/SEO";
 import { CONTACT_INFO } from "../utils/constants";
 import AppLink from "../components/common/AppLink";
+import { PageProps } from "gatsby";
 
-export default function ContactPage() {
+export default function ContactPage(props: PageProps) {
   return (
     <>
-      <Layout showFooter={false}>
+      <Layout showFooter={false} location={props.location}>
         <SEO title="Contact Me - Zaw Linn Naing" />
         <div className="h-screen-90 text-center text-white dark:text-gray-900">
           <TransitionContainer>

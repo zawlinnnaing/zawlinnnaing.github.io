@@ -3,21 +3,64 @@ import ExpaAI from "../assets/logos/expa-ai.png";
 import Mounts from "../assets/logos/mounts.jpg";
 import Nexlabs from "../assets/logos/nexlabs.jpg";
 import Taskworld from "../assets/logos/taskworld.png";
+import BriklLogo from "../assets/logos/brikl.jpg";
 import TaskworldSummary from "../components/experience/TaskworldSummary";
 import { TECHNOLOGIES } from "../utils/constants";
 import { formatDuration } from "../utils/dateTime";
 import { IExperience } from "./types";
+import BriklSummary from "../components/experience/BriklSummary";
+
+function createEmploymentPeriod(
+  start: Date,
+  end?: Date
+): IExperience["employmentPeriod"] {
+  return {
+    start,
+    end,
+    get duration() {
+      return formatDuration(this.start, this.end);
+    },
+  };
+}
 
 const experiences: IExperience[] = [
   {
+    id: "brikl",
+    companyName: "Brikl",
+    url: "/experience/brikl",
+    companyUrl: "https://www.brikl.com/",
+    role: "Software Engineer - Backend",
+    employmentPeriod: createEmploymentPeriod(
+      new Date(2023, 1),
+      new Date(2023, 7)
+    ),
+    logo: {
+      uri: BriklLogo,
+      isHorizontal: false,
+    },
+    technologies: [
+      TECHNOLOGIES.graphql,
+      TECHNOLOGIES.typescript,
+      TECHNOLOGIES.nodejs,
+      TECHNOLOGIES.postgresql,
+      TECHNOLOGIES.prisma,
+      TECHNOLOGIES.redis,
+      TECHNOLOGIES.aws,
+      TECHNOLOGIES.serverless,
+    ],
+    summary: <BriklSummary />,
+  },
+  {
     id: "taskworld",
     companyName: "Taskworld",
+    companyUrl: "https://taskworld.com/",
     url: "/experience/taskworld",
     role: "Full Stack Engineer",
     employmentPeriod: {
       start: new Date(2022, 0),
+      end: new Date(2023, 1),
       get duration() {
-        return formatDuration(this.start);
+        return formatDuration(this.start, this.end);
       },
     },
     logo: {
@@ -69,8 +112,8 @@ const experiences: IExperience[] = [
     summary: (
       <>
         <div className="py-2">
-          <h4 className="text-xl pb-1 font-light">CONTRIBUTIONS</h4>
-          <ul className="list-disc pl-6">
+          <h4 className="pb-1 text-xl font-light">CONTRIBUTIONS</h4>
+          <ul className="pl-6 list-disc">
             <li>
               Revamped and extended a social commerce platform (using{" "}
               <i>Node.js</i> and <i>React.js</i>) which integrates with Facebook
@@ -100,8 +143,8 @@ const experiences: IExperience[] = [
           </ul>
         </div>
         <div>
-          <h4 className="text-xl pb-1 font-light">CHALLENGES</h4>
-          <ul className="list-disc pl-6">
+          <h4 className="pb-1 text-xl font-light">CHALLENGES</h4>
+          <ul className="pl-6 list-disc">
             <li>
               Ensured product quality through rapid iterations of the
               development process
@@ -142,8 +185,8 @@ const experiences: IExperience[] = [
     summary: (
       <>
         <div className="py-2">
-          <h4 className="text-xl pb-1 font-light">CONTRIBUTIONS</h4>
-          <ul className="app-list pl-6">
+          <h4 className="pb-1 text-xl font-light">CONTRIBUTIONS</h4>
+          <ul className="pl-6 app-list">
             <li>
               Developed backend system for ERP solutions using{" "}
               <i>Laravel and MySQL</i>.
@@ -160,8 +203,8 @@ const experiences: IExperience[] = [
           </ul>
         </div>
         <div>
-          <h4 className="text-xl pb-1 font-light">CHALLENGES</h4>
-          <ul className="app-list pl-6">
+          <h4 className="pb-1 text-xl font-light">CHALLENGES</h4>
+          <ul className="pl-6 app-list">
             <li>
               Designing DB schema for ERP systems that fit business needs.
             </li>
@@ -209,8 +252,8 @@ const experiences: IExperience[] = [
     summary: (
       <>
         <div className="py-2">
-          <h4 className="text-xl pb-1 font-light">CONTRIBUTIONS</h4>
-          <ul className="app-list pl-6">
+          <h4 className="pb-1 text-xl font-light">CONTRIBUTIONS</h4>
+          <ul className="pl-6 app-list">
             <li>
               Reviewed code for a project to learn about code architecture,
               coding styles from senior developers.

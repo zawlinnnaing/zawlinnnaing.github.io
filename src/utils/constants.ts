@@ -1,8 +1,7 @@
-import LinkedIn from "../assets/icons/linkedin.png";
-import Email from "../assets/icons/gmail.png";
 import GitHubDark from "../assets/icons/github-dark.png";
 import GitHubLight from "../assets/icons/github-light.png";
-import { ITechnology } from "./types";
+import Email from "../assets/icons/gmail.png";
+import LinkedIn from "../assets/icons/linkedin.png";
 
 export const ROUTES = Object.freeze([
   { name: "Home", href: "/" },
@@ -11,7 +10,7 @@ export const ROUTES = Object.freeze([
   { name: "About me", href: "/about" },
 ]);
 
-export const TECHNOLOGIES: Record<string, ITechnology> = {
+export const TECHNOLOGIES = {
   redis: {
     text: "Redis",
     url: "https://redis.io",
@@ -113,6 +112,30 @@ export const TECHNOLOGIES: Record<string, ITechnology> = {
     text: "Tensorflow",
     url: "https://www.tensorflow.org/",
   },
+  aws: {
+    text: "Amazon Web Services",
+    url: "https://aws.amazon.com/",
+  },
+  serverless: {
+    text: "Serverless",
+    url: "https://www.serverless.com/",
+  },
+  prisma: {
+    text: "Prisma ORM",
+    url: "https://www.prisma.io/",
+  },
+  vite: {
+    text: "Vite",
+    url: "https://vitejs.dev/",
+  },
+  chromeExtension: {
+    text: "Chrome Web Extension",
+    url: "https://developer.chrome.com/docs/extensions/mv3/",
+  },
+  nextJS: {
+    text: "Next.js",
+    url: "https://nextjs.org",
+  },
 };
 
 export const CONTACT_INFO = [
@@ -123,8 +146,8 @@ export const CONTACT_INFO = [
     uri: "https://www.linkedin.com/in/zlnaing/",
   },
   {
-    icon: GitHubDark,
-    iconLight: GitHubLight,
+    icon: GitHubLight,
+    iconLight: GitHubDark,
     name: "Github",
     text: "zawlinnnaing",
     uri: "https://github.com/zawlinnnaing",
@@ -133,6 +156,9 @@ export const CONTACT_INFO = [
     icon: Email,
     name: "Gmail",
     text: "zawlinnnaing0018@gmail.com",
-    uri: "mailto://zawlinnnaing0018@gmail.com",
+    uri: "mailto:zawlinnnaing0018@gmail.com",
   },
 ];
+
+export const RESUME_LINK =
+  "https://docs.google.com/document/d/1PLzmX_DR6wARbjrEMneYnTu-hg0xR0Tmlpk0D0nPFA0/export?format=pdf&attachment=false";

@@ -1,8 +1,44 @@
 import React from "react";
 import AppLink from "../components/common/AppLink";
 import { TECHNOLOGIES } from "../utils/constants";
+import { IProject } from "./types";
 
-export default [
+const projects: IProject[] = [
+  {
+    name: "Zen Mode Extension",
+    links: [
+      {
+        text: "source code",
+        url: "https://github.com/zen-suite/focus-mode-extension",
+      },
+      {
+        text: "download extension",
+        url: "https://chrome.google.com/webstore/detail/zen-mode-block-distractio/cblailchdcmjcjjklmninjaoifijfdmg",
+      },
+    ],
+    logo: {
+      src: "https://raw.githubusercontent.com/zen-suite/focus-mode-extension/943a82b7eb203e3dda69f8047c928d4cb5c65674/public/logo.png",
+    },
+    technologies: [
+      TECHNOLOGIES.typescript,
+      TECHNOLOGIES.reactJs,
+      TECHNOLOGIES.vite,
+      TECHNOLOGIES.chromeExtension,
+    ],
+    summary: (
+      <>
+        Zen Mode Extension is a Chrome browser extension that I developed to
+        optimize productivity and minimize distractions. It empowers users to
+        regain control over their online experience by blocking access to up to
+        5000 domains. As a testament to its versatility, this extension also
+        boasts a search functionality, enabling users to effortlessly search for
+        and unblock specific websites that may be temporarily restricted. By
+        integrating comprehensive website blocking features with a user-friendly
+        search function, Zen Mode Extension offers an efficient solution for
+        enhancing productivity and maintaining focus during web browsing.
+      </>
+    ),
+  },
   {
     name: "Zen Player",
     links: [
@@ -91,7 +127,7 @@ export default [
         </AppLink>
         . My main contribution for the project includes;
         <br />
-        <ul className="list-disc ml-6">
+        <ul className="ml-6 list-disc">
           <li>
             Up-scaled Generator model output image by 2 times, including its
             neural network Parameters. (from 256x256 to 512x512)
@@ -114,3 +150,5 @@ export default [
     technologies: [TECHNOLOGIES.python, TECHNOLOGIES.tensorflow],
   },
 ];
+
+export default projects;

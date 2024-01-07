@@ -2,137 +2,140 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --accent-color: #10b981;
-  --mobile-card-width: {
+@layer base {
+  :root {
+    --accent-color: #10b981;
+    --mobile-card-width: {
+      max-width: 90vw;
+    }
+    --desktop-card-width: {
+      max-width: 500px;
+    }
+  }
+
+  ::selection {
+    background: var(--accent-color);
+    @apply text-white;
+  }
+
+  ::-moz-selection {
+    background: var(--accent-color);
+    @apply text-white;
+  }
+
+  body {
+    line-height: 2;
+    @apply text-black dark:text-white;
+    @apply transition-colors duration-700;
+  }
+
+  .theme-icon {
+    @apply w-5 h-5 inline-block text-white my-2;
+  }
+
+  .left-34 {
+    left: 8.5rem;
+  }
+
+  .max-h-250px {
+    max-height: 250px;
+  }
+
+  .h-screen-4by6 {
+    height: 83.33vh;
+  }
+
+  .h-screen-90 {
+    height: 90vh;
+  }
+
+  .max-w-90 {
     max-width: 90vw;
   }
-  --desktop-card-width: {
+
+  .max-w-500px {
     max-width: 500px;
   }
-}
 
-::selection {
-  background: var(--accent-color);
-  @apply text-white;
-}
-
-::-moz-selection {
-  background: var(--accent-color);
-  @apply text-white;
-}
-
-body {
-  @apply bg-white dark:bg-gray-900;
-  @apply min-h-screen;
-  line-height: 2;
-  @apply text-black dark:text-white;
-  @apply transition-colors duration-700;
-}
-
-.theme-icon {
-  @apply w-5 h-5 inline-block text-white my-2;
-}
-
-.left-34 {
-  left: 8.5rem;
-}
-
-.max-h-250px {
-  max-height: 250px;
-}
-
-.h-screen-4by6 {
-  height: 83.33vh;
-}
-
-.h-screen-90 {
-  height: 90vh;
-}
-
-.max-w-90 {
-  max-width: 90vw;
-}
-
-.max-w-500px {
-  max-width: 500px;
-}
-
-@media screen and (max-width: 1280px) {
-  .app-card {
-    max-width: 86vw;
+  @media screen and (max-width: 1280px) {
+    .app-card {
+      max-width: 86vw;
+    }
   }
-}
 
-.app-card {
-  max-width: 500px;
-  margin: 0 1rem;
-  overflow: hidden;
-}
+  .app-card {
+    max-width: 500px;
+    margin: 0 1rem;
+    overflow: hidden;
+  }
 
-.min-h-1 {
-  min-height: 1rem;
-}
+  .min-h-1 {
+    min-height: 1rem;
+  }
 
-.nav-bar {
-  z-index: 100;
-  width: 100%;
-  @apply max-w-2xl;
-}
+  .nav-bar {
+    z-index: 100;
+    width: 100%;
+    @apply max-w-2xl;
+  }
 
-.navbar-item {
-  @apply px-3 py-2 text-base font-medium mx-2;
-  @apply text-gray-500 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white;
-  @apply md:hover:border-black border-b-4 border-transparent md:dark:hover:border-white;
-}
+  .navbar-item {
+    @apply px-3 py-2 text-base font-medium mx-2;
+    @apply text-gray-500 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white;
+    @apply md:hover:border-black border-b-4 border-transparent md:dark:hover:border-white;
+  }
 
-.active-navbar-item {
-  @apply md:border-black md:dark:border-gray-100 font-bold;
-  /* @apply hover:text-white dark:hover:text-white; */
-}
+  .active-navbar-item {
+    @apply md:border-black md:dark:border-gray-100 font-bold;
+  }
 
-.active-navbar-item-mobile {
-  background-color: var(--accent-color);
-  @apply text-white rounded;
-}
+  .active-navbar-item-mobile {
+    background-color: var(--accent-color);
+    @apply text-white rounded;
+  }
 
-.writing-mode-vertical {
-  writing-mode: vertical-lr;
-}
+  .writing-mode-vertical {
+    writing-mode: vertical-lr;
+  }
 
-.subtitle {
-  @apply text-gray-500 dark:text-gray-400;
-}
+  .subtitle {
+    @apply text-gray-500 dark:text-gray-400;
+  }
 
-.min-w-200 {
-  min-width: 200px;
-}
+  .min-w-200 {
+    min-width: 200px;
+  }
 
-.app-link {
-  @apply text-green-500 hover:underline text-base;
-}
+  .app-link {
+    @apply text-green-500 hover:underline text-base;
+  }
 
-.app-list {
-  @apply list-disc list-outside;
-}
+  .app-list {
+    @apply list-disc list-outside;
+  }
 
-.app-span {
-  @apply text-green-500;
-}
+  .app-span {
+    @apply text-green-500;
+  }
 
-.active-link {
-  @apply border-b-2 border-green-500;
-}
+  .active-link {
+    @apply border-b-2 border-green-500;
+  }
 
-.app-content {
-  padding-top: 5rem;
-}
+  .app-content {
+    padding-top: 5rem;
+  }
 
-.app-table-of-content {
-  position: fixed;
-  top: 4rem;
-  width: 100%;
-  z-index: 40;
-  overflow: hidden;
-  @apply bg-white dark:bg-gray-900 max-w-2xl;
+  .app-table-of-content {
+    position: fixed;
+    top: 4rem;
+    width: 100%;
+    z-index: 40;
+    overflow: hidden;
+    @apply bg-white dark:bg-gray-900 max-w-2xl;
+  }
+
+  a {
+    cursor: pointer;
+  }
 }
