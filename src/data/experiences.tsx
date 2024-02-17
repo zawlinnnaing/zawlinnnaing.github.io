@@ -9,6 +9,8 @@ import { TECHNOLOGIES } from "../utils/constants";
 import { formatDuration } from "../utils/dateTime";
 import { IExperience } from "./types";
 import BriklSummary from "../components/experience/BriklSummary";
+import OozouLogo from "../assets/logos/oozou.jpg";
+import OozouSummary from "../components/experience/OozouSummary";
 
 function createEmploymentPeriod(
   start: Date,
@@ -24,6 +26,32 @@ function createEmploymentPeriod(
 }
 
 const experiences: IExperience[] = [
+  {
+    id: "oozou",
+    companyName: "Oozou",
+    employmentPeriod: createEmploymentPeriod(new Date(2023, 8)),
+    logo: {
+      uri: OozouLogo,
+      isHorizontal: false,
+    },
+    role: "Full-stack Engineer",
+    technologies: [
+      TECHNOLOGIES.typescript,
+      TECHNOLOGIES.nextJS,
+      TECHNOLOGIES.reactJs,
+      TECHNOLOGIES.tailwindCSS,
+      TECHNOLOGIES.nodejs,
+      TECHNOLOGIES.postgresql,
+      TECHNOLOGIES.redis,
+      TECHNOLOGIES.docker,
+      TECHNOLOGIES.aws,
+      TECHNOLOGIES.websocket,
+      TECHNOLOGIES.yjs,
+    ],
+    url: "https://oozou.com",
+    companyUrl: "https://oozou.com",
+    summary: <OozouSummary />,
+  },
   {
     id: "brikl",
     companyName: "Brikl",
