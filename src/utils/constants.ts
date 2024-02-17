@@ -1,3 +1,4 @@
+import { url } from "inspector";
 import GitHubDark from "../assets/icons/github-dark.png";
 import GitHubLight from "../assets/icons/github-light.png";
 import Email from "../assets/icons/gmail.png";
@@ -135,6 +136,10 @@ export const TECHNOLOGIES = {
   nextJS: {
     text: "Next.js",
     url: "https://nextjs.org",
+  },
+  yjs: {
+    text: "Yjs",
+    url: "https://yjs.dev",
   },
 };
 
