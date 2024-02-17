@@ -39,9 +39,10 @@ export default function OozouSummary() {
             stability, maintainability and extensibility.
           </SummaryListItem>
           <SummaryListItem>
-            Setup client codebase structure, seamlessly integrating state
-            management with data fetching that enables optimistic updates, data
-            caching and cache invalidation.
+            Setup client codebase structure to streamline feature development
+            for other developers, enabling seamless implementation of optimistic
+            updates, data caching, and cache validation by integrating state
+            management with data fetching.
           </SummaryListItem>
           <SummaryListItem>
             Reduced API calls and page load performance for the new editor;
