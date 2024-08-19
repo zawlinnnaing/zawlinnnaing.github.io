@@ -11,7 +11,7 @@ export default function ContactPage(props: PageProps) {
   return (
     <>
       <Layout showFooter={false} location={props.location}>
-        <SEO title="Contact Me - Zaw Linn Naing" />
+        <SEO title="Contact Me - Zaw Lin Naing" />
         <div className="h-screen-90 text-center">
           <TransitionContainer>
             <AppCard

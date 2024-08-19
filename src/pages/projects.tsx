@@ -12,7 +12,7 @@ const projectIds = projects.map((project) => `project-${project.name}`);
 export default function ProjectsPage(props: PageProps) {
   return (
     <Layout location={props.location}>
-      <SEO title="Projects - Zaw Linn Naing" />
+      <SEO title="Projects - Zaw Lin Naing" />
       <ScrollingProvider>
         <TableOfContent sectionIds={projectIds} outerClassName="12rem" />
         <div className="p-4 pt-16">

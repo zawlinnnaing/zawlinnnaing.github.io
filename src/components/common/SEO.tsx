@@ -16,16 +16,16 @@ const DEFAULT_DESCRIPTION =
 // ];
 
 export default function SEO({
-  title = "Hi, I am Zaw Linn Naing",
+  title = "Hi, I am Zaw Lin Naing",
   description = DEFAULT_DESCRIPTION,
 }) {
   return (
     <>
       <Helmet>
         <title>{title}</title>
-        <meta charset="utf-8" />
+        <meta charSet="utf-8" />
         <meta name="description" content={description} />
-        <meta name="author" content="Zaw Linn Naing" />
+        <meta name="author" content="Zaw Lin Naing" />
         <meta name="robot" content="index nofollow" />
         <meta property="og:title" content={title} />
         <meta property="og:locale" content="en_GB" />

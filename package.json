@@ -2,12 +2,11 @@
   "name": "zawlinnnaing",
   "version": "0.0.0-development",
   "private": true,
-  "description": "zawlinnnaing's personal website",
-  "author": "zawlinnnaing",
+  "description": "My personal website",
+  "author": "Zaw Lin Naing",
   "keywords": [
     "gatsby",
-    "portfolio",
-    "zawlinnaning"
+    "portfolio"
   ],
   "engines": {
     "node": ">=16"

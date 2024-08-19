@@ -15,7 +15,7 @@ export default function ExperiencePage(props: PageProps) {
   return (
     <ScrollingProvider>
       <Layout location={props.location}>
-        <SEO title="My Experience - Zaw Linn Naing" />
+        <SEO title="My Experience - Zaw Lin Naing" />
         <TableOfContent
           expandedPanelHeight="12rem"
           sectionIds={experienceIds}
