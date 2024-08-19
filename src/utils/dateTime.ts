@@ -11,14 +11,20 @@ export function formatDuration(startTime: Date, endTime?: Date): string {
 }
 
 export function formatToYearsAndMonths(durationInMonths: number): string {
-  const numberOfYears = durationInMonths / 12;
+  const numberOfYears = Math.floor(durationInMonths / 12);
   const remainingMonths = durationInMonths % 12;
+  const displayMonth = `${remainingMonths} ${
+    remainingMonths === 1 ? "mo" : "mos"
+  }`;
+  const displayYear = `${numberOfYears} ${
+    numberOfYears === 1 ? "year" : "years"
+  }`;
   if (numberOfYears >= 1) {
-    const roundedYears = Math.floor(numberOfYears);
-    return `${roundedYears} ${
-      roundedYears === 1 ? "year" : "years"
-    }, ${remainingMonths} ${remainingMonths === 1 ? "mo" : "mos"}`;
+    if (remainingMonths === 0) {
+      return displayYear;
+    }
+    return `${displayYear}, ${displayMonth}`;
   }
 
-  return `${remainingMonths} ${remainingMonths === 1 ? "mo" : "mos"}`;
+  return `${displayMonth}`;
 }

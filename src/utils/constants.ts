@@ -1,4 +1,3 @@
-import { url } from "inspector";
 import GitHubDark from "../assets/icons/github-dark.png";
 import GitHubLight from "../assets/icons/github-light.png";
 import Email from "../assets/icons/gmail.png";
@@ -12,6 +11,10 @@ export const ROUTES = Object.freeze([
 ]);
 
 export const TECHNOLOGIES = {
+  angular: {
+    text: "Angular",
+    url: "https://angular.dev",
+  },
   redis: {
     text: "Redis",
     url: "https://redis.io",
@@ -95,6 +98,10 @@ export const TECHNOLOGIES = {
   googleMap: {
     text: "Google Map API",
     url: "https://developers.google.com/maps",
+  },
+  golang: {
+    text: "Golang",
+    url: "https://go.dev",
   },
   nuxt: {
     text: "Nuxt.js",

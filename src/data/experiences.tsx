@@ -1,16 +1,18 @@
 import React from "react";
+import BriklLogo from "../assets/logos/brikl.jpg";
 import ExpaAI from "../assets/logos/expa-ai.png";
 import Mounts from "../assets/logos/mounts.jpg";
 import Nexlabs from "../assets/logos/nexlabs.jpg";
+import OozouLogo from "../assets/logos/oozou.jpg";
+import SertisLogo from "../assets/logos/sertis.png";
 import Taskworld from "../assets/logos/taskworld.png";
-import BriklLogo from "../assets/logos/brikl.jpg";
+import BriklSummary from "../components/experience/BriklSummary";
+import OozouSummary from "../components/experience/OozouSummary";
+import SertisSummary from "../components/experience/SertisSummary";
 import TaskworldSummary from "../components/experience/TaskworldSummary";
 import { TECHNOLOGIES } from "../utils/constants";
 import { formatDuration } from "../utils/dateTime";
 import { IExperience } from "./types";
-import BriklSummary from "../components/experience/BriklSummary";
-import OozouLogo from "../assets/logos/oozou.jpg";
-import OozouSummary from "../components/experience/OozouSummary";
 
 function createEmploymentPeriod(
   start: Date,
@@ -27,9 +29,29 @@ function createEmploymentPeriod(
 
 const experiences: IExperience[] = [
   {
+    id: "Sertis",
+    companyName: "Sertis",
+    employmentPeriod: createEmploymentPeriod(new Date(2024, 6)),
+    logo: {
+      uri: SertisLogo,
+      isHorizontal: true,
+    },
+    url: "https://www.sertiscorp.com",
+    role: "Senior Software Engineer",
+    technologies: [
+      TECHNOLOGIES.angular,
+      TECHNOLOGIES.typescript,
+      TECHNOLOGIES.golang,
+    ],
+    summary: <SertisSummary />,
+  },
+  {
     id: "oozou",
     companyName: "Oozou",
-    employmentPeriod: createEmploymentPeriod(new Date(2023, 8)),
+    employmentPeriod: createEmploymentPeriod(
+      new Date(2023, 8),
+      new Date(2024, 6)
+    ),
     logo: {
       uri: OozouLogo,
       isHorizontal: false,
