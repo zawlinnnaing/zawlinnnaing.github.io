@@ -11,6 +11,30 @@ export const ROUTES = Object.freeze([
 ]);
 
 export const TECHNOLOGIES = {
+  sqlite: {
+    text: "SQLite",
+    url: "https://www.sqlite.org/index.html",
+  },
+  dynamodb: {
+    text: "Amazon DynamoDB",
+    url: "https://aws.amazon.com/dynamodb/",
+  },
+  athena: {
+    text: "Amazon Athena",
+    url: "https://aws.amazon.com/athena/",
+  },
+  azure: {
+    text: "Microsoft Azure",
+    url: "https://azure.microsoft.com/",
+  },
+  gcloud: {
+    text: "Google Cloud Platform",
+    url: "https://cloud.google.com/",
+  },
+  javascript: {
+    text: "JavaScript",
+    url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+  },
   angular: {
     text: "Angular",
     url: "https://angular.dev",

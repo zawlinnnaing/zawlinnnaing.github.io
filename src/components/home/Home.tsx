@@ -38,14 +38,18 @@ export default function Home() {
         <p className="text-sm my-4">Hi, I am</p>
         <h1 className="text-2xl text-green-500 my-4">Zaw Lin Naing</h1>
         <p className="my-4">
-          A full-stack engineer with 5 years of experience and passion about
-          building software both professionally and for fun. Always eager to
-          learn new things ✨.
+          Results-driven full-stack software engineer with strong experience in
+          the JavaScript ecosystem. I build reliable, scalable, and maintainable
+          systems, and effectively leverage AI coding agents to boost
+          productivity and code quality. Always learning and adapting to modern
+          development practices.
         </p>
         <section className="my-4 flex">
           <span className="mr-4">Skills:</span>
           <div className="inline-flex flex-wrap">
             {[
+              TECHNOLOGIES.typescript,
+              TECHNOLOGIES.javascript,
               TECHNOLOGIES.nodejs,
               TECHNOLOGIES.reactJs,
               TECHNOLOGIES.docker,
@@ -54,6 +58,8 @@ export default function Home() {
               TECHNOLOGIES.graphql,
               TECHNOLOGIES.mongodb,
               TECHNOLOGIES.aws,
+              TECHNOLOGIES.gcloud,
+              TECHNOLOGIES.azure,
             ].map((technology) => {
               return (
                 <Tag
