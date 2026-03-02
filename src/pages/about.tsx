@@ -1,21 +1,11 @@
 import React from "react";
 import { ScrollingProvider, Section } from "react-scroll-section";
-import styled from "styled-components";
 import AppLink from "../components/common/AppLink";
 import SEO from "../components/common/SEO";
 import TableOfContent from "../components/common/TableOfContent";
 import Layout from "../components/Layout";
 import * as styles from "../css/about.module.css";
 import { TECHNOLOGIES } from "../utils/constants";
-
-const PrimarySpan = styled.span`
-  color: var(--accent-color);
-  font-weight: bold;
-`;
-
-const SectionHr = styled.hr`
-  margin: 0 1rem;
-`;
 
 const SECTION_MAP = {
   frontend: "frontend",
@@ -110,7 +100,7 @@ export default function AboutPage(props: { location: Location }) {
                   </li>
                 </ol>
               </Section>
-              <SectionHr />
+              <hr className="mx-4" />
               <Section
                 id={SECTION_MAP.backend}
                 className={styles.aboutSection}
@@ -271,7 +261,7 @@ export default function AboutPage(props: { location: Location }) {
                   real-world business constraints.
                 </p>
               </Section>
-              <SectionHr />
+              <hr className="mx-4" />
               <Section
                 id={SECTION_MAP.frontend}
                 className={styles.aboutSection}
@@ -342,8 +332,8 @@ export default function AboutPage(props: { location: Location }) {
                     </span>
                     <p>
                       Integrate and customize enterprise design systems and
-                      component libraries such as Carbon and Ant Design to
-                      ensure consistency and scalability across products.
+                      component libraries to ensure consistency and scalability
+                      across products.
                     </p>
                   </li>
                   <li>
