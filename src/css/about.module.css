@@ -3,7 +3,7 @@
 }
 
 .aboutSectionTitle {
-  @apply text-lg font-bold;
+  @apply text-xl font-bold my-2;
 }
 
 .aboutMobileSidebarPanel {

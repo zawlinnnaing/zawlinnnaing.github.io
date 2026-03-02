@@ -29,7 +29,7 @@ export default function AboutPage(props: { location: Location }) {
       <Layout location={props.location}>
         <SEO
           title="About me - Zaw Lin Naing"
-          description="I am a software engineer with 5 years of professional experience in developing web applications, using Node.js, React.js, Vue.js and Laravel. I also have hands-on experience in Docker, Kubernetes, AWS and Deep Learning/Machine Learning."
+          description="I am a software engineer with over 7 years of professional experience in developing web applications, using Node.js, React.js, Vue.js and Laravel. I also have hands-on experience in Docker, Kubernetes, AWS and Deep Learning/Machine Learning."
         />
         <section className="block">
           <ScrollingProvider>
@@ -47,44 +47,66 @@ export default function AboutPage(props: { location: Location }) {
               >
                 <h1 className={styles.aboutSectionTitle}>TLDR;</h1>
                 <p>
-                  I am a software engineer with 5 years of professional
-                  experience in developing web applications, using{" "}
+                  I am a software engineer with over 7 years of professional
+                  experience building web applications across multiple
+                  technology stacks. I have strong expertise in the JavaScript
+                  ecosystem (
                   <AppLink href={TECHNOLOGIES.nodejs.url}>Node.js</AppLink>,{" "}
-                  <AppLink href={TECHNOLOGIES.reactJs.url}>React.js</AppLink>,{" "}
-                  <AppLink href={TECHNOLOGIES.vue.url}>Vue.js</AppLink> and{" "}
-                  <AppLink href={TECHNOLOGIES.laravel.url}>Laravel</AppLink>. I
-                  also have hands-on experience in{" "}
-                  <PrimarySpan>
-                    Docker, Kubernetes, AWS and Deep Learning/Machine Learning
-                  </PrimarySpan>
-                  . I love to build scalable and maintainable software and
-                  always prioritize clean software architecture in software
-                  development. I am always eager to learn new technologies and
-                  concepts to contribute more.
+                  <AppLink href={TECHNOLOGIES.reactJs.url}>React</AppLink>,{" "}
+                  etc), and solid experience working with{" "}
+                  <AppLink href={TECHNOLOGIES.python.url}>Python</AppLink> and{" "}
+                  <AppLink href={TECHNOLOGIES.golang.url}>Golang</AppLink> for
+                  backend services, APIs, and system-level tasks. I am
+                  comfortable working with a wide range of technologies and
+                  tools. My experience includes both{" "}
+                  <span className="font-bold text-green-500">SQL</span> and{" "}
+                  <span className="font-bold text-green-500">
+                    NoSQL databases
+                  </span>
+                  , containerization and orchestration (
+                  <AppLink href={TECHNOLOGIES.docker.url}>Docker</AppLink>,{" "}
+                  <AppLink href={TECHNOLOGIES.kubernetes.url}>
+                    Kubernetes
+                  </AppLink>
+                  ), and deploying and operating systems on major cloud
+                  platforms such as{" "}
+                  <AppLink href={TECHNOLOGIES.aws.url}>AWS</AppLink>,{" "}
+                  <AppLink href={TECHNOLOGIES.gcloud.url}>Google Cloud</AppLink>
+                  , and <AppLink href={TECHNOLOGIES.azure.url}>Azure</AppLink>.
+                  I adapt quickly to different stacks and architectures, and I
+                  am confident working across diverse technical environments to
+                  deliver scalable, maintainable, and production-ready
+                  solutions.{" "}
                 </p>
-                <p className="italic font-bold text-green-500">
-                  What I can offer:
-                </p>
+                <h2 className="font-bold text-lg my-2">What I can offer</h2>
                 <ol className="list-disc ml-8">
                   <li>
-                    Architect and develop web applications both backend and
-                    frontend.
+                    Design and develop scalable, maintainable backend and
+                    frontend systems across multiple tech stacks.
                   </li>
                   <li>
-                    Setup and Deploy web apps on cloud providers, e.g,{" "}
-                    <AppLink href="https://aws.amazon.com/">AWS</AppLink>,{" "}
-                    <AppLink href="https://www.digitalocean.com/">
-                      Digital Ocean
-                    </AppLink>{" "}
-                    using Docker, Kubernetes and Serverless.
+                    Architect clean, well-structured systems with long-term
+                    maintainability in mind.
                   </li>
                   <li>
-                    Can work on Deep learning/Machine learning projects if
-                    needed.
+                    Build and deploy cloud-native applications on AWS, Google
+                    Cloud, and Azure.
                   </li>
                   <li>
-                    Research about new technologies to solve complex business
-                    problems.
+                    Work with SQL and NoSQL databases, optimizing performance
+                    and reliability.
+                  </li>
+                  <li>
+                    Contribute to AI/ML initiatives and integrate AI
+                    capabilities into production systems.
+                  </li>
+                  <li>
+                    Use AI agents and automation tools to streamline development
+                    workflows and increase team productivity.
+                  </li>
+                  <li>
+                    Research and evaluate new technologies to solve complex
+                    business problems efficiently.
                   </li>
                 </ol>
               </Section>
@@ -99,84 +121,155 @@ export default function AboutPage(props: { location: Location }) {
                 <h1 className={styles.aboutSectionTitle}>
                   Backend Engineering
                 </h1>
-                <p className="my-4">
-                  I can design and build scalable services with either{" "}
-                  <PrimarySpan>microservice</PrimarySpan> or{" "}
-                  <PrimarySpan>monolith</PrimarySpan> architectures. I can also
-                  provide insights on which architecture to choose depending on
-                  business requirements and constraints. I can solve business
-                  problems with the following data storage technologies.
+                <p>
+                  I design and build scalable backend systems using both
+                  monolithic and microservices architectures. I can evaluate
+                  business requirements, team size, operational complexity, cost
+                  constraints, and long-term scalability goals to recommend the
+                  most suitable architecture. I focus on building systems that
+                  are maintainable today and adaptable tomorrow. I have strong
+                  experience working with a wide range of data storage
+                  technologies and choosing the right tool based on consistency,
+                  scalability, query patterns, and performance requirements.{" "}
                 </p>
+                <p className="font-bold">Data Technologies I Work With</p>
                 <ul className="list-disc ml-8">
                   <li>
-                    NoSQL database:{" "}
-                    <span className="app-link">
-                      <AppLink href="https://www.mongodb.com/">MongoDB</AppLink>
-                    </span>
-                    .
+                    <span className="font-bold">NoSQL:</span>{" "}
+                    <AppLink href={TECHNOLOGIES.mongodb.url}>MongoDB</AppLink>,{" "}
+                    <AppLink href={TECHNOLOGIES.elasticsearch.url}>
+                      Elasticsearch
+                    </AppLink>
+                    ,{" "}
+                    <AppLink href={TECHNOLOGIES.dynamodb.url}>DynamoDB</AppLink>
+                    , <AppLink href={TECHNOLOGIES.athena.url}>Athena</AppLink>
                   </li>
                   <li>
-                    SQL databases:{" "}
-                    <AppLink href="https://www.mysql.com/">MySQL</AppLink>,{" "}
-                    <AppLink href="https://www.postgresql.org/">
+                    <span className="font-bold">SQL:</span>{" "}
+                    <AppLink href={TECHNOLOGIES.sqlite.url}>SQLite</AppLink>,{" "}
+                    <AppLink href={TECHNOLOGIES.mysql.url}>MySQL</AppLink>,{" "}
+                    <AppLink href={TECHNOLOGIES.postgresql.url}>
                       PostgreSQL
                     </AppLink>
-                    .
                   </li>
                   <li>
-                    In-memory storage:{" "}
-                    <AppLink href="https://redis.io/">Redis</AppLink>.
+                    <span className="font-bold">
+                      In-memory storage & caching:
+                    </span>{" "}
+                    <AppLink href={TECHNOLOGIES.redis.url}>Redis</AppLink>
                   </li>
                   <li>
-                    Cloud Object Storage:{" "}
-                    <AppLink href="https://aws.amazon.com/s3">S3</AppLink>.
+                    <span className="font-bold">Cloud object storage:</span>{" "}
+                    <AppLink href={TECHNOLOGIES.aws.url}>AWS S3</AppLink>,{" "}
+                    <AppLink href={TECHNOLOGIES.azure.url}>
+                      Azure Blob Storage
+                    </AppLink>
+                    ,{" "}
+                    <AppLink href={TECHNOLOGIES.gcloud.url}>
+                      Google Cloud Storage
+                    </AppLink>
                   </li>
                 </ul>
                 <p>
-                  I am happy to learn any frameworks, programming languages or
-                  technologies as a whole that will help in solving business
-                  problems. What I can offer for backend engineering includes:
+                  I am comfortable learning new frameworks, languages, and
+                  technologies whenever they are the right fit for solving
+                  business problems.
                 </p>
+                <h2 className="text-lg font-bold my-2">
+                  What I can offer for backend engineering
+                </h2>
                 <ul className="list-disc ml-8">
                   <li>
-                    Designing the overall system architecture for web
-                    applications.
+                    <span className="font-bold">
+                      System Architecture Design
+                    </span>
+                    <p>
+                      Design end-to-end backend architecture for web
+                      applications, including service boundaries, communication
+                      patterns, data flow, and deployment strategy.
+                    </p>
                   </li>
                   <li>
-                    Developing the backend system using Node.js and Laravel.
+                    <span className="font-bold">Backend Development</span>
+                    <p>
+                      Build production-ready backend systems using Node.js and
+                      Laravel, with clean architecture and clear separation of
+                      concerns.
+                    </p>
                   </li>
                   <li>
-                    Refactoring existing backend code by improving readability,
-                    separation of concerns, decoupling business logic from
-                    request/response layer or framework-specific functions into
-                    separate modules. Changing layered architecture into modular
-                    architecture for ease of splitting monolithic app into
-                    micro-services.
+                    <span className="font-bold">
+                      Codebase Refactoring & Modernization
+                    </span>
+                    <p>Improve existing backend systems by:</p>
+                    <ul className="list-disc ml-8">
+                      <li>Enhancing readability and maintainability</li>
+                      <li>
+                        Decoupling business logic from framework-specific layers
+                      </li>
+                      <li>Extracting domain logic into modular components</li>
+                      <li>
+                        Transforming tightly coupled layered architectures into
+                        modular designs
+                      </li>
+                      <li>
+                        Preparing monolithic systems for gradual microservices
+                        migration
+                      </li>
+                    </ul>
                   </li>
                   <li>
-                    Migrate monolith applications into micro-services and ensure{" "}
-                    <AppLink href="https://en.wikipedia.org/wiki/Eventual_consistency">
-                      eventual data consistency
-                    </AppLink>{" "}
-                    for such distributed services
+                    <span className="font-bold">
+                      Monolith to Microservices Migration
+                    </span>
+                    <p>
+                      Plan and execute service decomposition strategies, handle
+                      distributed data management, and implement eventual
+                      consistency where appropriate.
+                    </p>
                   </li>
                   <li>
-                    Database schema design, including SQL and NoSQL to satisfy
-                    business needs.
+                    <span className="font-bold">
+                      Database Design & Optimization
+                    </span>
+                    <p>
+                      Design efficient schemas for both SQL and NoSQL systems
+                      based on access patterns and business requirements,
+                      including indexing, performance tuning, and data modeling.
+                    </p>
                   </li>
                   <li>
-                    Working with APIs, including integration with third-party
-                    APIs, RESTful API development and GraphQL development.
+                    <span className="font-bold">API Design & Integration</span>
+                    <p>
+                      Develop and maintain RESTful and GraphQL APIs, integrate
+                      third-party services, and design stable, versioned API
+                      contracts.
+                    </p>
                   </li>
-                  <li>Writing unit tests and integration tests</li>
                   <li>
-                    Containerization of web applications using{" "}
-                    <AppLink href="https://www.docker.com/">Docker</AppLink> and
-                    deploying multiple services using{" "}
-                    <AppLink href="https://kubernetes.io/">Kubernetes</AppLink>{" "}
-                    and Nginx load balancer.
+                    <span className="font-bold">Testing & Reliability</span>
+                    <p>
+                      Write unit and integration tests to ensure system
+                      correctness, stability, and long-term maintainability.
+                    </p>
+                  </li>
+                  <li>
+                    <span className="font-bold">
+                      Containerization & Deployment
+                    </span>
+                    <p>
+                      Containerize applications using Docker and orchestrate
+                      multi-service environments with Kubernetes, including load
+                      balancing with Nginx and cloud-native deployment
+                      strategies.
+                    </p>
                   </li>
                 </ul>
+                <p>
+                  I approach backend engineering with a strong focus on
+                  scalability, maintainability, reliability, and alignment with
+                  real-world business constraints.
+                </p>
               </Section>
               <SectionHr />
               <Section
@@ -190,68 +283,98 @@ export default function AboutPage(props: { location: Location }) {
                   Frontend Engineering
                 </h1>
                 <p>
-                  I have built{" "}
-                  <span className="font-bold">
-                    several enterprise-level web apps
-                  </span>{" "}
-                  using <AppLink href="https://reactjs.org/">React.js</AppLink>{" "}
-                  and <AppLink href={TECHNOLOGIES.nextJS.url}>Next.js</AppLink>.
-                  I also have experience in building{" "}
-                  <span className="font-bold">
-                    3+ small to medium sized applications
-                  </span>{" "}
-                  using <AppLink href="https://vuejs.org/">Vue.js</AppLink>.
-                  Even though I am not as experience in Vue.js as React.js, I am
-                  confident that I can transfer my knowledge regarding with
-                  architectural patterns and principles from React. Thus, I
-                  believe that I can build quality apps with both frameworks. I
-                  can also setup{" "}
-                  <AppLink href="https://web.dev/progressive-web-apps/">
-                    PWA
-                  </AppLink>{" "}
-                  using above mentioned frameworks. I am currently a fan of
-                  writing{" "}
-                  <AppLink href="https://blog.logrocket.com/react-pure-components-functional/">
-                    pure
-                  </AppLink>{" "}
-                  components and developing in{" "}
-                  <AppLink href="https://redux.js.org/tutorials/fundamentals/part-1-overview">
-                    redux architecture
+                  I have extensive experience building enterprise-grade web
+                  applications using modern JavaScript frontend frameworks,
+                  including{" "}
+                  <AppLink href={TECHNOLOGIES.reactJs.url}>React</AppLink>,{" "}
+                  <AppLink href={TECHNOLOGIES.nextJS.url}>Next.js</AppLink>, and{" "}
+                  <AppLink href={TECHNOLOGIES.vue.url}>Vue</AppLink>. I design{" "}
+                  <strong>
+                    scalable, high-performance, and maintainable frontend
+                    systems
+                  </strong>
+                  that support complex business requirements and long-term
+                  growth.
+                  <br />
+                  My frontend work is grounded in strong architectural
+                  principles. I prioritize clean structure, predictable state
+                  management, separation of concerns, and long-term
+                  maintainability. I am experienced in building{" "}
+                  <AppLink href={TECHNOLOGIES.pwa.url}>
+                    Progressive Web Applications (PWA)
                   </AppLink>
-                  .
+                  , optimizing performance, and ensuring production readiness
+                  for large-scale systems.
+                  <br />I strongly advocate writing pure, reusable components
+                  and designing applications around well-structured,
+                  unidirectional data flow architectures such as{" "}
+                  <AppLink href={TECHNOLOGIES.redux.url}>Redux</AppLink> and
+                  similar state management patterns.
                 </p>
-                On the frontend-side, I can help you with:
+                <h2 className="text-lg font-bold my-2">
+                  What I Offer in Frontend Engineering
+                </h2>
                 <ul className="list-disc ml-8">
                   <li>
-                    Development of enterprise level applications with{" "}
-                    <AppLink>React.js</AppLink> and <AppLink>Vue.js</AppLink>.
+                    <span className="font-bold">
+                      Enterprise Frontend Development
+                    </span>
+                    <p>
+                      Architect and build large-scale, production-ready
+                      applications using popular JavaScript frameworks such as
+                      React, Next.js, and Vue.
+                    </p>
                   </li>
                   <li>
-                    Refactoring codebase to implement Redux architecture and
-                    pure components, for better maintainability, separation of
-                    concerns, and thus, faster development speed.
+                    <span className="font-bold">
+                      Frontend Architecture & Refactoring
+                    </span>
+                    <p>
+                      Refactor and restructure existing codebases to improve
+                      modularity, maintainability, and scalability. Implement
+                      predictable state management patterns and clean component
+                      hierarchies to support faster feature development.
+                    </p>
                   </li>
                   <li>
-                    Adoption of design systems and integration with their
-                    components library, such as{" "}
-                    <AppLink href="https://www.carbondesignsystem.com/">
-                      Carbon
-                    </AppLink>
-                    , <AppLink href="https://ant.design/">Ant.design</AppLink>.
+                    <span className="font-bold">
+                      Design System Adoption & Integration
+                    </span>
+                    <p>
+                      Integrate and customize enterprise design systems and
+                      component libraries such as Carbon and Ant Design to
+                      ensure consistency and scalability across products.
+                    </p>
                   </li>
-                  <li>Writing unit tests and behavioral driven tests.</li>
                   <li>
-                    Deployment of static websites,{" "}
-                    <AppLink href="https://en.wikipedia.org/wiki/Single-page_application#:~:text=A%20single%2Dpage%20application%20(SPA,browser%20loading%20entire%20new%20pages.">
-                      SPA
-                    </AppLink>
-                    , and{" "}
-                    <AppLink href="https://web.dev/progressive-web-apps/">
-                      PWA
-                    </AppLink>{" "}
-                    using containerization technologies or web server.
+                    <span className="font-bold">Testing & Code Quality</span>
+                    <p>
+                      Write unit tests and behavior-driven tests to improve
+                      system reliability and reduce regression risks.
+                    </p>
+                  </li>
+                  <li>
+                    <span className="font-bold">Performance Optimization</span>
+                    <p>
+                      Enhance application performance through bundle
+                      optimization, code splitting, rendering improvements, and
+                      efficient state management.
+                    </p>
+                  </li>
+                  <li>
+                    <span className="font-bold">PWA & Deployment</span>
+                    <p>
+                      Build and deploy static sites, SPAs, and PWAs using modern
+                      build pipelines, containerization, and scalable hosting
+                      configurations.
+                    </p>
                   </li>
                 </ul>
+                <p>
+                  I approach frontend engineering as system design; ensuring
+                  that applications remain robust, scalable, and adaptable as
+                  business and product requirements evolve.
+                </p>
               </Section>
             </div>
           </ScrollingProvider>
