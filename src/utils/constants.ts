@@ -11,6 +11,10 @@ export const ROUTES = Object.freeze([
 ]);
 
 export const TECHNOLOGIES = {
+  pwa: {
+    text: "Progressive Web App",
+    url: "https://web.dev/progressive-web-apps/",
+  },
   sqlite: {
     text: "SQLite",
     url: "https://www.sqlite.org/index.html",
