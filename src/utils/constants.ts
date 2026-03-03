@@ -11,6 +11,18 @@ export const ROUTES = Object.freeze([
 ]);
 
 export const TECHNOLOGIES = {
+  nestJs: {
+    text: "NestJS",
+    url: "https://nestjs.com/",
+  },
+  svelte: {
+    text: "Svelte",
+    url: "https://svelte.dev/",
+  },
+  terraform: {
+    text: "Terraform",
+    url: "https://developer.hashicorp.com/terraform",
+  },
   pwa: {
     text: "Progressive Web App",
     url: "https://web.dev/progressive-web-apps/",

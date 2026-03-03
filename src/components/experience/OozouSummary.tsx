@@ -32,7 +32,7 @@ export default function OozouSummary() {
         </SummaryList>
       </SummarySection>
       <SummarySection>
-        <SummaryTitle title="CHALLENGES" />
+        <SummaryTitle title="CHALLENGES & IMPACT" />
         <SummaryList>
           <SummaryListItem>
             Research and benchmarked various WYSIWYG editor libraries that offer

@@ -37,7 +37,7 @@ export default function BriklSummary() {
         </SummaryList>
       </SummarySection>
       <SummarySection>
-        <SummaryTitle title="CHALLENGES" />
+        <SummaryTitle title="CHALLENGES & IMPACT" />
         <SummaryListItem>
           Solved n + 1 issues on GraphQL queries, reducing latency, database
           calls and inter-service communication.
