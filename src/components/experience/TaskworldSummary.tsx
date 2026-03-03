@@ -37,7 +37,7 @@ export default function TaskworldSummary() {
         </SummaryList>
       </SummarySection>
       <SummarySection>
-        <SummaryTitle title="CHALLENGES" />
+        <SummaryTitle title="CHALLENGES & IMPACT" />
         <SummaryList>
           <SummaryListItem>
             Developed and modified complex features on the platform with little

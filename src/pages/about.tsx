@@ -342,8 +342,8 @@ export default function AboutPage(props: { location: Location }) {
                     </span>
                     <p>
                       Integrate and customize enterprise design systems and
-                      component libraries such as Carbon and Ant Design to
-                      ensure consistency and scalability across products.
+                      component libraries to ensure consistency and scalability
+                      across products.
                     </p>
                   </li>
                   <li>
