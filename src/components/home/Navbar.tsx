@@ -97,8 +97,11 @@ export function Navbar({
       </div>
 
       {/* Mobile menu */}
-      {menuOpen && (
-        <div className="md:hidden bg-gray-900 border-t border-gray-800 px-6 py-4 space-y-3">
+      <div
+        className="md:hidden bg-gray-900/95 backdrop-blur overflow-hidden transition-all duration-500 ease-in-out"
+        style={{ maxHeight: menuOpen ? "500px" : "0px" }}
+      >
+        <div className="border-t border-gray-800 px-6 py-4 space-y-3">
           {navLinks.map((item) => (
             <a
               key={item.label}
@@ -123,7 +126,7 @@ export function Navbar({
             Resume
           </a>
         </div>
-      )}
+      </div>
     </header>
   );
 }
