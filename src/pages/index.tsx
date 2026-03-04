@@ -1,60 +1,101 @@
 import moment from "moment";
 import React, { useEffect, useRef, useState } from "react";
 import { Helmet } from "react-helmet";
+import {
+  SiTypescript,
+  SiJavascript,
+  SiPython,
+  SiGo,
+  SiReact,
+  SiNextdotjs,
+  SiAngular,
+  SiSvelte,
+  SiTailwindcss,
+  SiRedux,
+  SiNodedotjs,
+  SiNestjs,
+  SiGraphql,
+  SiPrisma,
+  SiExpress,
+  SiDocker,
+  SiKubernetes,
+  SiGooglecloud,
+  SiTerraform,
+  SiRedis,
+  SiPostgresql,
+  SiMongodb,
+  SiGithub,
+  SiAnthropic,
+  SiDatabricks,
+} from "react-icons/si";
+import { FaAws, FaMicrosoft } from "react-icons/fa";
 import experiences from "../data/experiences";
 import projects from "../data/projects";
 import { CONTACT_INFO, RESUME_LINK } from "../utils/constants";
 
 // ── Skill categories ────────────────────────────────────────────────────────
-const SKILL_CATEGORIES = [
+interface Skill {
+  text: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  icon?: any;
+  color?: string;
+}
+
+const SKILL_CATEGORIES: { name: string; skills: Skill[] }[] = [
   {
     name: "Languages",
-    skills: ["TypeScript", "JavaScript", "Python", "Golang", "SQL"],
+    skills: [
+      { text: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+      { text: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
+      { text: "Python", icon: SiPython, color: "#3776AB" },
+      { text: "Golang", icon: SiGo, color: "#00ADD8" },
+      { text: "SQL", icon: SiPostgresql, color: "#336791" },
+    ],
   },
   {
     name: "Frontend",
     skills: [
-      "React.js",
-      "Next.js",
-      "Angular",
-      "Svelte",
-      "Tailwind CSS",
-      "Redux",
+      { text: "React.js", icon: SiReact, color: "#61DAFB" },
+      { text: "Next.js", icon: SiNextdotjs, color: "#e2e8f0" },
+      { text: "Angular", icon: SiAngular, color: "#DD0031" },
+      { text: "Svelte", icon: SiSvelte, color: "#FF3E00" },
+      { text: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
+      { text: "Redux", icon: SiRedux, color: "#764ABC" },
     ],
   },
   {
     name: "Backend",
     skills: [
-      "Node.js",
-      "NestJS",
-      "GraphQL",
-      "REST APIs",
-      "Prisma",
-      "Express",
+      { text: "Node.js", icon: SiNodedotjs, color: "#339933" },
+      { text: "NestJS", icon: SiNestjs, color: "#E0234E" },
+      { text: "GraphQL", icon: SiGraphql, color: "#E10098" },
+      { text: "REST APIs", color: "#94a3b8" },
+      { text: "Prisma", icon: SiPrisma, color: "#a78bfa" },
+      { text: "Express", icon: SiExpress, color: "#e2e8f0" },
     ],
   },
   {
     name: "Tools & Infra",
     skills: [
-      "Docker",
-      "Kubernetes",
-      "AWS",
-      "GCP",
-      "Azure",
-      "Terraform",
-      "Redis",
-      "PostgreSQL",
-      "MongoDB",
-      "CI/CD",
+      { text: "Docker", icon: SiDocker, color: "#2496ED" },
+      { text: "Kubernetes", icon: SiKubernetes, color: "#326CE5" },
+      { text: "AWS", icon: FaAws, color: "#FF9900" },
+      { text: "GCP", icon: SiGooglecloud, color: "#4285F4" },
+      { text: "Azure", icon: FaMicrosoft, color: "#0078D4" },
+      { text: "Terraform", icon: SiTerraform, color: "#844FBA" },
+      { text: "Redis", icon: SiRedis, color: "#DC382D" },
+      { text: "PostgreSQL", icon: SiPostgresql, color: "#336791" },
+      { text: "MongoDB", icon: SiMongodb, color: "#47A248" },
+      { text: "CI/CD", color: "#94a3b8" },
     ],
   },
   {
     name: "AI & Automation",
     skills: [
-      "Claude Code",
-      "GitHub Copilot",
-      "AI Agent Tooling",
-      "LLM Integration",
+      { text: "Claude Code", icon: SiAnthropic, color: "#d97757" },
+      { text: "GitHub Copilot", icon: SiGithub, color: "#e2e8f0" },
+      { text: "AI Agent Tooling", icon: SiDatabricks, color: "#FF3621" },
+      { text: "LLM Integration", color: "#94a3b8" },
     ],
   },
 ];
@@ -78,9 +119,15 @@ function SectionHeading({
   );
 }
 
-function TechTag({ text }: { text: string }) {
+function TechTag({ text, icon: Icon, color }: Skill) {
+  const textColor = color ?? "#4ade80";
+  const bgColor = color ? `${color}1a` : "rgba(74,222,128,0.1)";
   return (
-    <span className="inline-block bg-green-500/10 text-green-400 text-xs font-mono px-2 py-1 rounded mr-2 mb-1">
+    <span
+      className="inline-flex items-center gap-1 text-xs font-mono px-2 py-1 rounded mr-2 mb-1"
+      style={{ color: textColor, backgroundColor: bgColor }}
+    >
+      {Icon && <Icon style={{ color: textColor }} />}
       {text}
     </span>
   );
@@ -383,7 +430,7 @@ export default function IndexPage() {
                   </h3>
                   <div className="flex flex-wrap">
                     {cat.skills.map((skill) => (
-                      <TechTag key={skill} text={skill} />
+                      <TechTag key={skill.text} {...skill} />
                     ))}
                   </div>
                 </div>
