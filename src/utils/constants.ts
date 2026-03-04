@@ -5,8 +5,6 @@ import LinkedIn from "../assets/icons/linkedin.png";
 
 export const ROUTES = Object.freeze([
   { name: "Home", href: "/" },
-  { name: "Experience", href: "/experience" },
-  { name: "Projects", href: "/projects" },
   { name: "About me", href: "/about" },
 ]);
 
