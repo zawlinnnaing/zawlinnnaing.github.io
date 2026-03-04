@@ -28,7 +28,7 @@ import {
   SiAnthropic,
   SiDatabricks,
 } from "react-icons/si";
-import { FaAws, FaMicrosoft } from "react-icons/fa";
+import { FaAws, FaMicrosoft, FaArrowDown } from "react-icons/fa";
 import experiences from "../data/experiences";
 import projects from "../data/projects";
 import { CONTACT_INFO, RESUME_LINK } from "../utils/constants";
@@ -519,7 +519,7 @@ export default function IndexPage() {
           {/* ── Hero ──────────────────────────────────────────────────────── */}
           <section
             id="about"
-            className="min-h-screen flex flex-col justify-center pt-16"
+            className="relative min-h-screen flex flex-col justify-center pt-16"
           >
             <p className="font-mono text-green-500 mb-5 text-base">
               Hi, my name is
@@ -568,6 +568,19 @@ export default function IndexPage() {
                 </a>
               ))}
             </div>
+
+            {/* Scroll-down arrow */}
+            <button
+              onClick={() =>
+                document
+                  .getElementById("skills")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+              aria-label="Scroll to Skills"
+              className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-green-500 hover:text-green-400 transition-colors focus:outline-none"
+            >
+              <FaArrowDown className="w-6 h-6" />
+            </button>
           </section>
 
           {/* ── 01. Skills ────────────────────────────────────────────────── */}
