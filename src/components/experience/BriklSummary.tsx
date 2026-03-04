@@ -1,52 +1,48 @@
 import React from "react";
-import {
-  SummaryList,
-  SummaryListItem,
-  SummarySection,
-  SummaryTitle,
-} from "./summary";
 
 export default function BriklSummary() {
   return (
     <div>
-      <SummarySection>
-        <SummaryTitle title="CONTRIBUTIONS" />
-        <SummaryList>
-          <SummaryListItem>
+      <div>
+        <h4>CONTRIBUTIONS</h4>
+        <ul>
+          <li>
             Mentored a fellow engineer, providing guidance and better solution
             suggestions.
-          </SummaryListItem>
-          <SummaryListItem>
+          </li>
+          <li>
             Improved integration testing flow enabling developers to seed and
             cleanup test data with ease. Reducing lines of code to write tests
             by half.
-          </SummaryListItem>
-          <SummaryListItem>
+          </li>
+          <li>
             Implemented scalable bulk upload products feature that can import
             multiple data points for products using serverless framework.
-          </SummaryListItem>
-          <SummaryListItem>
+          </li>
+          <li>
             Enhanced pricing feature adding price markups, tiered pricing and
             cost configurations; allowing merchants to update price and
             automatically propagated to all micro-stores.
-          </SummaryListItem>
-          <SummaryListItem>
+          </li>
+          <li>
             Enabled data collection for merchants from their customers in
             checkout flow using custom data fields.
-          </SummaryListItem>
-        </SummaryList>
-      </SummarySection>
-      <SummarySection>
-        <SummaryTitle title="CHALLENGES & IMPACT" />
-        <SummaryListItem>
-          Solved n + 1 issues on GraphQL queries, reducing latency, database
-          calls and inter-service communication.
-        </SummaryListItem>
-        <SummaryListItem>
-          Optimized batch operations with complex business logic to be executed
-          under constant time.
-        </SummaryListItem>
-      </SummarySection>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h4>CHALLENGES & IMPACT</h4>
+        <ul>
+          <li>
+            Solved n + 1 issues on GraphQL queries, reducing latency, database
+            calls and inter-service communication.
+          </li>
+          <li>
+            Optimized batch operations with complex business logic to be
+            executed under constant time.
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }

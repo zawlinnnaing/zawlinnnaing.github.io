@@ -31,6 +31,7 @@ const experiences: IExperience[] = [
   {
     id: "Sertis",
     companyName: "Sertis",
+    companyUrl: "https://www.sertiscorp.com",
     employmentPeriod: createEmploymentPeriod(new Date(2024, 6)),
     logo: {
       uri: SertisLogo,
@@ -249,7 +250,9 @@ const experiences: IExperience[] = [
     summary: (
       <>
         <div className="py-2">
-          <h4 className="pb-1 text-xl font-light">CONTRIBUTIONS</h4>
+          <h4 className="pb-1 text-xl text-red-500 font-light">
+            CONTRIBUTIONS
+          </h4>
           <ul className="pl-6 app-list">
             <li>
               Developed backend system for ERP solutions using{" "}
@@ -267,7 +270,7 @@ const experiences: IExperience[] = [
           </ul>
         </div>
         <div>
-          <h4 className="pb-1 text-xl font-light">CHALLENGES</h4>
+          <h4 className="pb-1 text-xl text-red-500 font-light">CHALLENGES</h4>
           <ul className="pl-6 app-list">
             <li>
               Designing DB schema for ERP systems that fit business needs.
