@@ -40,7 +40,7 @@ export default function Navbar({ className }: { className?: string }) {
                 to="/"
                 className="font-mono text-green-500 font-bold text-xl hover:text-green-400 transition-colors"
               >
-                ZN
+                &lt;Zaw/&gt;
               </AniLink>
 
               {/* Desktop nav */}
