@@ -28,10 +28,23 @@ import {
   SiAnthropic,
   SiDatabricks,
 } from "react-icons/si";
-import { FaAws, FaMicrosoft, FaArrowDown } from "react-icons/fa";
+import {
+  FaAws,
+  FaMicrosoft,
+  FaArrowDown,
+  FaEnvelope,
+  FaLinkedin,
+} from "react-icons/fa";
 import experiences from "../data/experiences";
 import projects from "../data/projects";
 import { CONTACT_INFO, RESUME_LINK } from "../utils/constants";
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const CONTACT_ICONS: Record<string, { Icon: any; color: string }> = {
+  LinkedIn: { Icon: FaLinkedin, color: "#0077B5" },
+  Github: { Icon: SiGithub, color: "#e2e8f0" },
+  Email: { Icon: FaEnvelope, color: "#EA4335" },
+};
 
 // ── Skill categories ────────────────────────────────────────────────────────
 interface Skill {
@@ -553,20 +566,30 @@ export default function IndexPage() {
               </a>
             </div>
             <div className="flex gap-5">
-              {CONTACT_INFO.map((contact) => (
-                <a
-                  key={contact.name}
-                  href={contact.uri}
-                  target={
-                    contact.uri.startsWith("mailto") ? undefined : "_blank"
-                  }
-                  rel="noreferrer"
-                  aria-label={contact.name}
-                  className="font-mono text-sm text-gray-500 hover:text-green-500 transition-colors"
-                >
-                  {contact.name}
-                </a>
-              ))}
+              {CONTACT_INFO.map((contact) => {
+                const iconData = CONTACT_ICONS[contact.name];
+                return (
+                  <a
+                    key={contact.name}
+                    href={contact.uri}
+                    target={
+                      contact.uri.startsWith("mailto") ? undefined : "_blank"
+                    }
+                    rel="noreferrer"
+                    aria-label={contact.name}
+                    className="flex items-center gap-2 font-mono text-sm text-gray-500 hover:text-green-500 transition-colors"
+                  >
+                    {iconData && (
+                      <iconData.Icon
+                        size={20}
+                        style={{ color: "inherit" }}
+                        aria-hidden="true"
+                      />
+                    )}
+                    {contact.name}
+                  </a>
+                );
+              })}
             </div>
 
             {/* Scroll-down arrow */}
@@ -792,20 +815,30 @@ export default function IndexPage() {
               Say Hello
             </a>
             <div className="flex justify-center gap-8 mt-12">
-              {CONTACT_INFO.map((contact) => (
-                <a
-                  key={contact.name}
-                  href={contact.uri}
-                  target={
-                    contact.uri.startsWith("mailto") ? undefined : "_blank"
-                  }
-                  rel="noreferrer"
-                  className="font-mono text-sm text-gray-500 hover:text-green-500 transition-colors"
-                  aria-label={contact.name}
-                >
-                  {contact.name}
-                </a>
-              ))}
+              {CONTACT_INFO.map((contact) => {
+                const iconData = CONTACT_ICONS[contact.name];
+                return (
+                  <a
+                    key={contact.name}
+                    href={contact.uri}
+                    target={
+                      contact.uri.startsWith("mailto") ? undefined : "_blank"
+                    }
+                    rel="noreferrer"
+                    className="flex items-center gap-2 font-mono text-sm text-gray-500 hover:text-green-500 transition-colors"
+                    aria-label={contact.name}
+                  >
+                    {iconData && (
+                      <iconData.Icon
+                        size={20}
+                        style={{ color: "inherit" }}
+                        aria-hidden="true"
+                      />
+                    )}
+                    {contact.name}
+                  </a>
+                );
+              })}
             </div>
           </section>
         </main>
