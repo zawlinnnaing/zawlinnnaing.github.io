@@ -5,6 +5,35 @@ import { IProject } from "./types";
 
 const projects: IProject[] = [
   {
+    name: "AI Review CLI",
+    logo: {
+      text: "AI Review CLI",
+    },
+    technologies: [TECHNOLOGIES.typescript, TECHNOLOGIES.nodejs],
+    links: [
+      {
+        text: "source code",
+        url: "https://github.com/zawlinnnaing/ai-review-cli",
+      },
+    ],
+    summary: (
+      <>
+        AI-review CLI is an open-source command-line tool that lets AI coding
+        agents (Claude Code, Cursor, GitHub Copilot, etc.) perform automated
+        code reviews on GitLab Merge Requests. It handles the integration work —
+        authenticating with GitLab, fetching and normalizing diffs, annotating
+        line numbers, and posting structured inline comments to provide context
+        for AI agents to review. Developers run{" "}
+        <code>ai-review get-context &lt;MR_URL&gt;</code> to pull a structured
+        JSON snapshot of the MR, feed it to their AI agent of choice, then use{" "}
+        <code>ai-review post-comments</code> to publish the results back to
+        GitLab. Built in TypeScript on Node.js, it ships as both an npm package
+        and pre-built binaries for macOS, Linux, and Windows, with a provider
+        abstraction layer designed to support GitHub in a future release.
+      </>
+    ),
+  },
+  {
     name: "Zen Mode Extension",
     links: [
       {
