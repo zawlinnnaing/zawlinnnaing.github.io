@@ -411,7 +411,7 @@ export default function IndexPage() {
 
                   {/* Role, company, summary, techs */}
                   <div>
-                    <h3 className="text-gray-100 font-semibold text-base leading-snug group-hover:text-green-500 transition-colors">
+                    <h3 className="text-gray-100 font-semibold text-base leading-snug">
                       {exp.role}
                       {exp.companyUrl ? (
                         <span>
