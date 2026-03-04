@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   :root {
     --accent-color: #10b981;
     --mobile-card-width: {
@@ -76,7 +80,7 @@
   .nav-bar {
     z-index: 100;
     width: 100%;
-    @apply max-w-2xl;
+    @apply max-w-5xl;
   }
 
   .navbar-item {
@@ -132,10 +136,37 @@
     width: 100%;
     z-index: 40;
     overflow: hidden;
-    @apply bg-gray-900 max-w-2xl;
+    @apply bg-gray-900 max-w-5xl;
   }
 
   a {
     cursor: pointer;
+  }
+
+  /* Experience summary content from data layer */
+  .experience-summary h4 {
+    @apply text-green-500 text-xs font-mono uppercase tracking-widest mt-4 mb-2;
+  }
+
+  .experience-summary ul,
+  .experience-summary ol {
+    @apply list-disc list-outside pl-5 space-y-1;
+  }
+
+  .experience-summary li {
+    @apply text-gray-400 text-sm leading-relaxed;
+  }
+
+  .experience-summary i {
+    @apply text-gray-300 not-italic;
+  }
+
+  .experience-summary code {
+    @apply font-mono text-green-400 bg-green-500/10 px-1 rounded text-xs;
+  }
+
+  .experience-summary .py-2 {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
