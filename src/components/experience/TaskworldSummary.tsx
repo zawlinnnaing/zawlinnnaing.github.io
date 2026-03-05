@@ -8,7 +8,7 @@ export default function TaskworldSummary() {
         <ul>
           <li>
             Optimized Kanban board memory usage from linear to constant
-            complexity, supporting thousands of items smoothly.
+            complexity, supporting <i>1000+ items</i> smoothly.
           </li>
           <li>
             Extracted a microservice from a legacy monolith, improving

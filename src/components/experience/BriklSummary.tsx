@@ -8,7 +8,7 @@ export default function BriklSummary() {
           <li>
             Improved integration testing flow enabling developers to seed and
             cleanup test data with ease. Reducing lines of code to write tests
-            by half.
+            by <i>50%</i>.
           </li>
           <li>
             Implemented scalable bulk upload products feature that can import
@@ -28,8 +28,9 @@ export default function BriklSummary() {
             calls and inter-service communication.
           </li>
           <li>
-            Improved query performance by 90% by optimizing complex business
-            logic to be executed under constant time using batch processing.
+            Improved query performance by <i>90%</i> by optimizing complex
+            business logic to be executed under constant time using batch
+            processing.
           </li>
           <li>
             Mentored a fellow engineer, providing guidance and better solution

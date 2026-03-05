@@ -29,7 +29,7 @@ export default function OozouSummary() {
             cache validation by integrating state management with data fetching.
           </li>
           <li>
-            Reduced API calls by 70% and improved page load performance for the new editor;
+            Reduced API calls by <i>70%</i> and improved page load performance for the new editor;
             providing better user experience.
           </li>
         </ul>

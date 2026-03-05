@@ -31,7 +31,7 @@ export default function SertisSummary() {
           </li>
           <li>
             Re-architected a monolithic system into modular components,
-            improving performance by 80%.
+            improving performance by <i>80%</i>.
           </li>
           <li>
             Mentored engineers and promoted knowledge sharing to ensure
