@@ -124,7 +124,7 @@ const SKILL_CATEGORIES: { name: string; skills: Skill[] }[] = [
         color: "#E10098",
         link: "https://graphql.org/",
       },
-      { text: "REST APIs", color: "#94a3b8", link: "https://restfulapi.net/" },
+      { text: "REST APIs", color: "#94a3b8" },
       {
         text: "Prisma",
         icon: SiPrisma,
@@ -217,12 +217,10 @@ const SKILL_CATEGORIES: { name: string; skills: Skill[] }[] = [
         text: "AI Agent Tooling",
         icon: SiDatabricks,
         color: "#FF3621",
-        link: "https://www.databricks.com/",
       },
       {
         text: "AI/LLM Integration",
         color: "#94a3b8",
-        link: "https://platform.openai.com/docs/",
       },
     ],
   },
