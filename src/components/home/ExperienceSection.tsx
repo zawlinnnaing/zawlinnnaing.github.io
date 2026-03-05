@@ -53,7 +53,7 @@ export function ExperienceSection() {
               )}
               <div className="flex flex-wrap mt-3">
                 {exp.technologies.map((tech) => (
-                  <TechTag key={tech.text} text={tech.text} />
+                  <TechTag key={tech.text} text={tech.text} link={tech.url} />
                 ))}
               </div>
             </div>

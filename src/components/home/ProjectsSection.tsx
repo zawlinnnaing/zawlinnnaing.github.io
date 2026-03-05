@@ -116,7 +116,11 @@ export function ProjectsSection() {
                 {project.technologies?.length > 0 && (
                   <div className="flex flex-wrap mt-4">
                     {project.technologies.slice(0, 4).map((tech) => (
-                      <TechTag key={tech.text} text={tech.text} />
+                      <TechTag
+                        key={tech.text}
+                        text={tech.text}
+                        link={tech.url}
+                      />
                     ))}
                   </div>
                 )}
