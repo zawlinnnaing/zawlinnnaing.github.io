@@ -7,6 +7,9 @@ import OozouLogo from "../assets/logos/oozou.jpg";
 import SertisLogo from "../assets/logos/sertis.png";
 import Taskworld from "../assets/logos/taskworld.png";
 import BriklSummary from "../components/experience/BriklSummary";
+import ExpaSummary from "../components/experience/ExpaSummary";
+import MountsSummary from "../components/experience/MountsSummary";
+import NexlabsSummary from "../components/experience/NexlabsSummary";
 import OozouSummary from "../components/experience/OozouSummary";
 import SertisSummary from "../components/experience/SertisSummary";
 import TaskworldSummary from "../components/experience/TaskworldSummary";
@@ -174,55 +177,7 @@ const experiences: IExperience[] = [
       TECHNOLOGIES.docker,
       TECHNOLOGIES.kubernetes,
     ],
-    summary: (
-      <>
-        <div className="py-2">
-          <h4 className="pb-1 text-xl font-light">CONTRIBUTIONS</h4>
-          <ul className="pl-6 list-disc">
-            <li>
-              Revamped and extended a social commerce platform (using{" "}
-              <i>Node.js</i> and <i>React.js</i>) which integrates with Facebook
-              API and enables SME users to sell products via Facebook Messenger.
-            </li>
-            <li>
-              Developed live chat plugin (using React.js) that can be used on
-              websites even without React.js.
-            </li>
-            <li>
-              Built <i>an analytics solution</i> for the social commerce
-              platform (with <i>Node.js</i> and{" "}
-              <i>open-source data visualization library</i>) which enables users
-              to gain insight into their storefronts.
-            </li>
-            <li>
-              Coded <i>an AI-driven feature</i> that delivers automated
-              responses, on behalf of businesses, to customers’ queries, and
-              enables businesses to improve AI models iteratively using
-              real-world conversations over time.
-            </li>
-            <li>
-              Worked on the AI management server which allows businesses to
-              deploy their own models instantly on the dashboard, and
-              automatically scales those models depending on the usage.
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="pb-1 text-xl font-light">CHALLENGES</h4>
-          <ul className="pl-6 list-disc">
-            <li>
-              Ensured product quality through rapid iterations of the
-              development process
-            </li>
-            <li>
-              Implemented Event-Driven Architecture for storing user activity
-              logs.
-            </li>
-            <li>Solved N+1 problems and implemented IAM on GraphQL server.</li>
-          </ul>
-        </div>
-      </>
-    ),
+    summary: <ExpaSummary />,
   },
   {
     id: "mounts-digital",
@@ -247,50 +202,7 @@ const experiences: IExperience[] = [
       TECHNOLOGIES.firebase,
       TECHNOLOGIES.googleMap,
     ],
-    summary: (
-      <>
-        <div className="py-2">
-          <h4 className="pb-1 text-xl text-red-500 font-light">
-            CONTRIBUTIONS
-          </h4>
-          <ul className="pl-6 app-list">
-            <li>
-              Developed backend system for ERP solutions using{" "}
-              <i>Laravel and MySQL</i>.
-            </li>
-            <li>
-              Built a location tracking feature for the delivery management
-              platform by integrating with{" "}
-              <i>Firebase and Google Map&lsquo;s API</i>.
-            </li>
-            <li>
-              Developed video chatting feature by integrating with{" "}
-              <i>open-source library and using Javascript</i>.
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="pb-1 text-xl text-red-500 font-light">CHALLENGES</h4>
-          <ul className="pl-6 app-list">
-            <li>
-              Designing DB schema for ERP systems that fit business needs.
-            </li>
-            <li>
-              Ensuring consistency and robustness for cascading writes across
-              multiple tables.
-            </li>
-            <li>
-              Writing and debugging complex and performant queries that span
-              across multiple tables.
-            </li>
-            <li>
-              Designing REST APIs for multiple platforms including web, android
-              and ios.
-            </li>
-          </ul>
-        </div>
-      </>
-    ),
+    summary: <MountsSummary />,
     url: "/experience/mounts-digital",
   },
   {
@@ -316,27 +228,7 @@ const experiences: IExperience[] = [
       TECHNOLOGIES.vue,
       TECHNOLOGIES.nuxt,
     ],
-    summary: (
-      <>
-        <div className="py-2">
-          <h4 className="pb-1 text-xl font-light">CONTRIBUTIONS</h4>
-          <ul className="pl-6 app-list">
-            <li>
-              Reviewed code for a project to learn about code architecture,
-              coding styles from senior developers.
-            </li>
-            <li>
-              Collaborated with senior developers in debugging process and
-              removing dead code.
-            </li>
-            <li>
-              Developed a blog app <i>(with Nuxt.js and Laravel)</i> to put my
-              learned skills into use.
-            </li>
-          </ul>
-        </div>
-      </>
-    ),
+    summary: <NexlabsSummary />,
   },
 ];
 

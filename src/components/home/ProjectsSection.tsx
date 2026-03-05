@@ -76,7 +76,15 @@ export function ProjectsSection() {
                 className="flex flex-col p-5 bg-gray-800/50 rounded-lg border border-gray-700 hover:border-green-500/40 hover:-translate-y-1 transition-all"
               >
                 <div className="flex items-start justify-between mb-4">
-                  <FolderIcon className="w-8 h-8 text-green-500" />
+                  {project.logo?.src ? (
+                    <img
+                      src={project.logo.src}
+                      alt={project.name}
+                      className="w-8 h-8 object-contain"
+                    />
+                  ) : (
+                    <FolderIcon className="w-8 h-8 text-green-500" />
+                  )}
                   <div className="flex gap-3">
                     {project.links?.map((link) =>
                       link.url ? (
@@ -102,16 +110,17 @@ export function ProjectsSection() {
                 <h4 className="text-gray-100 font-semibold mb-2">
                   {project.name}
                 </h4>
-                <div
-                  className="text-gray-400 text-sm leading-relaxed flex-1 overflow-hidden"
-                  style={{ maxHeight: "80px" }}
-                >
+                <div className="text-gray-400 text-sm leading-relaxed flex-1">
                   {project.summary}
                 </div>
                 {project.technologies?.length > 0 && (
                   <div className="flex flex-wrap mt-4">
                     {project.technologies.slice(0, 4).map((tech) => (
-                      <TechTag key={tech.text} text={tech.text} />
+                      <TechTag
+                        key={tech.text}
+                        text={tech.text}
+                        link={tech.url}
+                      />
                     ))}
                   </div>
                 )}
