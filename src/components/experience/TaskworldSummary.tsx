@@ -5,20 +5,17 @@ export default function TaskworldSummary() {
   return (
     <div>
       <div>
-        <h4>CONTRIBUTIONS</h4>
         <ul>
           <li>
-            Optimized Kanban board performance and memory usage (from linear
-            space complexity to constant space complexity), enabling smooth user
-            interaction and experience even when there are thousands of items
-            inside the board.
+            Optimized Kanban board memory usage from linear to constant
+            complexity, supporting thousands of items smoothly.
           </li>
           <li>
-            Extracted and deployed a micro service from legacy monolith
-            codebase, allowing easier maintenance and faster development speed.
+            Extracted a microservice from a legacy monolith, improving
+            maintainability and development speed.
           </li>
           <li>
-            Developed{" "}
+            Delivered{" "}
             <AppLink href="https://help.taskworld.com/en/articles/6357351-project-templates">
               project templates
             </AppLink>
@@ -26,20 +23,11 @@ export default function TaskworldSummary() {
             <AppLink href="https://help.taskworld.com/en/articles/6521209-pin-task-note-and-subtask-to-tasklist">
               pinned task
             </AppLink>{" "}
-            features in a timely manner.
-          </li>
-        </ul>
-      </div>
-      <div>
-        <h4>CHALLENGES & IMPACT</h4>
-        <ul>
-          <li>
-            Developed and modified complex features on the platform with little
-            or no regression.
+            features.
           </li>
           <li>
-            Navigated through complex and legacy codebase to identify
-            performance bottlenecks and implemented optimization solutions.
+            Identified performance bottlenecks in a legacy codebase and
+            implemented optimizations.
           </li>
         </ul>
       </div>

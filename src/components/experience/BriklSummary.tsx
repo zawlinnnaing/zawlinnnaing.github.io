@@ -4,12 +4,7 @@ export default function BriklSummary() {
   return (
     <div>
       <div>
-        <h4>CONTRIBUTIONS</h4>
         <ul>
-          <li>
-            Mentored a fellow engineer, providing guidance and better solution
-            suggestions.
-          </li>
           <li>
             Improved integration testing flow enabling developers to seed and
             cleanup test data with ease. Reducing lines of code to write tests
@@ -28,18 +23,17 @@ export default function BriklSummary() {
             Enabled data collection for merchants from their customers in
             checkout flow using custom data fields.
           </li>
-        </ul>
-      </div>
-      <div>
-        <h4>CHALLENGES & IMPACT</h4>
-        <ul>
           <li>
             Solved n + 1 issues on GraphQL queries, reducing latency, database
             calls and inter-service communication.
           </li>
           <li>
-            Optimized batch operations with complex business logic to be
-            executed under constant time.
+            Improved query performance by 90% by optimizing complex business
+            logic to be executed under constant time using batch processing.
+          </li>
+          <li>
+            Mentored a fellow engineer, providing guidance and better solution
+            suggestions.
           </li>
         </ul>
       </div>

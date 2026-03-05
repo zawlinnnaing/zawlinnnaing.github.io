@@ -111,7 +111,7 @@
   }
 
   .app-link {
-    @apply text-green-500 hover:underline text-base;
+    @apply text-green-500 hover:underline;
   }
 
   .app-list {
