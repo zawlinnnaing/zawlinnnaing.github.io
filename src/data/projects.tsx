@@ -77,19 +77,14 @@ const projects: IProject[] = [
       },
     ],
     logo: {
-      src: "https://raw.githubusercontent.com/zawlinnnaing/zen-player/main/assets/icon.png",
+      text: "Zen Player",
     },
     summary: (
       <>
-        Zen Player is a side project, I am currently working on. It is a video
-        player focuses mainly on preventing users from spending more time than
-        it should be on YouTube videos. Due to YouTube recommendation, we often
-        tend to watch more videos than we originally came for. Thus, lots of
-        time wasted on watching videos that are not related to our search
-        intention. The main features I am currently working on includes ability
-        to search videos by name or url on YouTube, provide analytics on watch
-        time, allow maximum watch timer for each day, allow creating queues and
-        looping of videos. It will be available on both web and android.
+        Zen Player is a video player designed to reduce time wasted on YouTube
+        by helping users watch only what they intend to. It supports searching
+        videos by name or URL and video queues with looping on both web and
+        Android.
       </>
     ),
     technologies: [TECHNOLOGIES.flutter],
@@ -107,15 +102,9 @@ const projects: IProject[] = [
     },
     summary: (
       <>
-        This portfolio website is built using both{" "}
-        <i>Gatsby.js and Tailwind CSS</i>. I also enabled DevOps using{" "}
-        <AppLink href="https://github.com/features/actions">
-          GitHub Actions
-        </AppLink>{" "}
-        which deploy the website to <i>GitHub Page</i> every time I push code
-        changes to a specified branch. I built this website as an opportunity to
-        learn two technologies I have been wanting to learn, <i>Gatsby.js</i>{" "}
-        and <i>DevOps</i>.
+        This portfolio website is built with Gatsby.js and Tailwind CSS, and
+        CI/CD is set up with GitHub Actions to be automatically deployed to
+        GitHub Pages.
       </>
     ),
     technologies: [
@@ -141,39 +130,14 @@ const projects: IProject[] = [
     },
     summary: (
       <>
-        I built this project as my graduation thesis and also a way to learn
-        in-depth about <i>Tensorflow</i>. I forked from{" "}
-        <AppLink href="https://github.com/KIMSEUNGGYU/AI-Art-Lab/tree/master/Creative_adversarial_networks_tensorflow">
-          the original repo
+        Built as a graduation thesis, this project implements a{" "}
+        <AppLink href="https://arxiv.org/abs/1706.07068" openInNewWindow>
+          Creative Adversarial Network (CAN)
         </AppLink>{" "}
-        and worked on Tensorflow implementation of Creative Adversarial Network
-        (CAN) model which generates creative art works by training upon{" "}
-        <AppLink
-          href="https://www.kaggle.com/c/painter-by-numbers"
-          openInNewWindow
-        >
-          art styles dataset
-        </AppLink>
-        . My main contribution for the project includes;
-        <br />
-        <ul className="ml-6 list-disc">
-          <li>
-            Up-scaled Generator model output image by 2 times, including its
-            neural network Parameters. (from 256x256 to 512x512)
-          </li>
-          <li>
-            Transformed the code structure to a single file that can be trained
-            on{" "}
-            <AppLink href="https://colab.research.google.com/">
-              Google Colaboratory
-            </AppLink>
-            .
-          </li>
-          <li>
-            Created trained checkpoint files for both original resolution model
-            (256x256) and enhanced resolution (512x512) model.
-          </li>
-        </ul>
+        using TensorFlow to generate artwork trained on an art styles dataset. I
+        enhanced the model to generate higher resolution images simplified the
+        training setup for Google Colab, and produced trained checkpoints for
+        both original and improved models.
       </>
     ),
     technologies: [TECHNOLOGIES.python, TECHNOLOGIES.tensorflow],
