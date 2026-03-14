@@ -14,7 +14,7 @@ export function HeroSection() {
         Zaw Lin Naing.
       </h1>
       <h2 className="text-3xl md:text-5xl font-bold text-gray-500 mb-8 leading-tight">
-        I build things for the web.
+        Full-stack Software Engineer.
       </h2>
       <p className="text-gray-400 max-w-xl leading-relaxed mb-10 text-lg">
         Results-driven full-stack software engineer with 7+ years of experience
