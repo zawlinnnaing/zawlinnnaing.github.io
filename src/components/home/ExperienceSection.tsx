@@ -16,11 +16,17 @@ export function ExperienceSection() {
           >
             {/* Date range */}
             <div className="font-mono text-xs text-gray-500 pt-1 shrink-0 uppercase tracking-wide">
-              {moment(exp.employmentPeriod.start).format("MMM YYYY")}
+              <time dateTime={moment(exp.employmentPeriod.start).format("YYYY-MM")}>
+                {moment(exp.employmentPeriod.start).format("MMM YYYY")}
+              </time>
               {" — "}
-              {exp.employmentPeriod.end
-                ? moment(exp.employmentPeriod.end).format("MMM YYYY")
-                : "PRESENT"}
+              {exp.employmentPeriod.end ? (
+                <time dateTime={moment(exp.employmentPeriod.end).format("YYYY-MM")}>
+                  {moment(exp.employmentPeriod.end).format("MMM YYYY")}
+                </time>
+              ) : (
+                "PRESENT"
+              )}
             </div>
 
             {/* Role, company, summary, techs */}

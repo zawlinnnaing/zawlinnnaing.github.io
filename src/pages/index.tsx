@@ -55,11 +55,33 @@ export default function HomePage() {
   return (
     <>
       <Helmet>
-        <title>Zaw Lin Naing – Software Engineer</title>
+        <title>Zaw Lin Naing – Senior Full-stack Engineer</title>
         <meta
           name="description"
-          content="Full-stack software engineer with 7+ years of experience specialising in TypeScript, Node.js, React, and cloud systems."
+          content="Senior Full-stack software engineer with 7+ years of experience specialising in TypeScript, Node.js, React, and cloud systems. Based in Bangkok, Thailand."
         />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfilePage",
+            name: "Zaw Lin Naing – Senior Full-stack Engineer",
+            url: "https://zawlinnnaing.com",
+            mainEntity: {
+              "@type": "Person",
+              name: "Zaw Lin Naing",
+              jobTitle: "Full-stack Software Engineer",
+              url: "https://zawlinnnaing.com",
+            },
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Zaw Lin Naing – Portfolio",
+            url: "https://zawlinnnaing.com",
+          })}
+        </script>
       </Helmet>
 
       <div className="bg-gray-900 min-h-screen text-gray-300">

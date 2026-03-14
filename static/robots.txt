@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Host: https://zawlinnnaing.com
+Sitemap: https://zawlinnnaing.com/sitemap/sitemap-index.xml
