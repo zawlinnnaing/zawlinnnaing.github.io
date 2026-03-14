@@ -7,3 +7,6 @@ public
 !.env.example
 
 **/*Zone.Identifier
+
+# AI agent configs
+.claude/*.local*
