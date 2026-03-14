@@ -1,0 +1,39 @@
+# Zaw Lin Naing
+
+> Full-stack Software Engineer with 7+ years of experience in TypeScript, Node.js, React, and cloud systems. Based in Bangkok, Thailand.
+
+## About
+
+Zaw Lin Naing is a results-driven full-stack software engineer with over 7 years of professional experience building reliable, scalable, and maintainable web applications. He specialises in the JavaScript/TypeScript ecosystem and effectively leverages AI coding agents to boost productivity and code quality.
+
+## Skills
+
+- **Languages**: TypeScript, JavaScript, Python, Golang, PHP, SQL
+- **Frontend**: React, Next.js, Angular, Svelte, Tailwind CSS, Redux
+- **Backend**: Node.js, NestJS, Express, FastAPI, GraphQL, Prisma
+- **Infrastructure**: Docker, Kubernetes, AWS, GCP, Azure, Terraform, Redis, PostgreSQL, MongoDB
+- **AI & Automation**: Claude Code, GitHub Copilot, LLM Integration, AI Agent Tooling
+
+## Experience
+
+- **Senior Software Engineer** at Sertis (Jul 2024 – Present)
+- **Full-stack Engineer** at Oozou (Sep 2023 – Jun 2024)
+- **Software Engineer – Backend** at Brikl (Feb 2023 – Aug 2023)
+- **Full Stack Engineer** at Taskworld (Jan 2022 – Feb 2023)
+- **Software Engineer** at Expa.AI (Jan 2020 – Aug 2021)
+- **Web Developer** at Mounts Digital (May 2019 – Nov 2019)
+- **Intern** at Nexlabs (Dec 2018 – Feb 2019)
+
+## Projects
+
+- **AI Review CLI** – Open-source CLI tool for AI-powered automated code reviews on GitLab Merge Requests (TypeScript, Node.js)
+- **Zen Mode Extension** – Chrome extension blocking up to 5000 domains to optimise productivity (TypeScript, React)
+- **Zen Player** – Cross-platform video player with YouTube distraction reduction (Flutter)
+- **Portfolio Website** – This site, built with Gatsby.js and Tailwind CSS, deployed on GitHub Pages
+
+## Contact
+
+- Email: zawlinnnaing0018@gmail.com
+- LinkedIn: https://www.linkedin.com/in/zlnaing
+- GitHub: https://github.com/zawlinnnaing
+- Website: https://zawlinnnaing.com

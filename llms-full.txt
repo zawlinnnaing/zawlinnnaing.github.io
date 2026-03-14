@@ -1,0 +1,109 @@
+# Zaw Lin Naing – Senior Full-stack Software Engineer
+
+> Full-stack Software Engineer with 7+ years of experience in TypeScript, Node.js, React, and cloud systems. Based in Bangkok, Thailand.
+
+Website: https://zawlinnnaing.com
+Email: zawlinnnaing0018@gmail.com
+LinkedIn: https://www.linkedin.com/in/zlnaing
+GitHub: https://github.com/zawlinnnaing
+
+---
+
+## About
+
+Zaw Lin Naing is a results-driven full-stack software engineer with over 7 years of professional experience building reliable, scalable, and maintainable web applications. He specialises in the JavaScript/TypeScript ecosystem across both frontend and backend, with strong depth in cloud infrastructure, microservices architecture, and AI/LLM integration. He effectively leverages AI coding agents (Claude Code, GitHub Copilot, Cursor) to boost productivity and code quality.
+
+---
+
+## Skills
+
+### Languages
+TypeScript, JavaScript, Python, Golang, PHP, SQL
+
+### Frontend
+React, Next.js, Angular, Svelte, Tailwind CSS, Redux, Vite
+
+### Backend
+Node.js, NestJS, Express, FastAPI, GraphQL, Prisma, REST APIs, WebSockets
+
+### Databases
+PostgreSQL, MySQL, MongoDB, Redis, Elasticsearch
+
+### Infrastructure & DevOps
+Docker, Kubernetes, AWS (EC2, S3, Lambda, RDS, ECS), GCP, Azure, Terraform, GitHub Actions, Serverless Framework
+
+### AI & Automation
+Claude Code, GitHub Copilot, LLM Integration, AI Agent Tooling, AI-assisted code review
+
+---
+
+## Professional Experience
+
+### Senior Software Engineer – Sertis
+**Period**: July 2024 – Present
+**Location**: Bangkok, Thailand
+**URL**: https://www.sertiscorp.com
+Senior software engineer working on large-scale enterprise systems across multiple frontend and backend stacks including TypeScript, React, Next.js, Angular, Svelte, Node.js, NestJS, Golang, PostgreSQL, Redis, Docker, Kubernetes, Terraform, AWS, Azure, and GCP.
+
+### Full-stack Engineer – Oozou
+**Period**: September 2023 – June 2024
+**URL**: https://oozou.com
+Full-stack engineer building web applications with TypeScript, Next.js, React, Tailwind CSS, Node.js, PostgreSQL, Redis, Docker, AWS, WebSockets, and Yjs.
+
+### Software Engineer (Backend) – Brikl
+**Period**: February 2023 – August 2023
+**URL**: https://www.brikl.com
+Backend engineer specialising in GraphQL APIs, TypeScript, Node.js, PostgreSQL, Prisma, Redis, AWS, and the Serverless Framework.
+
+### Full Stack Engineer – Taskworld
+**Period**: January 2022 – February 2023
+**URL**: https://taskworld.com
+Full-stack engineer on a project management SaaS platform using TypeScript, Node.js, MongoDB, Elasticsearch, React, Redux, Redis, WebSockets, Docker, and Kubernetes.
+
+### Software Engineer – Expa.AI
+**Period**: January 2020 – August 2021
+**URL**: https://expa.ai
+Software engineer building AI-powered applications with Node.js, GraphQL, MongoDB, PostgreSQL, React, Redux, Redis, Docker, and Kubernetes.
+
+### Web Developer – Mounts Digital
+**Period**: May 2019 – November 2019
+Web developer building applications with Laravel, MySQL, jQuery, Redis, Firebase, and Google Maps API.
+
+### Intern – Nexlabs
+**Period**: December 2018 – February 2019
+**URL**: https://www.nexlabs.co
+Software engineering internship working with Laravel, MySQL, Vue.js, and Nuxt.js.
+
+---
+
+## Projects
+
+### AI Review CLI
+**Type**: Open Source
+**Repository**: https://github.com/zawlinnnaing/ai-review-cli
+**Technologies**: TypeScript, Node.js
+An open-source command-line tool that enables AI coding agents (Claude Code, Cursor, GitHub Copilot) to perform automated code reviews on GitLab Merge Requests. It handles GitLab authentication, diff fetching, line number annotation, and posts structured inline comments. Ships as an npm package and pre-built binaries for macOS, Linux, and Windows.
+
+### Zen Mode Extension
+**Type**: Open Source / Chrome Extension
+**Repository**: https://github.com/zen-suite/focus-mode-extension
+**Store**: https://chrome.google.com/webstore/detail/zen-mode-block-distractio/cblailchdcmjcjjklmninjaoifijfdmg
+**Technologies**: TypeScript, React, Vite
+A Chrome extension that blocks up to 5000 domains to minimise distractions and boost productivity during web browsing. Includes a search function to temporarily unblock specific sites.
+
+### Zen Player
+**Type**: Open Source / Mobile App
+**Repository**: https://github.com/zawlinnnaing/zen-player
+**Technologies**: Flutter
+A cross-platform video player (web and Android) designed to reduce time wasted on YouTube by supporting intentional video queues with looping.
+
+### Portfolio Website
+**Repository**: https://github.com/zawlinnnaing/zawlinnnaing.github.io
+**Technologies**: Gatsby.js, Tailwind CSS, GitHub Pages
+This portfolio website, built with Gatsby.js and Tailwind CSS, deployed automatically via GitHub Actions to GitHub Pages.
+
+### TensorFlow Implementation of CAN (Graduation Thesis)
+**Repository**: https://github.com/zawlinnnaing/CAN-thesis
+**Article**: https://medium.com/@zawlinnnaing0018/creating-new-art-works-by-integrating-creative-adversarial-network-can-and-neural-style-bed8aa51fb3a
+**Technologies**: Python, TensorFlow
+Graduation thesis implementing a Creative Adversarial Network (CAN) using TensorFlow to generate artwork trained on an art styles dataset. Enhanced the model for higher-resolution image generation and simplified the training setup for Google Colab.

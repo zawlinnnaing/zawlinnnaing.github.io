@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkzawlinnnaing=self.webpackChunkzawlinnnaing||[]).push([[218],{3205:function(e,n,t){t.r(n);var a=t(7294),l=t(5444);n.default=()=>(a.useEffect((()=>{(0,l.navigate)("/",{replace:!0})}),[]),a.createElement("main",null,a.createElement("title",null,"Not found"),a.createElement("p",null,"Redirecting to ",a.createElement(l.Link,{to:"/"},"home page"),"...")))}}]);
+//# sourceMappingURL=component---src-pages-404-tsx-555b3041c11733e05110.js.map
