@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Helmet } from "react-helmet";
-import { ContactSection } from "../components/home/ContactSection";
+import SEO from "../components/common/SEO";
 import { NAV_LINKS } from "../components/home/constants";
+import { ContactSection } from "../components/home/ContactSection";
 import { ExperienceSection } from "../components/home/ExperienceSection";
 import { HeroSection } from "../components/home/HeroSection";
 import { HomeFooter } from "../components/home/HomeFooter";
@@ -54,26 +54,7 @@ export default function HomePage() {
 
   return (
     <>
-      <Helmet>
-        <title>Zaw Lin Naing – Senior Full-stack Engineer</title>
-        <meta
-          name="description"
-          content="Senior Full-stack software engineer with 7+ years of experience specialising in TypeScript, Node.js, React, and cloud systems. Based in Bangkok, Thailand."
-        />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "ProfilePage",
-            name: "Zaw Lin Naing – Senior Full-stack Engineer",
-            url: "https://zawlinnnaing.com",
-            mainEntity: {
-              "@type": "Person",
-              name: "Zaw Lin Naing",
-              jobTitle: "Full-stack Software Engineer",
-              url: "https://zawlinnnaing.com",
-            },
-          })}
-        </script>
+      <SEO>
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -82,7 +63,7 @@ export default function HomePage() {
             url: "https://zawlinnnaing.com",
           })}
         </script>
-      </Helmet>
+      </SEO>
 
       <div className="bg-gray-900 min-h-screen text-gray-300">
         <Navbar

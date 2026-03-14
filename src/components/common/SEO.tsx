@@ -1,4 +1,4 @@
-import React from "react";
+import React, { PropsWithChildren, ReactNode } from "react";
 import { Helmet } from "react-helmet";
 
 const SITE_URL = "https://zawlinnnaing.com";
@@ -42,12 +42,14 @@ export default function SEO({
   description = DEFAULT_DESCRIPTION,
   url = SITE_URL,
   image = `${SITE_URL}/images/cover.png`,
-}: {
+  children,
+}: PropsWithChildren<{
   title?: string;
   description?: string;
   url?: string;
   image?: string;
-}) {
+  children?: ReactNode;
+}>) {
   return (
     <>
       <Helmet>
@@ -79,6 +81,7 @@ export default function SEO({
         <script type="application/ld+json">
           {JSON.stringify(PERSON_SCHEMA)}
         </script>
+        {children}
       </Helmet>
     </>
   );
