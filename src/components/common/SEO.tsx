@@ -41,7 +41,7 @@ export default function SEO({
   title = "Zaw Lin Naing – Senior Software Engineer",
   description = DEFAULT_DESCRIPTION,
   url = SITE_URL,
-  image = `${SITE_URL}/icons/icon-512x512.png`,
+  image = `${SITE_URL}/images/cover.png`,
 }: {
   title?: string;
   description?: string;
